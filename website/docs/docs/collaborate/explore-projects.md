@@ -6,7 +6,11 @@ pagination_next: "docs/collaborate/model-performance"
 pagination_prev: null
 ---
 
+<IntroText>
+
 With dbt Explorer, you can view your project's [resources](/docs/build/projects) (such as models, tests, and metrics) and their <Term id="data-lineage">lineage</Term> to gain a better understanding of its latest production state. Navigate and manage your projects within dbt Cloud to help you and other data developers, analysts, and consumers discover and leverage your dbt resources.
+
+</IntroText>
 
 ## Prerequisites
 

@@ -46,6 +46,7 @@ import Lifecycle from '@site/src/components/lifeCycle';
 import detailsToggle from '@site/src/components/detailsToggle';
 import Expandable from '@site/src/components/expandable';
 import ConfettiTrigger from '@site/src/components/confetti/';
+import IntroText from '@site/src/components/IntroText';
 
 const MDXComponents = {
   head: MDXHead,
@@ -98,5 +99,6 @@ const MDXComponents = {
   detailsToggle: detailsToggle,
   Expandable: Expandable,
   ConfettiTrigger: ConfettiTrigger,
+  IntroText: IntroText,
 };
 export default MDXComponents;

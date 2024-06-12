@@ -1,0 +1,17 @@
+/* Default styles (assuming light mode) */
+.introText {
+    color: #575252; /* Default color */
+    font-size: 1.1em;
+  }
+  
+  /* Explicitly set light mode styles */
+  html[data-theme='light'] .introText {
+    color: #575252; /* Dark text in light mode */
+    font-size: 1.1em;
+  }
+  
+/* Adjusting for Dark Mode */
+html[data-theme='dark'] .introText {
+    color: #aaa8a8; /* White text in dark mode */
+    font-size: 1.1em;
+  }
