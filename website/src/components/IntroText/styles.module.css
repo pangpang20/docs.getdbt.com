@@ -1,17 +1,17 @@
-/* Default styles (assuming light mode) */
+/* default styles (assuming light mode) */
 .introText {
-    color: #575252; /* Default color */
+    color: #4B5563; /* default color approved by design (Madelyn) */
     font-size: 1.1em;
   }
   
   /* Explicitly set light mode styles */
   html[data-theme='light'] .introText {
-    color: #575252; /* Dark text in light mode */
+    color: #4B5563; /* dark text in light mode approved by design (Madelyn)  */
     font-size: 1.1em;
   }
   
 /* Adjusting for Dark Mode */
 html[data-theme='dark'] .introText {
-    color: #aaa8a8; /* White text in dark mode */
+    color: #9CA3AF; /* white text in dark mode approved by design (Madelyn) */
     font-size: 1.1em;
   }
