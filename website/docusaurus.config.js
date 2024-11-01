@@ -248,7 +248,6 @@ var siteSettings = {
             "/website/",
           showLastUpdateTime: true,
           //showLastUpdateAuthor: false,
-
           sidebarCollapsible: true,
           exclude: [
             'hover-terms.md'
