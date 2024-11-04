@@ -4,7 +4,3 @@ level: warning
 scope: raw
 tokens:
   - '<!--truncate-->'
-nonexistent: true
-
-ignoredScopes:
-  - '^((?!website/blog/).)*$'
