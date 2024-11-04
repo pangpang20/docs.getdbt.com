@@ -4,7 +4,7 @@ level: warning
 scope: raw
 tokens:
   - '<!--truncate-->'
-# Apply the rule only when the token does not exist
 nonexistent: true
-messageClass: blog
 
+ignoredScopes:
+  - '^((?!website/blog/).)*$'
