@@ -7,4 +7,4 @@ level: warning
 path: blog/.*\.md$
 scope: raw
 tokens:
-  - "<!--truncate-->"
+  - '<!--truncate-->'
