@@ -1,8 +1,9 @@
 extends: existence
-message: "Blog posts in the `/blog` directory must contain a `<!--truncate-->` comment."
-level: warning
-matches:
+message: "Blog posts in the `/blogs` directory must contain a `<!--truncate-->` comment."
+level: warning 
+scope: raw
+tokens:
   - '<!--truncate-->'
-
-scope: 
-  - raw
+# Apply the rule only when the token does not exist
+nonexistent: true
+glob: blog/*.md
