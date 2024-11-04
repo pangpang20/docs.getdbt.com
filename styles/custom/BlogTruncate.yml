@@ -3,5 +3,6 @@ message: "Blog posts in the `/blogs` directory must contain a `<!--truncate-->` 
 level: error
 
 path: /blogs/.*\.md$
-scope: file
-match: "<!--truncate-->"
+scope: raw
+tokens:
+  - "<!-- -->"
