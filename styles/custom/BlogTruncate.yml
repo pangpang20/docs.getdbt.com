@@ -6,4 +6,4 @@ tokens:
   - '<!--truncate-->'
 # Apply the rule only when the token does not exist
 nonexistent: true
-glob: blog/*.md
+messageClass: blog
