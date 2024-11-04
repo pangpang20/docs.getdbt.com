@@ -1,8 +1,10 @@
+# styles/custom/BlogTruncate.yml
+
 extends: existence
-message: "Blog posts in the `/blogs` directory must contain a `<!--truncate-->` comment."
+message: "Blog posts in the `/blog` directory must contain a `<!--truncate-->` comment."
 level: warning
 
-path: blog/*.md
+path: blog/.*\.md$
 scope: raw
 tokens:
-  - "<!-- -->"
+  - "<!--truncate-->"
