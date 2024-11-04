@@ -1,8 +1,7 @@
 extends: existence
 message: "Blog posts in the `/blog` directory must contain a `<!--truncate-->` comment."
 level: warning
-path: blog/*.md
-tokens:
+matches:
   - '<!--truncate-->'
 
 scope: 
