@@ -796,8 +796,6 @@ const sidebarSettings = {
             {
               type: "category",
               label: "Older versions",
-              position: 1,
-              collapsed: true,
               link: {
                 type: "generated-index",
                 title: "Older versions",
