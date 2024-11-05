@@ -2,5 +2,6 @@ extends: existence
 message: "Blog posts in the `/blogs` directory must contain a `<!--truncate-->` comment."
 level: warning 
 scope: raw
+nonword: true
 tokens:
   - '<!--truncate-->'
