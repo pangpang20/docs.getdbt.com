@@ -65,7 +65,7 @@ exports.versionedPages = [
 ];
 
 /**
- * Controls doc category visibility in the sidebar based on the current version
+ * Controls doc category visibility in the sidebar based for the current version
  * @type {Array.<{
  * category: string,
  * firstVersion: string,
