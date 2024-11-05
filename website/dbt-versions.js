@@ -72,7 +72,7 @@ exports.versionedPages = [
  * }>}
  * @property {string} category The target category to hide/show in the sidebar
  * @property {string} firstVersion The first version the category is visible in the sidebar
- * Testing
+ * Test
  */
 exports.versionedCategories = [
   {
