@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/docs/dbt-versions/core-upgrade/Older%20versions/:path*",
+      "destination": "/docs/dbt-versions/core-upgrade/older-versions/:path*",
+      "permanent": true
+    },
+    {
       "source": "/styles",
       "destination": "https://github.com/dbt-labs/docs.getdbt.com/blob/current/contributing/adding-page-components.md",
       "permanent": true
