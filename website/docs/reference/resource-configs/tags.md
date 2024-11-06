@@ -170,10 +170,12 @@ seeds:
 
 ### Apply tags to exports
 
+This following example shows how to apply tags to an export in the `dbt_project.yml` file. The export is then tagged with `order_metrics`.
+
 <File name='dbt_project.yml'>
 
 ```yml
-[exports](/docs/use-dbt-semantic-layer/exports):
+[exports](/docs/build/saved-queries-configure-exports):
   jaffle_shop:
     customer_order_metrics:
       +tags: order_metrics
@@ -181,15 +183,23 @@ seeds:
 
 </File>
 
-<File name='dbt_project.yml'>
+The second example shows how to apply tags to an export in the `semantic_model.yml` file. The export is then tagged with `order_metrics` and `hourly`.
 
-```yml
-[exports](/docs/use-dbt-semantic-layer/exports):
-  jaffle_shop:
-    customer_order_metrics:
-      +tags:
-        - order_metrics
-        - hourly
+<File name='semantic_model.yml'>
+
+```yaml
+saved_queries:
+  - name: order_metrics
+    ...
+    exports:
+      - name: hourly_order_metrics
+        config:
+          alias: my_export_alias
+          export_as: table
+          schema: my_export_schema_name
+          tags: 
+            - order_metrics
+            - hourly
 ```
 
 </File>
