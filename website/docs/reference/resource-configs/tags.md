@@ -30,7 +30,7 @@ seeds:
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
-[exports](/docs/use-dbt-semantic-layer/exports):
+[exports](/docs/build/saved-queries#configure-exports):
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
@@ -175,7 +175,7 @@ This following example shows how to apply tags to an export in the `dbt_project.
 <File name='dbt_project.yml'>
 
 ```yml
-[exports](/docs/build/saved-queries-configure-exports):
+[exports](/docs/build/saved-queries#configure-exports):
   jaffle_shop:
     customer_order_metrics:
       +tags: order_metrics
