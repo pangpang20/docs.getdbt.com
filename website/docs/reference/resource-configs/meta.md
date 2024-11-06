@@ -259,7 +259,7 @@ saved_queries:
 semantic_models:
   - name: semantic_model
     ...
-  dimensions:
+  [dimensions](/docs/build/dimensions):
     - name: order_date
       config:
         meta: {<dictionary>}
@@ -370,7 +370,7 @@ The following example shows how to assign a `data_owner` and additional metadata
 semantic_models:
   - name: semantic_model
     ...
-  dimensions:
+  [dimensions](/docs/build/dimensions):
     - name: order_date
       meta:
         data_owner: "Finance team"
@@ -387,7 +387,7 @@ This second example shows how to assign a `data_owner` and additional metadata v
 semantic-models:
   jaffle_shop:
     ...
-    dimensions:
+    [dimensions](/docs/build/dimensions):
       - name: order_date
         +meta:
           data_owner: "Finance team"
