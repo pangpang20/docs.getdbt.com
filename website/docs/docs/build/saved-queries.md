@@ -58,6 +58,7 @@ Note that we use the double colon (::) to indicate whether a parameter is nested
 | `exports::config::export_as` | String    | Required     |  Specifies the type of export: table, view, or upcoming cache options. Nested within `exports` and `config`.   |
 | `exports::config::schema`   | String   | Optional    | Schema for creating the table or view, not applicable for caching. Nested within `exports` and `config`.   |
 | `exports::config::alias`  | String     | Optional    | Table alias used to write to the table or view.  This option can't be used for caching. Nested within `exports` and `config`.  |
+| `exports::config::tag`  | String     | Optional    | Apply a [tag](/reference/resource-configs/tags) (or list of tags) to a resource. Tags help organize and filter resources in dbt. Nested within `exports` and `config`.  |
 
 </VersionBlock>
 
@@ -99,6 +100,7 @@ saved_queries:
           alias: my_export_alias
           export_as: table
           schema: my_export_schema_name
+          [tags](/reference/resource-configs/tags): ['my_tag']
 ```
 </File>
 

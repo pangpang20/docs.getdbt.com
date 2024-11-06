@@ -24,6 +24,14 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
   - Improved handling of queries when multiple tables are selected in a data source.
   - Fixed a bug when an IN filter contained a lot of values.
   - Better error messaging for queries that can't be parsed correctly.
+- **New**: Exports now support [tags](/docs/reference/resource-configs/tags) in dbt Cloud. Tags allow you to categorize your resources and filter them in dbt Cloud. You can add tags to your [exports](/docs/build/saved-queries#configure-exports) in the `semantic_model.yml` file or `dbt_project.yml` file. For example:
+
+  ```yml
+  exports:
+    - name: export_name
+      tags: ['export_tag']
+      ...
+  ```
 
 ## October 2024
 <Expandable alt_header="Coalesce 2024 announcements">

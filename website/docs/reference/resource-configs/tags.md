@@ -30,6 +30,10 @@ seeds:
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
+[exports](/docs/use-dbt-semantic-layer/exports):
+  [<resource-path>](/reference/resource-configs/resource-path):
+    +tags: <string> | [<string>]
+
 ```
 
 </File>
@@ -164,6 +168,32 @@ seeds:
 
 </File>
 
+### Apply tags to exports
+
+<File name='dbt_project.yml'>
+
+```yml
+[exports](/docs/use-dbt-semantic-layer/exports):
+  jaffle_shop:
+    customer_order_metrics:
+      +tags: order_metrics
+```
+
+</File>
+
+<File name='dbt_project.yml'>
+
+```yml
+[exports](/docs/use-dbt-semantic-layer/exports):
+  jaffle_shop:
+    customer_order_metrics:
+      +tags:
+        - order_metrics
+        - hourly
+```
+
+</File>
+
 ## Usage notes
 
 ### Tags are additive
@@ -178,7 +208,7 @@ Tags accumulate hierarchically. The above example would result in:
 
 ### Other resource types
 
-Tags can also be applied to sources, exposures, and even _specific columns_ in a resource.
+Tags can also be applied to [sources](/docs/build/sources), [exposures](/docs/build/exposures), [exports](/docs/use-dbt-semantic-layer/exports), and even _specific columns_ in a resource.
 These resources do not yet support the `config` property, so you'll need to specify
 the tags as a top-level key instead.
 
@@ -206,6 +236,11 @@ sources:
             tests:
               - unique:
                   tags: ['test_level']
+
+exports:
+  - name: export_name
+    tags: ['export_tag']
+    ...
 ```
 
 </File>
