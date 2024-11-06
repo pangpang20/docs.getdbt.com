@@ -22,6 +22,7 @@ All dimensions require a `name`, `type`, and can optionally include an `expr` pa
 | `description` | A clear description of the dimension | Optional |
 | `expr` | Defines the underlying column or SQL query for a dimension. If no `expr` is specified, MetricFlow will use the column with the same name as the group. You can use the column name itself to input a SQL expression. | Optional |
 | `label` | A recommended string that defines the display value in downstream tools. Accepts plain text, spaces, and quotes (such as `orders_total` or `"orders_total"`).  | Optional |
+| `meta` | Use the [`meta` field](/reference/resource-configs/meta) to set metadata for a resource and organize resources. Accepts plain text, spaces, and quotes (such as `orders_total` or `"orders_total"`).  | Optional |
 
 Refer to the following for the complete specification for dimensions:
 
@@ -59,6 +60,8 @@ semantic_models:
       type_params:
         time_granularity: day
       label: "Date of transaction" # Recommend adding a label to provide more context to users consuming the data
+      meta:
+        data_owner: "Finance team"
       expr: ts
     - name: is_bulk
       type: categorical
@@ -106,6 +109,8 @@ dimensions:
   - name: is_bulk_transaction
     type: categorical
     expr: case when quantity > 10 then true else false end
+    meta:
+      usage: "Filter to identify bulk transactions, like where quantity > 10."
 ```
 
 ## Time
@@ -136,6 +141,8 @@ dimensions:
     type: time
     label: "Date of creation"
     expr: ts_created # ts_created is the underlying column name from the table 
+    meta:
+      notes: "Only valid for orders from 2022 onward"
     is_partition: True
     type_params:
       time_granularity: day

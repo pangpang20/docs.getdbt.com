@@ -19,6 +19,7 @@ hide_table_of_contents: true
     { label: 'Semantic Models', value: 'semantic models', },
     { label: 'Metrics', value: 'metrics', },
     { label: 'Saved queries', value: 'saved queries', },
+    { label: 'Dimensions', value: 'dimensions', },
   ]
 }>
 <TabItem value="models">
@@ -250,6 +251,22 @@ saved_queries:
 
 </File>
 
+<TabItem value="Dimensions">
+
+<File name='models/semantic_models.yml'>
+
+```yml
+semantic_models:
+  - name: semantic_model
+    ...
+  dimensions:
+    - name: order_date
+      config:
+        meta: {<dictionary>}
+```
+
+</File>
+
 </TabItem>
 
 </Tabs>
@@ -343,3 +360,38 @@ models:
 
 </File>
 
+### Assign owner and additional metadata to dimensions
+
+The following example shows how to assign a `data_owner` and additional metadata value to a dimension in a semantic model.
+
+<File name='semantic_model.yml'>
+
+```yml
+semantic_models:
+  - name: semantic_model
+    ...
+  dimensions:
+    - name: order_date
+      meta:
+        data_owner: "Finance team"
+        used_in_reporting: true
+```
+
+</File>
+
+This second example shows how to assign a `data_owner` and additional metadata value to a dimension in the `dbt_project.yml` file using the `+meta` syntax.
+
+<File name='dbt_project.yml'>
+
+```yml
+semantic-models:
+  jaffle_shop:
+    ...
+    dimensions:
+      - name: order_date
+        +meta:
+          data_owner: "Finance team"
+          used_in_reporting: true
+```
+
+</File>

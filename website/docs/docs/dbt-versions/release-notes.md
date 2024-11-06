@@ -24,6 +24,7 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
   - Improved handling of queries when multiple tables are selected in a data source.
   - Fixed a bug when an IN filter contained a lot of values.
   - Better error messaging for queries that can't be parsed correctly.
+- **New**: [Dimensions](/reference/resource-configs/meta) now support the meta config property in dbt Cloud Versionless ??? or v1.9+??. You can add metadata to your dimensions to provide additional context and information about the dimension. Refer to [meta](/reference/resource-configs/meta) for more information.
 
 ## October 2024
 <Expandable alt_header="Coalesce 2024 announcements">
