@@ -100,7 +100,7 @@ saved_queries:
           alias: my_export_alias
           export_as: table
           schema: my_export_schema_name
-          [tags](/reference/resource-configs/tags): ['my_tag']
+          [tags](/reference/resource-configs/tags): 'my_tag'
 ```
 </File>
 
