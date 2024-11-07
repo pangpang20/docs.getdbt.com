@@ -62,13 +62,13 @@ In either case, download the following CSV files (the Jaffle Shop sample data) a
 ## Configure Amazon Athena
 
 1. Log into your AWS account and navigate to the **Athena console**.
-    - If this is your first time in the Athena console (in your current AWS Region), click **Explore the query editor** to open the query editor. Otherwise, Athena opens automatically in the query editor and take one of the following actions:
+    - If this is your first time in the Athena console (in your current AWS Region), click **Explore the query editor** to open the query editor. Otherwise, Athena opens automatically in the query editor.
 1. Open **Settings** and find the **Location of query result box** field.
     1. Enter the path of the S3 bucket (prefix it with `s3://`).
     2. Navigate to **Browse S3**, select the S3 bucket you created, and click **Choose**.
-1. **Save** the settings configuerations
+1. **Save** the settings configurations
 1. In the **query editor**, create a database by running `create database YOUR_DATABASE_NAME`.
-1. To make the database you created your current, select it from the **Database** list on the left side menu. 
+1. To make the database you created the one you `write` into, select it from the **Database** list on the left side menu. 
 1. There are 2 options to access the Jaffle Shop data in the S3 bucket:
     1. Manually create the tables
     2. Create a glue crawler to recreate the data as external tables (recommended)
