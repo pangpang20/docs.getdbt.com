@@ -69,3 +69,7 @@ MetricFlow allows you to:
 - [The dbt Semantic Layer: what's next](https://www.getdbt.com/blog/dbt-semantic-layer-whats-next/) blog
 - [dbt Semantic Layer on-demand course](https://learn.getdbt.com/courses/semantic-layer)
 - [dbt Semantic Layer FAQs](/docs/use-dbt-semantic-layer/sl-faqs)
+
+
+
+
