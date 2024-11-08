@@ -66,19 +66,19 @@ In either case, download the following CSV files (the Jaffle Shop sample data) a
 1. Open **Settings** and find the **Location of query result box** field.
     1. Enter the path of the S3 bucket (prefix it with `s3://`).
     2. Navigate to **Browse S3**, select the S3 bucket you created, and click **Choose**.
-1. **Save** the settings configurations
+1. **Save** these settings.
 1. In the **query editor**, create a database by running `create database YOUR_DATABASE_NAME`.
 1. To make the database you created the one you `write` into, select it from the **Database** list on the left side menu. 
-1. There are 2 options to access the Jaffle Shop data in the S3 bucket:
-    1. Manually create the tables
-    2. Create a glue crawler to recreate the data as external tables (recommended)
+1. Access the Jaffle Shop data in the S3 bucket using one of these options:
+    1. Manually create the tables.
+    2. Create a glue crawler to recreate the data as external tables (recommended).
 1. Once the tables have been created, you will able to `SELECT` from them. 
 
 ## Set up security access to Athena
 
 To setup the security access for Athena, determine which access method you want to use: 
-    1. The `aws_access_key_id` and `aws_secret_access_key` (recommended)
-    2. An `aws_profile_name` that matches your profile defined in your **AWS credentials** file.
+* Obtain `aws_access_key_id` and `aws_secret_access_key` (recommended)
+* Obtain an `aws_profile_name` that matches your profile defined in your **AWS credentials** file.
 
 ### AWS access key
 
@@ -109,7 +109,7 @@ Save the `aws_access_key_id` and `aws_secret_access_key` from the file for a fut
 To configure the Athena connection in dbt Cloud:
 1. Click your **account name** on the left-side menu and click **Account settings**.
 1. Click **Connections** and click **New connection**.
-1. Click **Athena** and fill out the required fields (and any optional fields you want).
+1. Click **Athena** and fill out the required fields (and any optional fields).
     1. **AWS region name** &mdash; The AWS region of your environment.
     1. **Database (catalog)** &mdash; Enter the database name created in earlier steps (lowercase only).
     1. **AWS S3 staging directory** &mdash; Enter the S3 bucket created in earlier steps.
