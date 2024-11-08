@@ -95,7 +95,7 @@ To obtain your AWS credentials file:
     1. Windows: `%USERPROFILE%\.aws\credentials`
     2. Mac/Linux: `~/.aws/credentials`
 
-Save the `aws_access_key_id` and `aws_secret_access_key` from the file for a future step.
+Retrieve the `aws_access_key_id` and `aws_secret_access_key` from the `~/.aws/credentials` file for a future step.
 
 ## Configure the connection in dbt Cloud
 
