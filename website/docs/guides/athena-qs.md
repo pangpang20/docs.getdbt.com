@@ -71,7 +71,7 @@ Download the following CSV files (the Jaffle Shop sample data) and upload them t
 
 To setup the security access for Athena, determine which access method you want to use: 
 * Obtain `aws_access_key_id` and `aws_secret_access_key` (recommended)
-* Obtain an `aws_profile_name` that matches your profile defined in your **AWS credentials** file.
+* Obtain an **AWS credentials** file.
 
 ### AWS access key (recommended)
 
