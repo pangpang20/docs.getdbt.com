@@ -10,7 +10,12 @@ pagination_prev: null
 import CodeSnippet from '/src/components/codeSnippet/index.js';
 
 <CodeSnippet
-  resourceType="saved_queries"/>
+  resourceType="snapshots"
+  overrides={{
+    target_schema: { newName: 'schema', value: 'test_schema_name' },
+    target_database: { newName: 'database', value: 'test_database_name' }
+  }}
+/>
 
 
 dbt compiles and runs your analytics code against your data platform, enabling you and your team to collaborate on a single source of truth for metrics, insights, and business definitions. This single source of truth, combined with the ability to define tests for your data, reduces errors when logic changes, and alerts you when issues arise.
