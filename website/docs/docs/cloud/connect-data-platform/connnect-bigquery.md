@@ -268,3 +268,4 @@ For a project, you will first create an environment variable to store the secret
 import BQRequiredPermissions from '/snippets/_bq-required-permissions.md';
 
 <BQRequiredPermissions />
+
