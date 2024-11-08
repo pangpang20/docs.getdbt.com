@@ -79,13 +79,13 @@ var siteSettings = {
     },
     announcementBarActive: true,
     announcementBarLink:
-      "https://www.getdbt.com/resources/webinars/dbt-cloud-demos-with-experts/?utm_medium=internal&utm_source=docs&utm_campaign=q2-2025_biweekly-demos_aw&utm_content=biweekly-demos____&utm_term=all_all__",
+      "https://www.getdbt.com/resources/webinars/dbt-cloud-demos-with-experts/?utm_medium=i[…]ly-demos_aw&utm_content=biweekly-demos____&utm_term=all_all__",
     // Set community spotlight member on homepage
     // This is the ID for a specific file under docs/community/spotlight
-    communitySpotlightMember: "meagan-palmer",
+    communitySpotlightMember: "original-dbt-athena-maintainers",
     prism: {
       theme: (() => {
-        var theme = themes.nightOwl; 
+        var theme = themes.nightOwl;
         // Add additional rule to nightowl theme in order to change
         // the color of YAML keys (to be different than values).
         // There weren't many Prism themes that differentiated
@@ -161,10 +161,6 @@ var siteSettings = {
               label: "Developer blog",
               to: "/blog",
             },
-            {
-              label: "Glossary",
-              to: "/glossary",
-            },
           ],
         },
         {
@@ -205,8 +201,15 @@ var siteSettings = {
       links: [
         {
           html: `
+          <script 
+            src="https://solve-widget.forethought.ai/embed.js" id="forethought-widget-embed-script" data-api-key="9d421bf3-96b8-403e-9900-6fb059132264" 
+            data-ft-workflow-tag="docs" 
+            config-ft-greeting-message="Welcome to dbt Product docs! Ask a question."
+            config-ft-widget-header-title = "Ask a question"
+          ></script>
+
           <div class='footer__items'>
-            <a href='https://www.getdbt.com/cloud/terms/'>Terms of Service</a>
+            <a href='https://www.getdbt.com/terms-of-use/'>Terms of Service</a>
             <a href='https://www.getdbt.com/cloud/privacy-policy/'>Privacy Policy</a>
             <a href='https://www.getdbt.com/security/'>Security</a>
             <button id="ot-sdk-btn" onclick="openPreferenceCenter()">Cookie Settings</button>
@@ -247,6 +250,9 @@ var siteSettings = {
           //showLastUpdateAuthor: false,
 
           sidebarCollapsible: true,
+          exclude: [
+            'hover-terms.md'
+          ]
         },
         blog: {
           blogTitle: "Developer Blog | dbt Developer Hub",

@@ -26,20 +26,17 @@ import SetUpPages from '/snippets/_setup-pages-intro.md';
 
 ## Python compatibility
 
-| Plugin version | Python 3.6  | Python 3.7  | Python 3.8  | Python 3.9  | Python 3.10 | Python 3.11  |
-| -------------- | ----------- | ----------- | ----------- | ----------- | ----------- | ------------ |
-| 0.19.0.x           | ✅          | ✅          | ✅          | ❌          | ❌          | ❌
-| 0.20.0.x           | ✅          | ✅          | ✅          | ✅          | ❌          | ❌
-| 0.21.1.x           | ✅          | ✅          | ✅          | ✅          | ❌          | ❌
-| 1.0.0.x           | ❌           | ✅          | ✅          | ✅          | ❌          | ❌
-|1.1.x.x            | ❌           | ✅          | ✅          | ✅          | ✅          | ❌
-|1.2.x.x            | ❌           | ✅          | ✅          | ✅          | ✅          | ❌
-|1.3.x.x            | ❌           | ✅          | ✅          | ✅          | ✅          | ❌
-|1.4.x.x            | ❌           | ✅          | ✅          | ✅          | ✅          | ✅
-|1.5.x              | ❌           | ✅          | ✅          | ✅          | ✅          | ✅
-|1.6.x              | ❌           | ❌          | ✅          | ✅          | ✅          | ✅
-|1.7.x              | ❌           | ❌          | ✅          | ✅          | ✅          | ✅
-|1.8.x              | ❌           | ❌          | ✅          | ✅          | ✅          | ✅
+| Plugin version | Python 3.9  | Python 3.10 | Python 3.11  |
+| -------------- | ----------- | ----------- | ------------ |
+|1.0.0.x         | ✅          | ❌          | ❌
+|1.1.x.x         | ✅          | ✅          | ❌
+|1.2.x.x         | ✅          | ✅          | ❌
+|1.3.x.x         | ✅          | ✅          | ❌
+|1.4.x.x         | ✅          | ✅          | ✅
+|1.5.x           | ✅          | ✅          | ✅
+|1.6.x           | ✅          | ✅          | ✅
+|1.7.x           | ✅          | ✅          | ✅
+|1.8.x           | ✅          | ✅          | ✅
 
 ## dbt dependent packages version compatibility
 
@@ -67,7 +64,7 @@ To connect to Teradata Vantage from dbt, you'll need to add a [profile](https://
       password: <password>
       schema: <database-name>
       tmode: ANSI
-      threads: 1
+      threads: [optional, 1 or more]
       #optional fields
       <field-name: <field-value>
 ```
