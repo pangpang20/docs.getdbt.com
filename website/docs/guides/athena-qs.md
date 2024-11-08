@@ -73,7 +73,7 @@ To setup the security access for Athena, determine which access method you want 
 * Obtain `aws_access_key_id` and `aws_secret_access_key` (recommended)
 * Obtain an `aws_profile_name` that matches your profile defined in your **AWS credentials** file.
 
-### AWS access key
+### AWS access key (recommended)
 
 To obtain your `aws_access_key_id` and `aws_secret_access_key`:
 
