@@ -33,8 +33,6 @@ In addition to these fields, there are two other optional fields that can be con
 | Timeout | Deprecated; exists for backwards compatibility with older versions of dbt and will be removed in the future. | `300` |
 | Location | The [location](https://cloud.google.com/bigquery/docs/locations) where dbt should create datasets. | `US`, `EU` |
 
-
-
 <Lightbox src="/img/docs/dbt-cloud/cloud-configuring-dbt-cloud/bigquery-connection.png" title="A valid BigQuery connection"/>
 
 ### BigQuery OAuth
@@ -264,7 +262,9 @@ For a project, you will first create an environment variable to store the secret
       "extended_attributes_id": FFFFF
     }'
     ```
-    
 
+## Required permissions
 
-  
+import BQRequiredPermissions from '/snippets/_bq-required-permissions.md';
+
+<BQRequiredPermissions/>
