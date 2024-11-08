@@ -13,6 +13,7 @@ There are two ways to optionally modify this behavior:
 - `CACHE_SELECTED_ONLY` (default `False`): Whether to limit cache population to just the resources selected in the current run. This can offer significant speed improvements when running a small subset of a large project, while still providing the benefit of caching upfront.
 
 For example, to quickly compile a model that requires no database metadata or introspective queries:
+
 ```text
 
 dbt --no-populate-cache compile --select my_model_name
