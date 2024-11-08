@@ -51,7 +51,7 @@ Download these CSV files (the Jaffle Shop sample data) that you will need for th
 
 ## Set up an Amazon S3 bucket
 
-For the following guide you can use an existing S3 bucket or create a new one.
+For the following guide you can use an existing S3 bucket or [create a new one](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html).
 
 In either case, download the following CSV files (the Jaffle Shop sample data) and load them into your S3 bucket:
 - [jaffle_shop_customers.csv](https://dbt-tutorial-public.s3-us-west-2.amazonaws.com/jaffle_shop_customers.csv)
