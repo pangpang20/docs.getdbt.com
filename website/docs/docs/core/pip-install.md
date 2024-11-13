@@ -154,3 +154,80 @@ python -m pip install \
 ```
 
 Or, better yet, just install the package(s) you need!
+
+### Install prereleases of dbt adapters
+
+To install prerelease versions of dbt Core and your adapter, use this command:
+
+```shell
+python3 -m pip install --pre dbt-core dbt-adapter-name
+````
+We recommend you install prereleases in a [virtual Python environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/). You can run the commands to activate and install your virtual environment. You’ll need to activate your virtual environment before you start installing or using packages in your virtual environment. For example, to install a prerelease in a `POSIX bash`/`zsh` virtual Python environment, use the following command:
+
+```shell
+dbt --version
+python3 -m venv venv
+source venv/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install --pre dbt-core dbt-adaptername
+source venv/bin/activate
+dbt --version
+```
+For additional details on how to create a virtual Python environment, refer to ADD LINK TO YOUR NEW VIRTUAL ENV PAGE.
+
+#### Install prereleases on different operating systems 
+
+To binstall or use packages within your virtual environment:
+
+- Activate the virtual environment to add its specific Python and `pip` executables to your shell’s PATH. This ensures you use the environment’s isolated setup. You can run the following commands to activate your virtual environment.
+
+- Select your operating system to activate your virtual environment.
+
+<Expandable alt_header="Unix/macOS" >
+
+```shell
+source .venv/bin/activate
+which python
+.venv/bin/python
+```
+
+These commands will install the prerelease:
+
+```shell
+python3 -m pip install --upgrade pip
+python3 -m pip --version
+pip 23.3.1 from .../.venv/lib/python3.9/site-packages (python 3.9)
+```
+
+</Expandable>
+
+<Expandable alt_header="Windows" >
+
+```shell
+.venv\Scripts\activate
+where python
+.venv\Scripts\python
+```
+These commands will install the prerelease:
+
+```shell
+py -m pip install --upgrade pip
+py -m pip --version
+pip 23.3.1 from .venv\lib\site-packages (Python 3.9.4)
+```
+
+</Expandable>
+
+If you’re using a different operating system, refer to [Git issue on Instructions to create a python virtual environment](https://github.com/dbt-labs/docs.getdbt.com/discussions/2143) for more information.
+
+<VersionBlock lastVersion="1.7">
+
+For dbt v1.7 or earlier, you can install prereleases using this command:
+
+```shell
+python -m pip uninstall -y dbt-adapters
+python -m pip install --upgrade dbt-core dbt-common dbt-adapters
+dbt --version
+```
+
+</VersionBlock>
