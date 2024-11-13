@@ -1,4 +1,3 @@
-// src/components/ColoredText.js
 import React from 'react';
 import clsx from 'clsx';
 
