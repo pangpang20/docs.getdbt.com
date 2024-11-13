@@ -2112,3 +2112,13 @@ h2.anchor.clicked a.hash-link:before {
     flex-direction: column;
   }
 }
+
+.text-green {
+  color: #42f54e;
+}
+.text-red {
+  color: #ff171f;
+}
+.text-yellow {
+  color: #f5ea20;
+}
