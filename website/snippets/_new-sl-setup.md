@@ -121,7 +121,7 @@ To re-enable the dbt Semantic Layer setup in the future, you will need to recrea
 - Click **Save** to link the service token to the credential.
 - Remember to copy and save the service token securely, as it won't be viewable again after generation.
 
-<Lightbox src="/img/docs/dbt-cloud/semantic-layer/sl-add-service-token.gif" title="Map additional servicetokens to a credential." />
+<Lightbox src="/img/docs/dbt-cloud/semantic-layer/sl-add-service-token.gif" title="Map additional service tokens to a credential." />
 
 ### Unlink service tokens
 - Unlink a service token from the credential by clicking **Unlink** under the **Linked service tokens** section. If you try to query the Semantic Layer with an unlinked credential, you'll experience an error in your BI tool because no valid token is mapped.
