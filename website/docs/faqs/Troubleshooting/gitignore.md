@@ -33,6 +33,6 @@ dbt_modules/
 9.  Merge the PR on your git provider page.
 10. Switch to your main branch and click on **Pull from remote** to pull in all the changes you made to your main branch. You can verify the changes by making sure the files/folders in the .gitignore file are in italics. 
 
-<Lightbox src="/img/docs/dbt-cloud/cloud-ide/gitignore-italics.png" width="50%" title="A dbt project on the main branch that has properly configured gitignore folders (highlighted in italics)."/>
+<Lightbox src="/img/docs/dbt-cloud/cloud-ide/gitignore-italics.jpg" width="50%" title="A dbt project on the main branch that has properly configured gitignore folders (highlighted in italics)."/>
 
 For more info, refer to this [detailed video](https://www.loom.com/share/9b3b8e2b617f41a8bad76ec7e42dd014) for additional guidance. 
