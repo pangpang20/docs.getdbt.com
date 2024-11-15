@@ -21,9 +21,9 @@ dbt Labs plans to provide additional Advanced CI features in the near future. Mo
 :::
 
 ## Prerequisites
-- You have a dbt Cloud Enterprise account
-- You have Advance CI features](/docs/cloud/account-settings#account-access-to-advanced-ci-features) enabled 
-- You use a supported data platform: BigQuery, Databricks, Postgres, or Snowflake
+- You have a dbt Cloud Enterprise account.
+- You have [Advance CI features](/docs/cloud/account-settings#account-access-to-advanced-features) enabled.
+- You use a supported data platform: BigQuery, Databricks, Postgres, or Snowflake. Support for additional data platforms coming soon.
 
 ## Compare changes feature {#compare-changes}
 
