@@ -16,6 +16,8 @@ datatype: string | [string]
 
 <File name='dbt_project.yml'>
 
+<VersionBlock lastVersion="1.8">
+
 ```yml
 
 models:
@@ -30,11 +32,32 @@ seeds:
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
-[exports](/docs/build/saved-queries#configure-exports):
+```
+</VersionBlock>
+
+<VersionBlock firstVersion="1.9">
+
+```yml
+
+models:
+  [<resource-path>](/reference/resource-configs/resource-path):
+    +tags: <string> | [<string>]
+
+snapshots:
+  [<resource-path>](/reference/resource-configs/resource-path):
+    +tags: <string> | [<string>]
+
+seeds:
+  [<resource-path>](/reference/resource-configs/resource-path):
+    +tags: <string> | [<string>]
+
+exports:
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
 ```
+</VersionBlock>
+
 
 </File>
 </TabItem>
@@ -170,6 +193,14 @@ seeds:
 
 ### Apply tags to exports
 
+<VersionBlock lastVersion="1.8">
+
+Applying tags to exports is only available in dbt Core versions 1.9 and later.
+
+</VersionBlock>
+
+<VersionBlock firstVersion="1.9">
+
 This following example shows how to apply tags to an export in the `dbt_project.yml` file. The export is then tagged with `order_metrics`.
 
 <File name='dbt_project.yml'>
@@ -203,11 +234,12 @@ saved_queries:
 ```
 
 </File>
+</VersionBlock>
 
 ## Usage notes
 
 ### Tags are additive
-Tags accumulate hierarchically. The above example would result in:
+Tags accumulate hierarchically. The [earlier example](/reference/resource-configs/tags#use-tags-to-run-parts-of-your-project) would result in:
 
 | Model                            | Tags                                  |
 | -------------------------------- | ------------------------------------- |
@@ -218,7 +250,7 @@ Tags accumulate hierarchically. The above example would result in:
 
 ### Other resource types
 
-Tags can also be applied to [sources](/docs/build/sources), [exposures](/docs/build/exposures), [exports](/docs/use-dbt-semantic-layer/exports), and even _specific columns_ in a resource.
+Tags can also be applied to [sources](/docs/build/sources), [exposures](/docs/build/exposures), and even _specific columns_ in a resource.
 These resources do not yet support the `config` property, so you'll need to specify
 the tags as a top-level key instead.
 
@@ -246,14 +278,10 @@ sources:
             tests:
               - unique:
                   tags: ['test_level']
-
-exports:
-  - name: export_name
-    tags: ['export_tag']
-    ...
 ```
 
 </File>
+
 
 In the example above, the `unique` test would be selected by any of these four tags:
 ```bash
