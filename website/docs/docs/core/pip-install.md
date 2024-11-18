@@ -162,7 +162,7 @@ To install prerelease versions of dbt Core and your adapter, use this command:
 ```shell
 python3 -m pip install --pre dbt-core dbt-adapter-name
 ````
-We recommend you install prereleases in a [virtual Python environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/). You can run the commands to activate and install your virtual environment. You’ll need to activate your virtual environment before you start installing or using packages in your virtual environment. For example, to install a prerelease in a `POSIX bash`/`zsh` virtual Python environment, use the following command:
+We recommend you install prereleases in a [virtual Python environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/). You can run the commands to activate and install your virtual environment. You’ll need to activate your virtual environment before you start installing or using packages within it. For example, to install a prerelease in a `POSIX bash`/`zsh` virtual Python environment, use the following command:
 
 ```shell
 dbt --version
@@ -173,11 +173,10 @@ python3 -m pip install --pre dbt-core dbt-adaptername
 source venv/bin/activate
 dbt --version
 ```
-For additional details on how to create a virtual Python environment, refer to ADD LINK TO YOUR NEW VIRTUAL ENV PAGE.
 
 #### Install prereleases on different operating systems 
 
-To binstall or use packages within your virtual environment:
+To install or use packages within your virtual environment:
 
 - Activate the virtual environment to add its specific Python and `pip` executables to your shell’s PATH. This ensures you use the environment’s isolated setup. You can run the following commands to activate your virtual environment.
 
@@ -220,14 +219,3 @@ pip 23.3.1 from .venv\lib\site-packages (Python 3.9.4)
 
 If you’re using a different operating system, refer to [Git issue on Instructions to create a python virtual environment](https://github.com/dbt-labs/docs.getdbt.com/discussions/2143) for more information.
 
-<VersionBlock lastVersion="1.7">
-
-For dbt v1.7 or earlier, you can install prereleases using this command:
-
-```shell
-python -m pip uninstall -y dbt-adapters
-python -m pip install --upgrade dbt-core dbt-common dbt-adapters
-dbt --version
-```
-
-</VersionBlock>
