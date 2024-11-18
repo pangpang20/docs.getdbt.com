@@ -155,6 +155,8 @@ python -m pip install \
 
 Or, better yet, just install the package(s) you need!
 
+<VersionBlock firstVersion="1.8">
+
 ### Install prereleases of dbt adapters
 
 To install prerelease versions of dbt Core and your adapter, use this command:
@@ -219,3 +221,4 @@ pip 23.3.1 from .venv\lib\site-packages (Python 3.9.4)
 
 If you’re using a different operating system, refer to [Git issue on Instructions to create a python virtual environment](https://github.com/dbt-labs/docs.getdbt.com/discussions/2143) for more information.
 
+</VersionBlock>
