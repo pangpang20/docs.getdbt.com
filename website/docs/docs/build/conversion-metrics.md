@@ -31,13 +31,13 @@ Note that we use the double colon (::) to indicate whether a parameter is nested
 | `entity` | The entity for each conversion event. | Required |
 | `calculation` | Method of calculation. Either `conversion_rate` or `conversions`. Defaults to `conversion_rate`.  | Optional |
 | `base_measure` | A list of base measure inputs | Required |
-| `base_measure:name` | The base conversion event measure. |  Required |
-| `base_measure:fill_nulls_with` | Set the value in your metric definition instead of null (such as zero). | Optional |
-| `base_measure:join_to_timespine` | Boolean that indicates if the aggregated measure should be joined to the time spine table to fill in missing dates. Default `false`. | Optional |
+| `base_measure::name` | The base conversion event measure. |  Required |
+| `base_measure::fill_nulls_with` | Set the value in your metric definition instead of null (such as zero). | Optional |
+| `base_measure::join_to_timespine` | Boolean that indicates if the aggregated measure should be joined to the time spine table to fill in missing dates. Default `false`. | Optional |
 | `conversion_measure` | A list of conversion measure inputs. | Required |
-| `conversion_measure:name` | The base conversion event measure.| Required |
-| `conversion_measure:fill_nulls_with` | Set the value in your metric definition instead of null (such as zero). | Optional |
-| `conversion_measure:join_to_timespine` | Boolean that indicates if the aggregated measure should be joined to the time spine table to fill in missing dates. Default `false`. | Optional |
+| `conversion_measure::name` | The base conversion event measure.| Required |
+| `conversion_measure::fill_nulls_with` | Set the value in your metric definition instead of null (such as zero). | Optional |
+| `conversion_measure::join_to_timespine` | Boolean that indicates if the aggregated measure should be joined to the time spine table to fill in missing dates. Default `false`. | Optional |
 | `window` | The time window for the conversion event, such as 7 days, 1 week, 3 months. Defaults to infinity. | Optional |
 | `constant_properties` | List of constant properties.  | Optional |
 | `base_property` | The property from the base semantic model that you want to hold constant.  |  Optional |
