@@ -19,12 +19,7 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
 \* The official release date for this new format of release notes is May 15th, 2024. Historical release notes for prior dates may not reflect all available features released earlier this year or their tenancy availability.
 
 ## November 2024
-- **Fix**: This update improves [dbt Semantic Layer Tableau integration](/docs/cloud-integrations/semantic-layer/tableau) making query parsing more reliable. Some key fixes include:
-  - Error messages for unsupported joins between saved queries and ALL tables.
-  - Improved handling of queries when multiple tables are selected in a data source.
-  - Fixed a bug when an IN filter contained a lot of values.
-  - Better error messaging for queries that can't be parsed correctly.
-- **New**: Exports now support [tags](/reference/resource-configs/tags) in dbt Cloud. Tags allow you to categorize your resources and filter them in dbt Cloud. You can add tags to your [exports](/docs/build/saved-queries#configure-exports) in the `semantic_model.yml` file or `dbt_project.yml` file. For example:
+- **New**: Exports now support [tags](/reference/resource-configs/tags) in dbt. Tags allow you to categorize your resources and filter them. You can add tags to your [exports](/docs/build/saved-queries#configure-exports) in the `semantic_model.yml` file or `dbt_project.yml` file. For example:
 
   ```yml
   exports:
@@ -32,6 +27,12 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
       tags: ['export_tag']
       ...
   ```
+- **Fix**: This update improves [dbt Semantic Layer Tableau integration](/docs/cloud-integrations/semantic-layer/tableau) making query parsing more reliable. Some key fixes include:
+  - Error messages for unsupported joins between saved queries and ALL tables.
+  - Improved handling of queries when multiple tables are selected in a data source.
+  - Fixed a bug when an IN filter contained a lot of values.
+  - Better error messaging for queries that can't be parsed correctly.
+
 
 ## October 2024
 <Expandable alt_header="Coalesce 2024 announcements">
