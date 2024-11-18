@@ -10,10 +10,6 @@ Measures are aggregations performed on columns in your model. They can be used a
 
 Measures have several inputs, which are described in the following table along with their field types.
 
-:::tip
-Note that we use the double colon (::) to indicate whether a parameter is nested within another parameter. So for example,` config::config_name` means the `config_name` parameter is nested under `config`.
-:::
-
 import MeasuresParameters from '/snippets/_sl-measures-parameters.md';
 
 <MeasuresParameters />

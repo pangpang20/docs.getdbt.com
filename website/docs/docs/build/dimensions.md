@@ -14,10 +14,6 @@ Groups are defined within semantic models, alongside entities and measures, and 
 
 All dimensions require a `name`, `type`, and can optionally include an `expr` parameter. The `name` for your Dimension must be unique within the same semantic model.
 
-:::tip
-Note that we use the double colon (::) to indicate whether a parameter is nested within another parameter. So for example,` config::config_name` means the `config_name` parameter is nested under `config`.
-:::
-
 <VersionBlock lastVersion="1.8">
 
 | Parameter | Description | Type |
@@ -28,7 +24,7 @@ Note that we use the double colon (::) to indicate whether a parameter is nested
 | `description` | A clear description of the dimension | Optional |
 | `expr` | Defines the underlying column or SQL query for a dimension. If no `expr` is specified, MetricFlow will use the column with the same name as the group. You can use the column name itself to input a SQL expression. | Optional |
 | `label` | A recommended string that defines the display value in downstream tools. Accepts plain text, spaces, and quotes (such as `orders_total` or `"orders_total"`).  | Optional |
-| `config`  | Use the [`config`](/reference/resource-properties/config) property to specify configurations for your metric. Supports [`meta`](/reference/resource-configs/meta), [`group`](/reference/resource-configs/group), and [`enabled`](/reference/resource-configs/enabled) configs. | Optional |
+| `config`  | Use the [`config`](/reference/resource-properties/config) property to specify configurations for your metric. Supports the [`meta`](/reference/resource-configs/meta) property, nested under `config`. | Optional |
 
 </VersionBlock>
 
@@ -42,8 +38,7 @@ Note that we use the double colon (::) to indicate whether a parameter is nested
 | `description` | A clear description of the dimension | Optional |
 | `expr` | Defines the underlying column or SQL query for a dimension. If no `expr` is specified, MetricFlow will use the column with the same name as the group. You can use the column name itself to input a SQL expression. | Optional |
 | `label` | A recommended string that defines the display value in downstream tools. Accepts plain text, spaces, and quotes (such as `orders_total` or `"orders_total"`).  | Optional |
-| `config`  | Use the [`config`](/reference/resource-properties/config) property to specify configurations for your metric. Supports [`meta`](/reference/resource-configs/meta), [`group`](/reference/resource-configs/group), and [`enabled`](/reference/resource-configs/enabled) configs. | Optional |
-| `config::meta` | Use [`meta`](/reference/resource-configs/meta), nested under `config`, to set metadata for a resource and organize resources. Accepts plain text, spaces, and quotes (such as `orders_total` or `"orders_total"`). | Optional |
+| `config`  | Use the [`config`](/reference/resource-properties/config) property to specify configurations for your metric. Supports the [`meta`](/reference/resource-configs/meta) configs. | Optional |
 
 </VersionBlock>
 
