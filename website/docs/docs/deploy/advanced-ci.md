@@ -20,6 +20,11 @@ dbt Labs plans to provide additional Advanced CI features in the near future. Mo
 
 :::
 
+## Prerequisites
+- You have a dbt Cloud Enterprise account.
+- You have [Advance CI features](/docs/cloud/account-settings#account-access-to-advanced-features) enabled.
+- You use a supported data platform: BigQuery, Databricks, Postgres, or Snowflake. Support for additional data platforms coming soon.
+
 ## Compare changes feature {#compare-changes}
 
 For [CI jobs](/docs/deploy/ci-jobs) that have the **dbt compare** option enabled, dbt Cloud compares the changes between the last applied state of the production environment (defaulting to deferral for lower compute costs) and the latest changes from the pull request, whenever a pull request is opened or new commits are pushed.  
