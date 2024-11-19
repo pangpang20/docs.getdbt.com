@@ -184,7 +184,6 @@ To install or use packages within your virtual environment:
 
    Select your operating system and run the following commands to activate it:
 
-- Select your operating system to activate your virtual environment.
 
 <Expandable alt_header="Unix/macOS" >
 
