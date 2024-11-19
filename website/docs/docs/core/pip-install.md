@@ -171,7 +171,7 @@ dbt --version
 python3 -m venv venv
 source venv/bin/activate
 python3 -m pip install --upgrade pip
-python3 -m pip install --pre dbt-core dbt-adaptername
+python3 -m pip install --pre dbt-core dbt-adapter-name
 source venv/bin/activate
 dbt --version
 ```
