@@ -180,7 +180,9 @@ dbt --version
 
 To install or use packages within your virtual environment:
 
-- Activate the virtual environment to add its specific Python and `pip` executables to your shell’s PATH. This ensures you use the environment’s isolated setup. You can run the following commands to activate your virtual environment.
+- Activate the virtual environment to add its specific Python and `pip` executables to your shell’s PATH. This ensures you use the environment’s isolated setup. 
+
+   Select your operating system and run the following commands to activate it:
 
 - Select your operating system to activate your virtual environment.
 
