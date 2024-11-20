@@ -2,21 +2,29 @@
 title: "Expectations for OSS contributors"
 ---
 
-Whether it's a dbt package, a plugin, `dbt-core`, or this very documentation site, contributing to the open source code that supports the dbt ecosystem is a great way to level yourself up as a developer, and to give back to the community. The goal of this page is to help you understand what to expect when contributing to dbt open source software (OSS). While we can only speak for our own experience as open source maintainers, many of these guidelines apply when contributing to other open source projects, too.
+Whether it's `dbt-core`, adapters, packages, or this very documentation site, contributing to the open source code that supports the dbt ecosystem is a great way to share your knowledge, level yourself up as a developer, and to give back to the community. The goal of this page is to help you understand what to expect when contributing to dbt open source software (OSS).
 
-Have you seen things in other OSS projects that you quite like, and think we could learn from? [Open a discussion on the dbt Community Forum](https://discourse.getdbt.com), or start a conversation in the dbt Community Slack (for example: `#community-strategy`, `#dbt-core-development`, `#package-ecosystem`, `#adapter-ecosystem`). We always appreciate hearing from you!
+Have you seen things in other OSS projects that you quite like, and think we could learn from? [Open a discussion on the dbt Community Forum](https://discourse.getdbt.com), or start a conversation in the [dbt Community Slack](https://www.getdbt.com/community/join-the-community) (for example: `#community-strategy`, `#dbt-core-development`, `#package-ecosystem`, `#adapter-ecosystem`). We always appreciate hearing from you!
 
 ## Principles
 
 ### Open source is participatory
 
-Why take time out of your day to write code you don’t _have_ to? We all build dbt together. By using dbt, you’re invested in the future of the tool, and an agent in pushing forward the practice of analytics engineering. You’ve already benefited from using code contributed by community members, and documentation written by community members. Contributing to dbt OSS is your way to pay it forward, as an active participant in the thing we’re all creating together.
+We all build dbt together -- whether you write code or contribute your ideas. By using dbt, you’re invested in the future of the tool, and have an active role in pushing forward the standard of analytics engineering. You already benefit from using code and documentation contributed by community members. Contributing to the dbt community is your way to be an active participant in the thing we’re all creating together.
 
 There’s a very practical reason, too: OSS prioritizes our collective knowledge and experience over any one person’s. We don’t have experience using every database, operating system, security environment, ... We rely on the community of OSS users to hone our product capabilities and documentation to the wide variety of contexts in which it operates. In this way, dbt gets to be the handiwork of thousands, rather than a few dozen.
 
-### We take seriously our role as maintainers
+### We take seriously our role as maintainers of a standard
 
-In that capacity, we cannot and will not fix every bug ourselves, or code up every feature worth doing. Instead, we’ll do our best to respond to new issues with context (including links to related issues), feedback, alternatives/workarounds, and (whenever possible) pointers to code that would aid a community contributor. If a change is so tricky or involved that the initiative rests solely with us, we’ll do our best to explain the complexity, and when / why we could foresee prioritizing it. Our role also includes maintenance of the backlog of issues, such as closing duplicates, proposals we don’t intend to support, or stale issues (no activity for 180 days).
+We believe dbt as a framework should be flexible enough to ["make the easy things easy, and the hard things possible"](https://en.wikipedia.org/wiki/Perl#Philosophy). To that end, we _don't_ believe it's appropriate for dbt to have an out-of-the-box solution for every niche problem. We view it as our responsibility as maintainers to decide when something should be "possible" -- via macros, packages, etc. -- and when something should be "easy" -- built into the dbt Core standard.
+
+dbt must be reliable and consistent. 
+
+In that capacity, 
+
+we cannot and will not fix every bug ourselves, or code up every feature worth doing. 
+
+Instead, we’ll do our best to respond to new issues with context (including links to related issues), feedback, alternatives/workarounds, and (whenever possible) pointers to code that would aid a community contributor. If a change is so tricky or involved that the initiative rests solely with us, we’ll do our best to explain the complexity, and when / why we could foresee prioritizing it. Our role also includes maintenance of the backlog of issues, such as closing duplicates, proposals we don’t intend to support, or stale issues (no activity for 180 days).
 
 ### Initiative is everything
 
@@ -36,8 +44,6 @@ Sometimes, this can feel like shouting into the void, especially if you aren’t
 As dbt OSS is growing in popularity, and dbt Labs has been growing in size, we’re working to involve new people in the responsibilities of OSS maintenance. We really appreciate your patience as our newest maintainers are learning and developing habits.
 
 ## Discussions
-
-Discussions are a relatively new GitHub feature, and we really like them!
 
 A discussion is best suited to propose a Big Idea, such as brand-new capability in dbt Core, or a new section of the product docs. Anyone can open a discussion, add a comment to an existing one, or reply in a thread.
 
