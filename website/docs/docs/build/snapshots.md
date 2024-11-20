@@ -54,6 +54,7 @@ Configure your snapshots in YAML files to tell dbt how to detect record changes.
 snapshots:
   - name: string
     relation: relation # source('my_source', 'my_table') or ref('my_model')
+    [description](/reference/resource-properties/description):  markdown_string
     config:
       [database](/reference/resource-configs/database): string
       [schema](/reference/resource-configs/schema): string
