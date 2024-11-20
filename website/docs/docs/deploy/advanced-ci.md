@@ -3,6 +3,7 @@ title: "Advanced CI"
 id: "advanced-ci"
 sidebar_label: "Advanced CI"
 description: "Advanced CI enables developers to compare changes by demonstrating the changes the code produces."
+image: /img/docs/dbt-cloud/example-ci-compare-changes-tab.png
 ---
 
 # Advanced CI <Lifecycle status="enterprise"/>
@@ -20,9 +21,14 @@ dbt Labs plans to provide additional Advanced CI features in the near future. Mo
 
 :::
 
+## Prerequisites
+- You have a dbt Cloud Enterprise account.
+- You have [Advance CI features](/docs/cloud/account-settings#account-access-to-advanced-features) enabled.
+- You use a supported data platform: BigQuery, Databricks, Postgres, or Snowflake. Support for additional data platforms coming soon.
+
 ## Compare changes feature {#compare-changes}
 
-For [CI jobs](/docs/deploy/ci-jobs) that have the **Run compare changes** option enabled, dbt Cloud compares the changes between the last applied state of the production environment (defaulting to deferral for lower compute costs) and the latest changes from the pull request, whenever a pull request is opened or new commits are pushed.  
+For [CI jobs](/docs/deploy/ci-jobs) that have the [**dbt compare** option enabled](/docs/deploy/ci-jobs#set-up-ci-jobs), dbt Cloud compares the changes between the last applied state of the production environment (defaulting to deferral for lower compute costs) and the latest changes from the pull request, whenever a pull request is opened or new commits are pushed.  
 
 dbt reports the comparison differences in:
 
@@ -31,9 +37,19 @@ dbt reports the comparison differences in:
 
 <Lightbox src="/img/docs/dbt-cloud/example-ci-compare-changes-tab.png" width="85%" title="Example of the Compare tab" />
 
+### Optimizing comparisons
+
+When an [`event_time`](/reference/resource-configs/event-time) column is specified on your model, compare changes can optimize comparisons by using only the overlapping timeframe (meaning the timeframe exists in both the CI and production environment), helping you avoid incorrect row-count changes and return results faster.
+
+This is useful in scenarios like:
+- **Subset of data in CI** &mdash; When CI builds only a [subset of data](/best-practices/best-practice-workflows#limit-the-data-processed-when-in-development) (like the most recent 7 days), compare changes would interpret the excluded data as "deleted rows." Configuring `event_time` allows you to avoid this issue by limiting comparisons to the overlapping timeframe, preventing false alerts about data deletions that are just filtered out in CI.
+- **Fresher data in CI than in production** &mdash; When your CI job includes fresher data than production (because it has run more recently), compare changes would flag the additional rows as "new" data, even though they’re just fresher data in CI. With `event_time` configured, the comparison only includes the shared timeframe and correctly reflects actual changes in the data.
+
+<Lightbox src="/img/docs/deploy/apples_to_apples.png" width="90%" title="event_time ensures the same time-slice of data is accurately compared between your CI and production environments." />
+
 ## About the cached data
 
-When [comparing changes](#compare-changes), dbt Cloud stores a cache of no more than 100 records for each modified model. By caching this data, you can view the examples of changed data without rerunning the comparison against the data warehouse every time (optimizing for lower compute costs). To display the changes, dbt Cloud uses a cached version of a sample of the data records. These data records are queried from the database using the connection configuration (such as user, role, service account, and so on) that's set in the CI job's environment. 
+After [comparing changes](#compare-changes), dbt Cloud stores a cache of no more than 100 records for each modified model for preview purposes. By caching this data, you can view the examples of changed data without rerunning the comparison against the data warehouse every time (optimizing for lower compute costs). To display the changes, dbt Cloud uses a cached version of a sample of the data records. These data records are queried from the database using the connection configuration (such as user, role, service account, and so on) that's set in the CI job's environment. 
 
 You control what data to use. This may include synthetic data if pre-production or development data is heavily regulated or sensitive. 
 
