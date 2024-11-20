@@ -45,7 +45,7 @@ import Lifecycle from '@site/src/components/lifeCycle';
 import DetailsToggle from '@site/src/components/detailsToggle';
 import Expandable from '@site/src/components/expandable';
 import ConfettiTrigger from '@site/src/components/confetti/';
-import ColoredText from '@site/src/components/ColoredText';
+import TextColor from '@site/src/components/TextColor';
 
 const MDXComponents = {
   Head,
