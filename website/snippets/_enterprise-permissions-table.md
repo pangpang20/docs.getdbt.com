@@ -48,7 +48,7 @@ Key:
 | Environment credentials |       W       |      -        |       W         |       -        |   R    |
 | Custom env. variables   |       W       |      -        |       W         |       -        |   R    |
 | Data platform configurations|   W       |      -        |       W         |       -        |   R    |
-| Develop (IDE or CLI)       | W       |      -        |       W         |       -        |   -    |
+| Develop (IDE or CLI)    |       W       |      -        |       W         |       -        |   -    |
 | Environments            |       W       |      -        |       W         |       -        |   R    |
 | Jobs                    |       W       |      -        |       W         |       -        |   R    |
 | Metadata GraphQL API access |   R       |      -        |       R         |       -        |   R    |
@@ -65,10 +65,12 @@ Key:
  
 The project roles enable you to work within the projects in various capacities. They primarily provide access to project-level permissions such as repos and the IDE or dbt Cloud CLI, but may also provide some account-level permissions.
 
+<span class="text-green">Test</span>
+
 Key:
 
-* (W)rite &mdash; Create new or modify existing. Includes `send`, `create`, `delete`, `allocate`, `modify`, and `develop`.
-* (R)ead &mdash; Can view but can not create or change any fields.
+* (<span class="text-green">**W**</span>)rite &mdash; Create new or modify existing. Includes `send`, `create`, `delete`, `allocate`, `modify`, and `develop`.
+* (<span class="text-red">**R**</span>)ead &mdash; Can view but can not create or change any fields.
 
 #### Account permissions for project roles
  
