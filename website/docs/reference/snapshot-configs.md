@@ -13,11 +13,6 @@ import ConfigGeneral from '/snippets/_config-description-general.md';
 * [Snapshots](/docs/build/snapshots)
 * The `dbt snapshot` [command](/reference/commands/snapshot)
 
-<!--
-Parts of a snapshot:
-- name
-- query
--->
 
 ## Available configurations
 ### Snapshot-specific configurations
@@ -125,7 +120,7 @@ snapshots:
 
 <VersionBlock firstVersion="1.9">
 
-Configurations can be applied to snapshots using the [YAML syntax](/docs/build/snapshots), available in Versionless and dbt v1.9 and higher, in the `snapshot` directory file.
+Configurations can be applied to snapshots using the [YAML syntax](/docs/build/snapshots#configuring-snapshots), available in Versionless and dbt v1.9 and higher, in the `snapshot` directory file.
 
 </VersionBlock>
 
@@ -155,6 +150,17 @@ Configurations can be applied to snapshots using the [YAML syntax](/docs/build/s
 
 <ConfigGeneral />
 
+:::tip
+
+Configuring snapshots in YAML is recommended for new snapshot configurations. If you have existing snapshots using the `.sql` config, they'll continue to work as expected. When you're ready to migrate to YAML, we recommend:
+1. Creating a backup copy of your snapshots (or using version control)
+2. Converting the configurations one at a time, testing as you go
+3. Using `alter` statements as needed to ensure table consistency or using a script to apply the `alter` statements
+
+The YAML configuration offers improved maintainability and consistency, but there's no pressure to migrate existing snapshots immediately &mdash; feel free to do so at your own pace while ensuring data quality is maintained.
+:::
+
+
 <Tabs
   groupId="config-languages"
   defaultValue="project-yaml"
@@ -169,6 +175,7 @@ Configurations can be applied to snapshots using the [YAML syntax](/docs/build/s
 <File name='dbt_project.yml'>
 
 <VersionBlock firstVersion="1.9">
+
 
 ```yaml
 snapshots:
@@ -256,7 +263,7 @@ snapshots:
 
 <VersionBlock firstVersion="1.9">
 
-Configurations can be applied to snapshots using [YAML syntax](/docs/build/snapshots), available in Versionless and dbt v1.9 and higher, in the `snapshot` directory file.
+Configurations can be applied to snapshots using [YAML syntax](/docs/build/snapshots#configuring-snapshots), available in Versionless and dbt v1.9 and higher, in the `snapshot` directory file.
 
 </VersionBlock>
 
