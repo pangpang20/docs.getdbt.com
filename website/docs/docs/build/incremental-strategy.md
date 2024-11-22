@@ -241,6 +241,12 @@ select * from {{ ref("some_model") }}
 
 ### Custom strategies
 
+:::note limited support
+
+Custom strategies are not currently suppored on the BigQuery and Spark adapters.
+
+:::
+
 Starting from dbt version 1.2 and onwards, users have an easier alternative to [creating an entirely new materialization](/guides/create-new-materializations). They define and use their own "custom" incremental strategies by:
 
 1. Defining a macro named `get_incremental_STRATEGY_sql`. Note that `STRATEGY` is a placeholder and you should replace it with the name of your custom incremental strategy.
