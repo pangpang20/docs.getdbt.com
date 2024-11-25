@@ -7,6 +7,7 @@ meta:
 
 import ConfigResource from '/snippets/_config-description-resource.md';
 import ConfigGeneral from '/snippets/_config-description-general.md';
+import SnapshotsYamlConfig from '/snippets/_snapshots-yaml-config.md';
 
 
 ## Related documentation
@@ -120,7 +121,8 @@ snapshots:
 
 <VersionBlock firstVersion="1.9">
 
-Configurations can be applied to snapshots using the [YAML syntax](/docs/build/snapshots#configuring-snapshots), available in Versionless and dbt v1.9 and higher, in the `snapshot` directory file.
+<SnapshotsYamlConfig />
+
 
 </VersionBlock>
 
@@ -263,7 +265,7 @@ snapshots:
 
 <VersionBlock firstVersion="1.9">
 
-Configurations can be applied to snapshots using [YAML syntax](/docs/build/snapshots#configuring-snapshots), available in Versionless and dbt v1.9 and higher, in the `snapshot` directory file.
+<SnapshotsYamlConfig />
 
 </VersionBlock>
 
