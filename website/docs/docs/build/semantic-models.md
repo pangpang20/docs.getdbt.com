@@ -29,7 +29,7 @@ Here we describe the Semantic model components with examples:
 | Component    | Description      | Required     |  Type     | 
 | ------------ | ---------------- | -------- | -------- | 
 | [Name](#name)     | Choose a unique name for the semantic model. Avoid using double underscores (\_\_) in the name as they're not supported.   | Required | String |
-| [Description](#description)    | 	Includes important details in the description   | Optional | String |
+| [Description](#description)    | 	Includes important details in the description.   | Optional | String |
 | [Model](#model)     | Specifies the dbt model for the semantic model using the `ref` function    | Required | String |
 | [Defaults](#defaults)      | The defaults for the model, currently only `agg_time_dimension` is supported.    | Required |  Dict |
 | [Entities](#entities)         | Uses the columns from entities as join keys and indicate their type as primary, foreign, or unique keys with the `type` parameter  | Required | List | 
