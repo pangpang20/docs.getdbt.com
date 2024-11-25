@@ -19,7 +19,7 @@ In MetricFlow, derived metrics are metrics created by defining an expression usi
 | `type_params` | The type parameters of the metric. | Required | Dict |  
 | `expr` | The derived expression. You see validation warnings when the derived metric is missing an `expr` or  the `expr` does not use all the input metrics. | Required | String |
 | `metrics` |  The list of metrics used in the derived metrics. Each entry can include optional fields like `alias`, `filter`, or `offset_window`. | Required  | List |  
-| `alias` | Optional alias for the metric that you can use in the expr. | Optional | String |
+| `alias` | Optional alias for the metric that you can use in the `expr`. | Optional | String |
 | `filter` | Optional filter to apply to the metric. | Optional | String |  
 | `offset_window` | Set the period for the offset window, such as 1 month. This will return the value of the metric one month from the metric time.  | Optional | String |
 
