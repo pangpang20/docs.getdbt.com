@@ -36,7 +36,7 @@ Here we describe the Semantic model components with examples:
 | [Primary Entity](#primary-entity) | If a primary entity exists, this component is Optional. If the semantic model has no primary entity, then this property is required.    | Optional | String | 
 | [Dimensions](#dimensions)     | Different ways to group or slice data for a metric, they can be `time` or `categorical`  | Required | List |
 | [Measures](#measures)     | Aggregations applied to columns in your data model. They can be the final metric or used as building blocks for more complex metrics  | Optional | List |
-| [Label](#label)     | The display name for your semantic model `node`, `dimension`, `entity`, and/or `measures`   | Optional | String |
+| [Label](#label)     | The display name for your semantic model `node`, `dimension`, `entity`, and/or `measures`.   | Optional | String |
 | `config`   | Use the [`config`](/reference/resource-properties/config) property to specify configurations for your metric. Supports [`meta`](/reference/resource-configs/meta), [`group`](/reference/resource-configs/group), and [`enabled`](/reference/resource-configs/enabled) configs. | Optional | Dict |
 
 ## Semantic models components
