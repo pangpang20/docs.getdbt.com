@@ -30,7 +30,7 @@ Note that we use the double colon (::) to indicate whether a parameter is nested
 | `conversion_type_params` | Additional configuration specific to conversion metrics. | Required | Dict |
 | `entity` | The entity for each conversion event. | Required | String |  
 | `calculation` | Method of calculation. Either `conversion_rate` or `conversions`. Defaults to `conversion_rate`.  | Optional | String |
-| `base_measure` | A list of base measure inputs | Required | Dict |
+| `base_measure` | A list of base measure inputs. | Required | Dict |
 | `base_measure:name` | The base conversion event measure. |  Required | String |
 | `base_measure:fill_nulls_with` | Set the value in your metric definition instead of null (such as zero). | Optional | String |
 | `base_measure:join_to_timespine` | Boolean that indicates if the aggregated measure should be joined to the time spine table to fill in missing dates. Default `false`. | Optional | Boolean |
