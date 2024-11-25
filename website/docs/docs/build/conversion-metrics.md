@@ -24,7 +24,7 @@ Note that we use the double colon (::) to indicate whether a parameter is nested
 | --- | --- | --- | --- |
 | `name` | The name of the metric. |  Required | String |
 | `description` | The description of the metric. | Optional | String |
-| `type` | The type of metric (such as derived, ratio, and so on.). In this case, set as 'conversion' | Required | String |
+| `type` | The type of metric (such as derived, ratio, and so on.). In this case, set as 'conversion'. | Required | String |
 | `label` | Required string that defines the display value in downstream tools. Accepts plain text, spaces, and quotes (such as `orders_total` or `"orders_total"`). | Required | String |
 | `type_params` | Specific configurations for each metric type. |  Required | Dict |
 | `conversion_type_params` | Additional configuration specific to conversion metrics. | Required | Dict |
