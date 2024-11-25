@@ -18,7 +18,7 @@ All dimensions require a `name`, `type`, and can optionally include an `expr` pa
 | --------- | ----------- | ---- | ---- |
 | `name` |  Refers to the name of the group that will be visible to the user in downstream tools. It can also serve as an alias if the column name or SQL query reference is different and provided in the `expr` parameter. <br /><br /> Dimension names should be unique within a semantic model, but they can be non-unique across different models as MetricFlow uses [joins](/docs/build/join-logic) to identify the right dimension. | Required | String |
 | `type` | Specifies the type of group created in the semantic model. There are two types:<br /><br />- **Categorical**: Describe attributes or features like geography or sales region. <br />- **Time**: Time-based dimensions like timestamps or dates. | Required | String |  
-| `type_params` | Specific type params such as if the time is primary or used as a partition | Required | Dict |
+| `type_params` | Specific type params such as if the time is primary or used as a partition. | Required | Dict |
 | `description` | A clear description of the dimension | Optional | String |  
 | `expr` | Defines the underlying column or SQL query for a dimension. If no `expr` is specified, MetricFlow will use the column with the same name as the group. You can use the column name itself to input a SQL expression. | Optional | String |
 | `label` | Defines the display value in downstream tools. Accepts plain text, spaces, and quotes (such as `orders_total` or `"orders_total"`).  | Optional | String |
