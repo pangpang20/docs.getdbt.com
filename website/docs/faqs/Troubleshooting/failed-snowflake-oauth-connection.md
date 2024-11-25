@@ -20,3 +20,18 @@ ALTER INTEGRATION <my_int_name> SET EXTERNAL_OAUTH_SCOPE_MAPPING_ATTRIBUTE = 'sc
 ```
 
 You can read more about this error in [Snowflake's documentation](https://community.snowflake.com/s/article/external-custom-oauth-error-the-role-requested-in-the-connection-is-not-listed-in-the-access-token).
+
+----
+
+1. If you see this error:
+
+   ```shell
+   
+   Failed to connect to DB: xxxxxxx.snowflakecomputing.com:443. Incorrect username or password was specified.
+   
+   ```
+
+2. Double check that:
+
+* There is not more than a single Snowflake user that shares the same email identifier. For example - there exist a human user that authenticates to Snowflake with the email `alice@acme.com` but at the same time there also exist a separate service account user that also authenticates with `alice@acme.com`.
+* The email address of your user in Snowflake is identical to the email address you use to authenticate in your IdP. For example - if your Snowflake users email address is `alice@acme.com` but you authenticate in Entra/Okta with `alice_adm@acme.com` - then those email addresses are not the same and you may see this error.
