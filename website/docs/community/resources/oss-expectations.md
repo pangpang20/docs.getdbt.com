@@ -16,15 +16,9 @@ There’s a very practical reason, too: OSS prioritizes our collective knowledge
 
 ### We take seriously our role as maintainers of a standard
 
-We believe dbt as a framework should be flexible enough to ["make the easy things easy, and the hard things possible"](https://en.wikipedia.org/wiki/Perl#Philosophy). To that end, we _don't_ believe it's appropriate for dbt to have an out-of-the-box solution for every niche problem. We view it as our responsibility as maintainers to decide when something should be "possible" -- via macros, packages, etc. -- and when something should be "easy" -- built into the dbt Core standard.
+As a standard, dbt must be reliable and consistent. We believe dbt as a framework should be flexible enough to ["make the easy things easy, and the hard things possible"](https://en.wikipedia.org/wiki/Perl#Philosophy). To that end, we _don't_ believe it's appropriate for dbt to have an out-of-the-box solution for every niche problem. We view it as our responsibility as maintainers to decide when something should be "possible" -- via macros, packages, etc. -- and when something should be "easy" -- built into the dbt Core standard.
 
-dbt must be reliable and consistent. 
-
-In that capacity, 
-
-we cannot and will not fix every bug ourselves, or code up every feature worth doing. 
-
-Instead, we’ll do our best to respond to new issues with context (including links to related issues), feedback, alternatives/workarounds, and (whenever possible) pointers to code that would aid a community contributor. If a change is so tricky or involved that the initiative rests solely with us, we’ll do our best to explain the complexity, and when / why we could foresee prioritizing it. Our role also includes maintenance of the backlog of issues, such as closing duplicates, proposals we don’t intend to support, or stale issues (no activity for 180 days).
+In that capacity, we’ll do our best to respond to new issues with context (including links to related issues), feedback, alternatives/workarounds, and (whenever possible) pointers to code that would aid a community contributor. If a change is so tricky or involved that the initiative rests solely with us, we’ll do our best to explain the complexity, and when / why we could foresee prioritizing it. Our role also includes maintenance of the backlog of issues, such as closing duplicates, proposals we don’t intend to support, or stale issues (no activity for 180 days).
 
 ### Initiative is everything
 
