@@ -63,6 +63,7 @@ Beginning in dbt Core 1.9, we've streamlined snapshot configuration and added a 
 - `target_schema` is now optional for snapshots: When omitted, snapshots will use the schema defined for the current environment.
 - Standard `schema` and `database` configs supported: Snapshots will now be consistent with other dbt resource types. You can specify where environment-aware snapshots should be stored.
 - Warning for incorrect `updated_at` data type: To ensure data integrity, you'll see a warning if the `updated_at` field specified in the snapshot configuration is not the proper data type or timestamp.
+- Set a custom current indicator for the value of `dbt_valid_to`: Use the [`dbt_valid_to_current` config](/reference/resource-configs/dbt_valid_to_current) to set a custom indicator for the value of `dbt_valid_to` in current snapshot records (like a future date). By default, this value is `NULL`. When configured, dbt will use the specified value instead of `NULL` for `dbt_valid_to` for current records in the snapshot table. 
 
 Read more about [Snapshots meta fields](/docs/build/snapshots#snapshot-meta-fields).
 
@@ -107,6 +108,6 @@ You can read more about each of these behavior changes in the following links:
 We also made some quality-of-life improvements in Core 1.9, enabling you to:
 
 - Maintain data quality now that dbt returns an an error (versioned models) or warning (unversioned models) when someone [removes a contracted model by deleting, renaming, or disabling](/docs/collaborate/govern/model-contracts#how-are-breaking-changes-handled) it.
-- Document [singular data tests](/docs/build/data-tests#singular-data-tests).
+- Document [data tests](/reference/resource-properties/description).
 - Use `ref` and `source` in [foreign key constraints](/reference/resource-properties/constraints).
 - Use `dbt test` with the `--resource-type` / `--exclude-resource-type` flag, making it possible to include or exclude data tests (`test`) or unit tests (`unit_test`).
