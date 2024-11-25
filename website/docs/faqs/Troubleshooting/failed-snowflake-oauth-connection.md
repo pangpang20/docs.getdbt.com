@@ -28,4 +28,4 @@ You can read more about this error in [Snowflake's documentation](https://commun
    ```
 
    * **Unique email addresses** &mdash; Each user in Snowflake must have a unique email address. You can't have multiple users (for example, a human user and a service account) using the same email, such as `alice@acme.com`, to authenticate to Snowflake.
-   * **Match email addresses with identity provider** &mdash; The email address of your Snowflake user must exactly match the email address you use to authenticate with your Identity Provider (IdP). For example, if your Snowflake user's email is alice@acme.com but you log in to Entra or Okta with alice_adm@acme.com, this mismatch can cause an error.
+   * **Match email addresses with identity provider** &mdash; The email address of your Snowflake user must exactly match the email address you use to authenticate with your Identity Provider (IdP). For example, if your Snowflake user's email is `alice@acme.com` but you log in to Entra or Okta with `alice_adm@acme.com`, this mismatch can cause an error.
