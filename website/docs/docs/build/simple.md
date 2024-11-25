@@ -22,7 +22,7 @@ Note that we use the double colon (::) to indicate whether a parameter is nested
 | `type` | The type of the metric (cumulative, derived, ratio, or simple). | Required | String |
 | `label` | Defines the display value in downstream tools. Accepts plain text, spaces, and quotes (such as `orders_total` or `"orders_total"`). | Required | String |
 | `type_params` | The type parameters of the metric. | Required | Dict |
-| `measure` | A list of measure inputs | Required | List |
+| `measure` | A list of measure inputs. | Required | List |
 | `measure:name` | The measure you're referencing. | Required | String |
 | `measure:fill_nulls_with` | Set the value in your metric definition instead of null (such as zero). | Optional | String |
 | `measure:join_to_timespine` | Indicates if the aggregated measure should be joined to the time spine table to fill in missing dates. Default `false`. | Optional | Boolean |
