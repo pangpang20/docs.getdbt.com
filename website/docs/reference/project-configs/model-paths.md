@@ -35,7 +35,6 @@ absolute="/Users/username/project/models"
     # Avoid using absolute paths
     model-paths: ["/Users/username/project/models"]
     ```
-
 ## Examples
 ### Use a subdirectory named `transformations` instead of `models`
 
