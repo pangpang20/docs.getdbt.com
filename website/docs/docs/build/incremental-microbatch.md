@@ -24,7 +24,7 @@ Incremental models in dbt are a [materialization](/docs/build/materializations)
 
 Microbatch is an incremental strategy designed for large time-series datasets:
 - It complements, rather than replaces, existing incremental strategies by focusing on efficiency and simplicity in batch processing.
-- Unlike traditional incremental strategies, microbatch doesn't require managing uniqueness constraints or implementing complex conditional logic for [backfilling](#backfills). 
+- Unlike traditional incremental strategies, microbatch doesn't require implementing complex conditional logic for [backfilling](#backfills). 
 - It relies solely on a time column ([`event_time`](/reference/resource-configs/event-time)) to handle data partitioning and filtering. 
 - Note, microbatch might not be the best strategy for all use cases. Consider other strategies for use cases such as not having a reliable `event_time` column or if you want more control over the incremental logic. Read more in [How `microbatch` compares to other incremental strategies](#how-microbatch-compares-to-other-incremental-strategies).
 
