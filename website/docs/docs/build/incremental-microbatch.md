@@ -46,7 +46,7 @@ As a result:
 - The `customers` table isn't filtered, resulting in a full scan for every batch. 
 
 :::tip
-In addition to configuring `event_time` for the target table, you can also specify it for any upstream models that you want to filter, even if they have different time columns.
+In addition to configuring `event_time` for the target table, you should also specify it for any upstream models that you want to filter, even if they have different time columns.
 :::
 
 <File name="models/staging/page_views.yml">
