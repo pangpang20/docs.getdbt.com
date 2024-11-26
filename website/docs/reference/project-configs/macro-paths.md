@@ -16,7 +16,26 @@ macro-paths: [directorypath]
 Optionally specify a custom list of directories where [macros](/docs/build/jinja-macros#macros) are located. Note that you cannot co-locate models and macros.
 
 ## Default
-By default, dbt will search for macros in a directory named `macros`, i.e. `macro-paths: ["macros"]`
+By default, dbt will search for macros in a directory named `macros`, i.e. `macro-paths: ["macros"]`. 
+
+import RelativePath from '/snippets/_relative-path.md';
+
+<RelativePath 
+path="macro-paths"
+absolute="/Users/username/project/macros"
+/>
+
+- ✅ **Do:**
+    ```yml
+    # Recommended relative path example
+    macro-paths: ["macros"]
+    ```
+
+- ❌ **Don't:**
+    ```yml
+    # Avoid using absolute paths
+    macro-paths: ["/Users/username/project/macros"]
+    ```
 
 ## Examples
 ### Use a subdirectory named `custom_macros` instead of `macros`

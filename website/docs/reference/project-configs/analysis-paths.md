@@ -13,12 +13,32 @@ analysis-paths: [directorypath]
 </File>
 
 ## Definition
-Specify a custom list of directories where [analyses](/docs/build/analyses) are located.
+Specify a custom list of directories where [analyses](/docs/build/analyses) are located. 
 
 ## Default
 Without specifying this config, dbt will not compile any `.sql` files as analyses.
 
-However, the [`dbt init` command](/reference/commands/init) populates this value as `analyses` ([source](https://github.com/dbt-labs/dbt-starter-project/blob/HEAD/dbt_project.yml#L15))
+However, the [`dbt init` command](/reference/commands/init) populates this value as `analyses` ([source](https://github.com/dbt-labs/dbt-starter-project/blob/HEAD/dbt_project.yml#L15)).
+
+import RelativePath from '/snippets/_relative-path.md';
+
+<RelativePath 
+path="analysis-paths"
+absolute="/Users/username/project/analyses"
+/>
+
+- ✅ **Do:**
+    ```yml
+    # Recommended relative path example
+    analysis-paths: ["analyses"]
+    ```
+
+- ❌ **Don't:**
+    ```yml
+    # Avoid using absolute paths
+    analysis-paths: ["/Users/username/project/analyses"]
+    ```
+
 
 ## Examples
 ### Use a subdirectory named `analyses`

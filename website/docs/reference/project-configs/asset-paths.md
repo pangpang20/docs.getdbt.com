@@ -15,8 +15,28 @@ asset-paths: [directorypath]
 ## Definition
 Optionally specify a custom list of directories to copy to the `target` directory as part of the `docs generate` command. This is useful for rendering images in your repository in your project documentation.
 
+
 ## Default
-By default, dbt will not copy any additional files as part of docs generate, i.e. `asset-paths: []`
+By default, dbt will not copy any additional files as part of docs generate, i.e. `asset-paths: []`.
+
+import RelativePath from '/snippets/_relative-path.md';
+
+<RelativePath 
+path="asset-paths"
+absolute="/Users/username/project/assets"
+/>
+
+- ✅ **Do:**
+    ```yml
+    # Recommended relative path example
+    asset-paths: ["assets"]
+    ```
+
+- ❌ **Don't:**
+    ```yml
+    # Avoid using absolute paths
+    asset-paths: ["/Users/username/project/assets"]
+    ```
 
 ## Examples
 ### Compile files in the `assets` subdirectory as part of `docs generate`

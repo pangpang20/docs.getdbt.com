@@ -24,7 +24,27 @@ Note that you cannot co-locate models and snapshots. However, in [Versionless](/
 </VersionBlock>
 
 ## Default
-By default, dbt will search for snapshots in the `snapshots` directory, i.e. `snapshot-paths: ["snapshots"]`
+By default, dbt will search for snapshots in the `snapshots` directory, i.e. `snapshot-paths: ["snapshots"]`. 
+
+
+import RelativePath from '/snippets/_relative-path.md';
+
+<RelativePath 
+path="snapshot-paths"
+absolute="/Users/username/project/snapshots"
+/>
+
+- ✅ **Do:**
+    ```yml
+    # Recommended relative path example
+    snapshot-paths: ["snapshots"]
+    ```
+
+- ❌ **Don't:**
+    ```yml
+    # Avoid using absolute paths
+    snapshot-paths: ["/Users/username/project/snapshots"]
+    ```
 
 ## Examples
 ### Use a subdirectory named `archives` instead of `snapshots`

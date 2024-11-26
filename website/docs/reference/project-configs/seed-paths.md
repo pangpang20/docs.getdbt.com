@@ -16,7 +16,26 @@ Optionally specify a custom list of directories where [seed](/docs/build/seeds) 
 
 ## Default
 
-By default, dbt expects seeds to be located in the `seeds` directory, i.e. `seed-paths: ["seeds"]`
+By default, dbt expects seeds to be located in the `seeds` directory, i.e. `seed-paths: ["seeds"]`. 
+
+import RelativePath from '/snippets/_relative-path.md';
+
+<RelativePath 
+path="seed-paths"
+absolute="/Users/username/project/seed"
+/>
+
+- ✅ **Do:**
+    ```yml
+    # Recommended relative path example
+    seed-paths: ["seed"]
+    ```
+
+- ❌ **Don't:**
+    ```yml
+    # Avoid using absolute paths
+    seed-paths: ["/Users/username/project/seed"]
+    ```
 
 ## Examples
 ### Use a subdirectory named `custom_seeds` instead of `seeds`
