@@ -673,7 +673,7 @@ def model(dbt, session: snowpark.Session):
 
 </VersionBlock>
 
-**About "sprocs":** dbt submits Python models to run as _stored procedures_, which some people call _sprocs_ for short. By default, dbt will use Snowpark's _temporary_ or _anonymous_ stored procedures ([docs](https://docs.snowflake.com/en/sql-reference/sql/call-with.html)), which are faster and leave a cleaner query history than  creating and then calling a named sproc containing your model's compiled Python code. You can switch this feature off for your models by configuring `use_anonymous_sproc: False`.
+**About "sprocs":** dbt submits Python models to run as _stored procedures_, which some people call _sprocs_ for short. By default, dbt will use Snowpark's _temporary_ or _anonymous_ stored procedures ([docs](https://docs.snowflake.com/en/sql-reference/sql/call-with.html)), which are faster and leave a cleaner query history than creating and then calling a named sproc containing your model's compiled Python code. You can switch this feature off for your models by configuring `use_anonymous_sproc: False`.
 
 **Docs:** ["Developer Guide: Snowpark Python"](https://docs.snowflake.com/en/developer-guide/snowpark/python/index.html)
 
