@@ -22,7 +22,7 @@ Refer to [Supported incremental strategies by adapter](/docs/build/incremental-s
 
 Incremental models in dbt are a [materialization](/docs/build/materializations) designed to efficiently update your data warehouse tables by only transforming and loading _new or changed data_ since the last run. Instead of reprocessing an entire dataset every time, incremental models process a smaller number of rows, and then append, update, or replace those rows in the existing table. This can significantly reduce the time and resources required for your data transformations.
 
-Microbatch is a new incremental strategy designed for large time-series datasets:
+Microbatch is an incremental strategy designed for large time-series datasets:
 - It complements, rather than replaces, existing incremental strategies by focusing on efficiency and simplicity in batch processing.
 - Unlike traditional incremental strategies, microbatch doesn't require managing uniqueness constraints or implementing complex conditional logic for [backfilling](#backfills). 
 - It relies solely on a time column ([`event_time`](/reference/resource-configs/event-time)) to handle data partitioning and filtering. 
