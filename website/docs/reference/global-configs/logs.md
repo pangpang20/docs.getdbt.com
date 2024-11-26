@@ -72,7 +72,7 @@ The `LOG_LEVEL` config sets the minimum severity of events captured in the conso
   dbt --log-level debug run
   ```
 
-- Setting the `LOG_LEVEL` to none will disable logs from being sent to either the console or file logs. 
+- Setting the `LOG_LEVEL` to `none` will disable information from being sent to either the console or file logs. 
   
   ```text
   dbt --log-level none
