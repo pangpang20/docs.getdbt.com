@@ -25,7 +25,6 @@ import RelativePath from '/snippets/_relative-path.md';
 <RelativePath 
 path="analysis-paths"
 absolute="/Users/username/project/analyses"
-value="analyses"
 />
 
 - ✅ **Do** 
