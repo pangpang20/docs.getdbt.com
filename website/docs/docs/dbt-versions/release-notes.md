@@ -18,6 +18,9 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
 
 \* The official release date for this new format of release notes is May 15th, 2024. Historical release notes for prior dates may not reflect all available features released earlier this year or their tenancy availability.
 
+## December 2024
+- **New**: [Model notifications](/docs/deploy/model-notifications) is now generally available in dbt Cloud. These notifications alert model owners through email about any issues encountered by models and tests as soon as they occur while running a job.
+
 ## November 2024
 - **Fix**: Job environment variable overrides in credentials are now respected for Exports. Previously, they were ignored.
 - **Behavior change**: If you use a custom microbatch macro, set a [`require_batched_execution_for_custom_microbatch_strategy` behavior flag](/reference/global-configs/behavior-changes#custom-microbatch-strategy) in your `dbt_project.yml` to enable batched execution. If you don't have a custom microbatch macro, you don't need to set this flag as dbt will handle microbatching automatically for any model using the [microbatch strategy](/docs/build/incremental-microbatch#how-microbatch-compares-to-other-incremental-strategies).

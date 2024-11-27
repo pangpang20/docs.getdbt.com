@@ -3,20 +3,12 @@ title: "Model notifications"
 description: "While a job is running, receive email notifications in real time about any issues with your models and tests. "
 ---
 
-# Model notifications <Lifecycle status="beta" />
-
 Set up dbt to notify the appropriate model owners through email about issues as soon as they occur, while the job is still running. Model owners can specify which statuses to receive notifications about: 
 
 - `Success` and `Fails` for models
 - `Warning`, `Success`, and `Fails` for tests
 
 With model-level notifications, model owners can be the first ones to know about issues before anyone else (like the stakeholders). 
-
-:::info Beta feature
-
-This feature is currently available in [beta](/docs/dbt-versions/product-lifecycles#dbt-cloud) to a limited group of users and is gradually being rolled out. If you're in the beta, please contact the Support team at support@getdbt.com for assistance or questions.
-
-:::
 
 To be timely and keep the number of notifications to a reasonable amount when multiple models or tests trigger them, dbt observes the following guidelines when notifying the owners:  
 
