@@ -16,7 +16,7 @@ is_featured: true
 
 In [our first post](https://docs.getdbt.com/blog/test-smarter-not-harder) on refining testing best practices, we developed a prioritized list of data quality concerns. We also documented first steps for debugging each concern. This post will guide you on where specific tests should go in your data pipeline.
 
-**Note that we are constructing this guidance based on how we [structure data at dbt Labs.](https://docs.getdbt.com/best-practices/how-we-structure/1-guide-overview#guide-structure-overview)** You may use a different modeling approach—that’s okay! Translate our guidance to your data’s shape, and let us know in the comments section what modifications you made. 
+*Note that we are constructing this guidance based on how we [structure data at dbt Labs.](https://docs.getdbt.com/best-practices/how-we-structure/1-guide-overview#guide-structure-overview)* You may use a different modeling approach—that’s okay! Translate our guidance to your data’s shape, and let us know in the comments section what modifications you made. 
 
 First, here’s our opinions on where specific tests should go:
 
@@ -26,7 +26,7 @@ First, here’s our opinions on where specific tests should go:
 
 ## Where should tests go in your pipeline?
 
-![A horizontal, multicolored diagram that shows examples of where tests ought to be placed in a data pipeline.](/img/blog/2024-11-27-test-smarter-part-2/testing_pipeline.png)
+![A horizontal, multicolored diagram that shows examples of where tests ought to be placed in a data pipeline.](website/static/img/blog/2024-11-27-test-smarter-part-2/testing_pipeline.png)
 
 This diagram above outlines where you might put specific data tests in your pipeline. Let’s expand on it and discuss where each type of data quality issue should be tested. 
 
