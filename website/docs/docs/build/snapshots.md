@@ -62,7 +62,6 @@ snapshots:
       [unique_key](/reference/resource-configs/unique_key): column_name_or_expression
       [check_cols](/reference/resource-configs/check_cols): [column_name] | all
       [updated_at](/reference/resource-configs/updated_at): column_name
-      [invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes): true | false
       [snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names): dictionary
       [dbt_valid_to_current](/reference/resource-configs/dbt_valid_to_current): string
       [hard_deletes](/reference/resource-configs/hard-deletes): string
@@ -81,7 +80,6 @@ The following table outlines the configurations available for snapshots:
 | [unique_key](/reference/resource-configs/unique_key) | A <Term id="primary-key" /> column(s) (string or array) or expression for the record | Yes |  `id` or `[order_id, product_id]` |
 | [check_cols](/reference/resource-configs/check_cols) | If using the `check` strategy, then the columns to check | Only if using the `check` strategy | ["status"] |
 | [updated_at](/reference/resource-configs/updated_at) | If using the `timestamp` strategy, the timestamp column to compare | Only if using the `timestamp` strategy | updated_at |
-| [invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) | Find hard deleted records in source and set `dbt_valid_to` to current time if the record no longer exists | No | True |
 | [dbt_valid_to_current](/reference/resource-configs/dbt_valid_to_current) | Set a custom indicator for the value of `dbt_valid_to` in current snapshot records (like a future date). By default, this value is `NULL`. When configured, dbt will use the specified value instead of `NULL` for `dbt_valid_to` for current records in the snapshot table.| No | string |
 | [snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names) | Customize the names of the snapshot meta fields | No | dictionary |
 | [hard_deletes](/reference/resource-configs/hard-deletes) | Track hard deletes by adding a new record when row become "deleted" in source | No | string |
