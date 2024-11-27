@@ -34,7 +34,7 @@ This diagram above outlines where you might put specific data tests in your pipe
 
 Tests applied to your sources should indicate **fixable-at-the-source-system** issues**.** If your source tests flag source system issues that aren’t fixable, remove the test and mitigate the problem in your staging layer instead. 
 
-<aside>
+:::info
 💡 A note on what we mean by *fixable*: We consider a "fixable-at-the-source-system" issue to be something that:
 
 - You yourself can fix in the source system.
@@ -42,7 +42,7 @@ Tests applied to your sources should indicate **fixable-at-the-source-system** i
 
 You may have issues that can *technically* get fixed at the source, but it won't happen till the next planning cycle, or you need to develop better relationships to get the issue fixed, or something similar. This demands a more nuanced approach than we'll cover in this post. If you have thoughts on this type of situation, let us know!
 
-</aside>
+:::
 
 Here’s our recommendation for what tests belong on your sources. 
 
