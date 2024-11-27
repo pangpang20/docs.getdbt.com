@@ -163,7 +163,7 @@ The latest snapshot YAML configurations introduced in dbt v1.9 and higher (such 
   - Use `alter` statements as needed to ensure table consistency or use a script to apply the `alter` statements.
 - New YAML config &mdash; Convert the YAML configurations one at a time, testing as you go. 
 
-If you use one of the latest configs, such as `dbt_valid_to_current`, without migrating your data may result in mixed old and new data, leading to incorrect downstream result.
+If you use one of the latest configs, such as `dbt_valid_to_current`, without migrating your data, you may have mixed old and new data, leading to an incorrect downstream result.
 
 
 ### General configurations
