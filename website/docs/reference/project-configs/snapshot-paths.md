@@ -34,15 +34,15 @@ path="snapshot-paths"
 absolute="/Users/username/project/snapshots"
 />
 
-- ✅ **Do:**
+- ✅ **Do**
+  - Use relative path:
     ```yml
-    # Recommended relative path example
     snapshot-paths: ["snapshots"]
     ```
 
 - ❌ **Don't:**
+  - Avoid absolute paths:
     ```yml
-    # Avoid using absolute paths
     snapshot-paths: ["/Users/username/project/snapshots"]
     ```
 

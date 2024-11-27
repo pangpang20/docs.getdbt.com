@@ -28,15 +28,15 @@ path="test-paths"
 absolute="/Users/username/project/test"
 />
 
-- ✅ **Do:**
+- ✅ **Do**
+  - Use relative path:
     ```yml
-    # Recommended relative path example
     test-paths: ["test"]
     ```
 
 - ❌ **Don't:**
+  - Avoid absolute paths:
     ```yml
-    # Avoid using absolute paths
     test-paths: ["/Users/username/project/test"]
     ```
 

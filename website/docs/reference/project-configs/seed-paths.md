@@ -25,15 +25,15 @@ path="seed-paths"
 absolute="/Users/username/project/seed"
 />
 
-- ✅ **Do:**
+- ✅ **Do**
+  - Use relative path:
     ```yml
-    # Recommended relative path example
     seed-paths: ["seed"]
     ```
 
 - ❌ **Don't:**
+  - Avoid absolute paths:
     ```yml
-    # Avoid using absolute paths
     seed-paths: ["/Users/username/project/seed"]
     ```
 

@@ -24,17 +24,18 @@ path="model-paths"
 absolute="/Users/username/project/models"
 />
 
-- ✅ **Do:**
+- ✅ **Do**
+  - Use relative path:
     ```yml
-    # Recommended relative path example
     model-paths: ["models"]
     ```
 
 - ❌ **Don't:**
+  - Avoid absolute paths:
     ```yml
-    # Avoid using absolute paths
     model-paths: ["/Users/username/project/models"]
     ```
+
 ## Examples
 ### Use a subdirectory named `transformations` instead of `models`
 

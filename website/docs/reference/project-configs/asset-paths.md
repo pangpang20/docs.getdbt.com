@@ -26,15 +26,15 @@ path="asset-paths"
 absolute="/Users/username/project/assets"
 />
 
-- ✅ **Do:**
+- ✅ **Do**
+  - Use relative path:
     ```yml
-    # Recommended relative path example
     asset-paths: ["assets"]
     ```
 
-- ❌ **Don't:**
+- ❌ **Don't**
+  - Avoid absolute paths:
     ```yml
-    # Avoid using absolute paths
     asset-paths: ["/Users/username/project/assets"]
     ```
 

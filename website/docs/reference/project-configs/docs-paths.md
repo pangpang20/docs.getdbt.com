@@ -37,15 +37,15 @@ path="docs-paths"
 absolute="/Users/username/project/docs"
 />
 
-- ✅ **Do:**
+- ✅ **Do**
+  - Use relative path:
     ```yml
-    # Recommended relative path example
     docs-paths: ["docs"]
     ```
 
-- ❌ **Don't:**
+- ❌ **Don't**
+  - Avoid absolute paths:
     ```yml
-    # Avoid using absolute paths
     docs-paths: ["/Users/username/project/docs"]
     ```
 

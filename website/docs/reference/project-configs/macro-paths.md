@@ -25,15 +25,15 @@ path="macro-paths"
 absolute="/Users/username/project/macros"
 />
 
-- ✅ **Do:**
+- ✅ **Do**
+  - Use relative path:
     ```yml
-    # Recommended relative path example
     macro-paths: ["macros"]
     ```
 
 - ❌ **Don't:**
+  - Avoid absolute paths:
     ```yml
-    # Avoid using absolute paths
     macro-paths: ["/Users/username/project/macros"]
     ```
 
