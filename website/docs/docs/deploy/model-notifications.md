@@ -82,7 +82,9 @@ models:
 ```
 </File>
 
-By assigning groups in the `dbt_project.yml` file, you can capture all models in a subdirectory at once. In the below example, all notifications related to staging models will go to the data engineering group, whereas models in `marts/sales` will be routed to the finance team.
+By assigning groups in the `dbt_project.yml` file, you can capture all models in a subdirectory at once. 
+
+In this example, model notifications related to staging models go to the data engineering group, `marts/sales` models to the finance team, and `marts/campaigns` models to the marketing team.
 
 <File name='dbt_project.yml'>
 
