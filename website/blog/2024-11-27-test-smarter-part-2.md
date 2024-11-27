@@ -21,7 +21,7 @@ In [our first post](https://docs.getdbt.com/blog/test-smarter-not-harder) on ref
 First, here’s our opinions on where specific tests should go:
 
 - Source tests should be fixable data quality concerns. (See the callout box below for what we mean by “fixable”)
-- Staging tests should be business-focused anomalies specific to individual tables, such as accepted ranges or ensuring sequential values. In addition to these tests, your staging layer should clean **up **any nulls, duplicates, or outliers that you can’t fix in your source system. You generally don’t need to test your cleanup efforts.
+- Staging tests should be business-focused anomalies specific to individual tables, such as accepted ranges or ensuring sequential values. In addition to these tests, your staging layer should clean up any nulls, duplicates, or outliers that you can’t fix in your source system. You generally don’t need to test your cleanup efforts.
 - Intermediate and marts layer tests should be business-focused anomalies resulting specifically from joins or calculations.  You also may consider adding additional primary key and not null tests on columns where it’s especially important to protect the grain.
 
 ## Where should tests go in your pipeline?
@@ -32,7 +32,7 @@ This diagram above outlines where you might put specific data tests in your pipe
 
 ### Sources
 
-Tests applied to your sources should indicate **fixable-at-the-source-system** issues**.** If your source tests flag source system issues that aren’t fixable, remove the test and mitigate the problem in your staging layer instead. 
+Tests applied to your sources should indicate *fixable-at-the-source-system* issues. If your source tests flag source system issues that aren’t fixable, remove the test and mitigate the problem in your staging layer instead. 
 
 :::info
 💡 A note on what we mean by *fixable*: We consider a "fixable-at-the-source-system" issue to be something that:
@@ -88,7 +88,7 @@ Marts layer testing will follow the same hygiene-or-anomaly pattern as staging a
 - Unit tests: validate especially complex transformation logic. For example:
     - Calculating dates in a way that feeds into forecasting.
     - Customer segmentation logic, especially logic that has a lot of CASE-WHEN statements.
-- Primary key tests:** primarily where your mart's granularity has changed from its staging/intermediate inputs.
+- Primary key tests: focus on where where your mart's granularity has changed from its staging/intermediate inputs.
     - Similar to the intermediate models above, you may also want to add primary key tests to models whose grain hasn’t changed, but have been enriched with other data. Primary key tests here communicate your intent.
 - Business focused anomaly tests: focus on *new* calculated fields, such as:
     - Singular tests on high-priority, high-impact tables where you have a specific problem you want forewarning about.
