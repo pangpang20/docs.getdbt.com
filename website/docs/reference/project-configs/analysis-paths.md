@@ -25,20 +25,20 @@ import RelativePath from '/snippets/_relative-path.md';
 <RelativePath 
 path="analysis-paths"
 absolute="/Users/username/project/analyses"
+value="analyses"
 />
 
-- ✅ **Do:**
+- ✅ **Do** 
+  - Use relative path:
     ```yml
-    # Recommended relative path example
     analysis-paths: ["analyses"]
     ```
 
-- ❌ **Don't:**
+- ❌ **Don't** 
+  - Avoid absolute paths:
     ```yml
-    # Avoid using absolute paths
     analysis-paths: ["/Users/username/project/analyses"]
     ```
-
 
 ## Examples
 ### Use a subdirectory named `analyses`
