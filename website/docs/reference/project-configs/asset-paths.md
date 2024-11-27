@@ -17,7 +17,7 @@ Optionally specify a custom list of directories to copy to the `target` director
 
 
 ## Default
-By default, dbt will not copy any additional files as part of docs generate, i.e. `asset-paths: []`.
+By default, dbt will not copy any additional files as part of docs generate. For example, `asset-paths: []`.
 
 import RelativePath from '/snippets/_relative-path.md';
 
