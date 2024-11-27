@@ -65,6 +65,7 @@ Beginning in dbt Core 1.9, we've streamlined snapshot configuration and added a 
 - Standard `schema` and `database` configs supported: Snapshots will now be consistent with other dbt resource types. You can specify where environment-aware snapshots should be stored.
 - Warning for incorrect `updated_at` data type: To ensure data integrity, you'll see a warning if the `updated_at` field specified in the snapshot configuration is not the proper data type or timestamp.
 - Set a custom current indicator for the value of `dbt_valid_to`: Use the [`dbt_valid_to_current` config](/reference/resource-configs/dbt_valid_to_current) to set a custom indicator for the value of `dbt_valid_to` in current snapshot records (like a future date). By default, this value is `NULL`. When configured, dbt will use the specified value instead of `NULL` for `dbt_valid_to` for current records in the snapshot table. 
+- Use the [`hard_deletes`](/reference/resource-configs/hard-deletes) configuration to track hard deletes by adding a new record when row become "deleted" in source. This config replaces the `invalidate_hard_deletes` to give you more control on how to handle deleted rows from the source. Supported fields are `ignore`, `invalidate`, and `new_record`.
 
 Read more about [Snapshots meta fields](/docs/build/snapshots#snapshot-meta-fields).
 

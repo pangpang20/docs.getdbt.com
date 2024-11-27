@@ -80,6 +80,7 @@ snapshots:
     [+](/reference/resource-configs/plus-prefix)[check_cols](/reference/resource-configs/check_cols): [<column_name>] | all
     [+](/reference/resource-configs/plus-prefix)[snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names): {<dictionary>}
     [+](/reference/resource-configs/plus-prefix)[invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) : true | false
+    [+](/reference/resource-configs/plus-prefix)[hard_deletes](/reference/resource-configs/hard-deletes): string
 ```
 
 </File>
@@ -114,6 +115,7 @@ snapshots:
       [check_cols](/reference/resource-configs/check_cols): [<column_name>] | all
       [snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names): {<dictionary>}
       [invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) : true | false
+      [hard_deletes](/reference/resource-configs/hard-deletes): string
 ```
 </File>
 
@@ -149,7 +151,6 @@ Configurations can be applied to snapshots using the [YAML syntax](/docs/build/s
 </TabItem>
 
 </Tabs>
-
 
 ### General configurations
 

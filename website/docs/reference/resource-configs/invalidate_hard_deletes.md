@@ -4,6 +4,10 @@ description: "Invalidate_hard_deletes - Read this in-depth guide to learn about 
 datatype: column_name
 ---
 
+:::tip Use the hard_deletes config instead
+
+Note, in Versionless and dbt Core 1.9 and higher, the [`hard_deletes`](/reference/resource-configs/hard-deletes) config replaces the `invalidate_hard_deletes` config for better control over how to handle deleted rows from the source.
+:::
 
 <VersionBlock firstVersion="1.9">
 
