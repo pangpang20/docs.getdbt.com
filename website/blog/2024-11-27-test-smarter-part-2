@@ -35,10 +35,10 @@ This diagram above outlines where you might put specific data tests in your pipe
 Tests applied to your sources should indicate **fixable-at-the-source-system** issues**.** If your source tests flag source system issues that aren’t fixable, remove the test and mitigate the problem in your staging layer instead. 
 
 <aside>
-💡 **A note on what we mean by *fixable:*** We consider a "fixable-at-the-source-system" issue to be something that:
+💡 A note on what we mean by *fixable*: We consider a "fixable-at-the-source-system" issue to be something that:
 
 - You yourself can fix in the source system.
-- You know the right person to fix it and have a good enough relationship with them that you know you can **get it fixed.**
+- You know the right person to fix it and have a good enough relationship with them that you know you can *get it fixed.*
 
 You may have issues that can *technically* get fixed at the source, but it won't happen till the next planning cycle, or you need to develop better relationships to get the issue fixed, or something similar. This demands a more nuanced approach than we'll cover in this post. If you have thoughts on this type of situation, let us know!
 
@@ -46,10 +46,10 @@ You may have issues that can *technically* get fixed at the source, but it won't
 
 Here’s our recommendation for what tests belong on your sources. 
 
-- **Source freshness**—testing data freshness for sources that are critical to your pipelines.
+- Source freshness: testing data freshness for sources that are critical to your pipelines.
     - If any sources feed into any of the “top 3” [priority categories](https://docs.getdbt.com/blog/test-smarter-not-harder#how-to-prioritize-data-quality-concerns-in-your-pipeline) in our last post, put [`dbt source freshness`](https://docs.getdbt.com/docs/deploy/source-freshness) in your job execution commands. If your sources are stale, dbt Cloud will fail your job.
     - If none of your sources feed into high priority categories, check the box in the dbt Cloud UI so source freshness doesn’t fail your job.
-- **Data hygiene** tests that are ***fixable*** in the source system (see our note above on “fixability”).
+- Data hygiene: tests that are *fixable* in the source system (see our note above on “fixability”).
     - Examples:
         - Duplicate customer records that can be deleted in the source system
         - Null records, such as a customer name or email address, that can be entered into the source system
@@ -59,8 +59,8 @@ Here’s our recommendation for what tests belong on your sources.
 
 In the staging layer, focus on business anomaly detection as well as cleaning up or mitigating data issues that can't be fixed at the source.  
 
-- **Data cleanup and issue mitigation:** You will probably have data quality or hygiene issues that you can’t fix in your source system. This is what your staging layer is for. Use our [best practices around staging layers](https://docs.getdbt.com/best-practices/how-we-structure/2-staging) to clean things up. Don’t add tests to your cleanup efforts. If you’re filtering out nulls in a column, adding a not_null test is repetitive!  🌶️
-- **Business-focused anomaly examples:** these are data quality issues you *should* test for in your staging layer, because they fall outside of your business’s defined norms. These might be:
+- Data cleanup and issue mitigation: You will probably have data quality or hygiene issues that you can’t fix in your source system. This is what your staging layer is for. Use our [best practices around staging layers](https://docs.getdbt.com/best-practices/how-we-structure/2-staging) to clean things up. Don’t add tests to your cleanup efforts. If you’re filtering out nulls in a column, adding a not_null test is repetitive!  🌶️
+- Business-focused anomaly examples: these are data quality issues you *should* test for in your staging layer, because they fall outside of your business’s defined norms. These might be:
     - Values inside a single column that fall outside of an acceptable range. For example, a sale amount that may indicate excessive discounting and require intervention.
     - A transaction size that usually indicates fraud and spurs further investigation into the offending transaction.
     - An monthly invoice amount that varies more than a certain % from other invoices in its category. This could indicate anything from a clerical error to improper spending, and is worth flagging with a test.
@@ -70,10 +70,10 @@ In the staging layer, focus on business anomaly detection as well as cleaning up
 In your intermediate layer, focus on data hygiene and anomaly tests for new columns. Don’t re-test passthrough columns from sources or staging. Here are some examples of tests you might put in your intermediate layer based on the use cases of intermediate models we [outline in this guide.](https://docs.getdbt.com/best-practices/how-we-structure/3-intermediate#intermediate-models)
 
 - Intermediate models often re-grain models to prepare them for marts.
-    - **Add a primary key test** to any re-grained models.
+    - Add a primary key test to any re-grained models.
     - Additionally, consider adding a primary key test to models where the grain *has remained the same* but has been *enriched.* This helps future-proof your enriched models against future developers who may not be able to glean your intention from SQL alone.
 - Intermediate models may perform a first set of joins or aggregations to reduce complexity in a final mart.
-    - **Add simple anomaly tests ****to verify the behavior of your sets of joins and aggregations. This may look like:
+    - Add simple anomaly tests to verify the behavior of your sets of joins and aggregations. This may look like:
         - An [accepted_values](https://docs.getdbt.com/reference/resource-properties/data-tests#accepted_values) test on a newly calculated categorical column.
         - A [mutually_exclusive_ranges](https://docs.getdbt.com/reference/resource-properties/data-tests#accepted_values) test on two columns whose values behave in relation to one another (ex: asserting age ranges do not overlap).
         - A [not_constant](https://docs.getdbt.com/reference/resource-properties/data-tests#accepted_values) test on a column whose value should be continually changing (ex: page view counts on website analytics).
@@ -85,12 +85,12 @@ In your intermediate layer, focus on data hygiene and anomaly tests for new colu
 
 Marts layer testing will follow the same hygiene-or-anomaly pattern as staging and intermediate. Similar to your intermediate layer, you should focus your testing on net-new columns in your marts layer. This might look like:
 
-- **Unit tests:** validate especially complex transformation logic. For example:
+- Unit tests: validate especially complex transformation logic. For example:
     - Calculating dates in a way that feeds into forecasting.
     - Customer segmentation logic, especially logic that has a lot of CASE-WHEN statements.
-- **Primary key tests:** primarily ****where your mart's granularity has changed from its staging/intermediate inputs.
+- Primary key tests:** primarily where your mart's granularity has changed from its staging/intermediate inputs.
     - Similar to the intermediate models above, you may also want to add primary key tests to models whose grain hasn’t changed, but have been enriched with other data. Primary key tests here communicate your intent.
-- **Business focused anomaly tests:** focus on **new** calculated fields, such as:
+- Business focused anomaly tests: focus on *new* calculated fields, such as:
     - Singular tests on high-priority, high-impact tables where you have a specific problem you want forewarning about.
         - This might be something like fuzzy matching logic to detect when the same person is making multiple emails to extend a free trial beyond its acceptable end date.
     - A test for calculated numerical fields that shouldn’t vary by more than certain percentage in a week.
