@@ -18,6 +18,7 @@ import SnapshotsYamlConfig from '/snippets/_snapshots-yaml-config.md';
 ## Available configurations
 ### Snapshot-specific configurations
 
+
 <ConfigResource meta={frontMatter.meta} />
 
 <VersionBlock lastVersion="1.8">
@@ -74,8 +75,9 @@ snapshots:
     [+](/reference/resource-configs/plus-prefix)[strategy](/reference/resource-configs/strategy): timestamp | check
     [+](/reference/resource-configs/plus-prefix)[updated_at](/reference/resource-configs/updated_at): <column_name>
     [+](/reference/resource-configs/plus-prefix)[check_cols](/reference/resource-configs/check_cols): [<column_name>] | all
+    [+](/reference/resource-configs/plus-prefix)[invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) : true | false    
     [+](/reference/resource-configs/plus-prefix)[snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names): {<dictionary>}
-    [+](/reference/resource-configs/plus-prefix)[invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) : true | false
+    [+](/reference/resource-configs/plus-prefix)[dbt_valid_to_current](/reference/resource-configs/dbt_valid_to_current): <string> 
 ```
 
 </File>
@@ -108,8 +110,9 @@ snapshots:
       [strategy](/reference/resource-configs/strategy): timestamp | check
       [updated_at](/reference/resource-configs/updated_at): <column_name>
       [check_cols](/reference/resource-configs/check_cols): [<column_name>] | all
-      [snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names): {<dictionary>}
       [invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) : true | false
+      [snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names): {<dictionary>}
+      [dbt_valid_to_current](/reference/resource-configs/dbt_valid_to_current): <string>
 ```
 </File>
 
@@ -147,20 +150,25 @@ snapshots:
 
 </Tabs>
 
+### Snapshot configuration migration
+
+The latest snapshot YAML configurations introduced in dbt v1.9 and higher (such as [`snapshot_meta_column_names`](/reference/resource-configs/snapshot_meta_column_names) and [`dbt_valid_to_current`](/reference/resource-configs/dbt_valid_to_current)) are best suited for new snapshots. For existing snapshots, we recommend the following to avoid any inconsistencies to your snapshots:
+
+#### For new snapshots
+- Use the latest snapshot YAML configurations when creating new snapshots that didn't exist previously.
+
+#### For existing snapshots
+- Migrate tables &mdash; Migrate the previous snapshot to the new table schema and values:
+  - Create a backup copy of your snapshots.
+  - Use `alter` statements as needed to ensure table consistency or use a script to apply the `alter` statements.
+- New YAML config &mdash; Convert the YAML configurations one at a time, testing as you go. 
+
+If you use one of the latest configs, such as `dbt_valid_to_current`, without migrating your data may result in mixed old and new data, leading to incorrect downstream result.
+
 
 ### General configurations
 
 <ConfigGeneral />
-
-:::tip
-
-Configuring snapshots in YAML is recommended for new snapshots. If you have existing snapshots using the `.sql` config, they'll continue to work as expected. When you're ready to migrate to YAML, we recommend:
-1. Creating a backup copy of your snapshots.
-2. Converting the configurations one at a time, testing as you go
-3. Using `alter` statements as needed to ensure table consistency or using a script to apply the `alter` statements
-
-The YAML configuration offers improved maintainability and consistency, but there's no pressure to migrate existing snapshots immediately &mdash; feel free to do so at your own pace while ensuring data quality is maintained.
-:::
 
 
 <Tabs
