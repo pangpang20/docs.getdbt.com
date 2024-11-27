@@ -16,7 +16,7 @@ Optionally specify a custom list of directories where [seed](/docs/build/seeds) 
 
 ## Default
 
-By default, dbt expects seeds to be located in the `seeds` directory, i.e. `seed-paths: ["seeds"]`. 
+By default, dbt expects seeds to be located in the `seeds` directory. For example, `seed-paths: ["seeds"]`. 
 
 import RelativePath from '/snippets/_relative-path.md';
 
