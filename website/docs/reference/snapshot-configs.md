@@ -160,7 +160,7 @@ The latest snapshot YAML configurations introduced in dbt v1.9 and higher (such 
 #### For existing snapshots
 - Migrate tables &mdash; Migrate the previous snapshot to the new table schema and values:
   - Create a backup copy of your snapshots.
-  - Use `alter` statements as needed to ensure table consistency or use a script to apply the `alter` statements.
+  - Use `alter` statements as needed (or a script to apply `alter` statements) to ensure table consistency.
 - New YAML config &mdash; Convert the YAML configurations one at a time, testing as you go. 
 
 If you use one of the latest configs, such as `dbt_valid_to_current`, without migrating your data, you may have mixed old and new data, leading to an incorrect downstream result.
