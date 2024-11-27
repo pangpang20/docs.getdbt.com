@@ -61,7 +61,7 @@ groups:
 
 ## Attach groups to models
 
-Attach groups to models as you would any other config, in either the `dbt_project.yml` or `<whatever>.yml` files. For example: 
+Attach groups to models as you would any other config, in either the `dbt_project.yml` or `whatever.yml` files. For example: 
 
 <File name='models/marts.yml'>
 
