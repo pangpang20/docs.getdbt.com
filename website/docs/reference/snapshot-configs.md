@@ -152,7 +152,7 @@ snapshots:
 
 ### Snapshot configuration migration
 
-The latest snapshot YAML configurations introduced in dbt v1.9 and higher (such as [`snapshot_meta_column_names`](/reference/resource-configs/snapshot_meta_column_names) and [`dbt_valid_to_current`](/reference/resource-configs/dbt_valid_to_current)) are best suited for new snapshots. For existing snapshots, we recommend the following to avoid any inconsistencies to your snapshots:
+The latest snapshot YAML configurations introduced in dbt v1.9 (such as [`snapshot_meta_column_names`](/reference/resource-configs/snapshot_meta_column_names) and [`dbt_valid_to_current`](/reference/resource-configs/dbt_valid_to_current)) are best suited for new snapshots. For existing snapshots, we recommend the following to avoid any inconsistencies in your snapshots:
 
 #### For new snapshots
 - Use the latest snapshot YAML configurations when creating new snapshots that didn't exist previously.
