@@ -164,7 +164,7 @@ To install prerelease versions of dbt Core and your adapter, use this command:
 ```shell
 python3 -m pip install --pre dbt-core dbt-adapter-name
 ````
-We recommend you install prereleases in a [virtual Python environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/). You can run the commands to activate and install your virtual environment. You’ll need to activate your virtual environment before you start installing or using packages within it. For example, to install a prerelease in a `POSIX bash`/`zsh` virtual Python environment, use the following command:
+We recommend you install prereleases in a [virtual Python environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/). You can run the commands to create your virtual environment, activate it, and install within it. You’ll need to activate your virtual environment before you start installing or using packages within it. For example, to install a prerelease in a `POSIX bash`/`zsh` virtual Python environment, use the following commands:
 
 ```shell
 dbt --version
