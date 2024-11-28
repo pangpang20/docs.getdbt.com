@@ -406,7 +406,7 @@ The following examples demonstrate how to configure snapshots using the `dbt_pro
 
     </File>
 
-  You can also define some common configs in a snapshot's `config` block. We don't recommend this for a snapshot's required configuration, however.
+  You can also define some common configs in a snapshot's `config` block. However, we don't recommend this for a snapshot's required configuration.
 
     <File name='dbt_project.yml'>
 
