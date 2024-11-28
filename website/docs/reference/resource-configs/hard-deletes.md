@@ -39,7 +39,7 @@ snapshots:
         unique_key='id',
         strategy='timestamp',
         updated_at='updated_at',
-        hard_deletes='ignore', 'invalidate', 'new_record'
+        hard_deletes='ignore' | 'invalidate' | 'new_record'
     )
 }}
 ```
