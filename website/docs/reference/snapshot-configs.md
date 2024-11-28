@@ -7,8 +7,6 @@ meta:
 
 import ConfigResource from '/snippets/_config-description-resource.md';
 import ConfigGeneral from '/snippets/_config-description-general.md';
-import SnapshotsYamlConfig from '/snippets/_snapshots-yaml-config.md';
-
 
 ## Related documentation
 * [Snapshots](/docs/build/snapshots)
