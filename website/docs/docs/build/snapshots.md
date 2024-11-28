@@ -402,7 +402,7 @@ This configuration is not a different strategy as described above, but is an add
 
 For this configuration to work with the `timestamp` strategy, the configured `updated_at` column must be of timestamp type. Otherwise, queries will fail due to mixing data types.
 
-Note, in v1.9 and higher, the [`hard_deletes`](/reference/resource-configs/hard-deletes) config replaces the `invalidate_hard_deletes` config for better control over how to handle deleted rows from the source.
+Note, in v1.9 and higher, setting the [`hard_deletes`](/reference/resource-configs/hard-deletes) config to `invalidate` replaces the `invalidate_hard_deletes` config for better control over how to handle deleted rows from the source.
 
 #### Example usage
 
