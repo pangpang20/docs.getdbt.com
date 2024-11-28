@@ -437,7 +437,7 @@ Snapshot <Term id="table">tables</Term> will be created as a clone of your sourc
 Starting in 1.9 or with [dbt Cloud Versionless](/docs/dbt-versions/upgrade-dbt-version-in-cloud#versionless):
 - These column names can be customized to your team or organizational conventions using the [`snapshot_meta_column_names`](/reference/resource-configs/snapshot_meta_column_names) config. 
 - Use the [`dbt_valid_to_current` config](/reference/resource-configs/dbt_valid_to_current) to set a custom indicator for the value of `dbt_valid_to` in current snapshot records (like a future date such as `9999-12-31`). By default, this value is `NULL`. When set, dbt will use this specified value instead of `NULL` for `dbt_valid_to` for current records in the snapshot table.
-- Use the [`hard_deletes`](/reference/resource-configs/hard-deletes) config to track deleted records as new rows with the `dbt_is_deleted` meta field when using the `hard_deletes='new_record'` field.
+- Use the [`hard_deletes`](/reference/resource-configs/hard-deletes) config and `new_record` method to track deleted records as new rows with the `dbt_is_deleted` meta field.
 
 | Field          | Meaning | Usage |
 | -------------- | ------- | ----- | 
