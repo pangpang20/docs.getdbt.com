@@ -18,14 +18,11 @@ import SnapshotsYamlConfig from '/snippets/_snapshots-yaml-config.md';
 ## Available configurations
 ### Snapshot-specific configurations
 
-
 <ConfigResource meta={frontMatter.meta} />
 
 <VersionBlock lastVersion="1.8">
 
-import SnapshotYaml from '/snippets/_snapshot-yaml-spec.md';
-
-<SnapshotYaml/>
+Starting from Versionless and Core v1.9, defining snapshots in a `.sql` file using a config block is a legacy method. You can define snapshots in YAML format using the latest [snapshot-specific configurations](/docs/build/snapshots#snapshot-meta-fields). For new snapshots, we recommend using these latest configs. If applying them to existing snapshots, you'll need to migrate over.
 
 </VersionBlock>
 
@@ -152,19 +149,17 @@ snapshots:
 
 ### Snapshot configuration migration
 
-The latest snapshot YAML configurations introduced in dbt v1.9 (such as [`snapshot_meta_column_names`](/reference/resource-configs/snapshot_meta_column_names) and [`dbt_valid_to_current`](/reference/resource-configs/dbt_valid_to_current)) are best suited for new snapshots. For existing snapshots, we recommend the following to avoid any inconsistencies in your snapshots:
-
-#### For new snapshots
-- Use the latest snapshot YAML configurations when creating new snapshots that didn't exist previously.
+The latest snapshot configurations introduced in dbt v1.9 (such as [`snapshot_meta_column_names`](/reference/resource-configs/snapshot_meta_column_names), [`dbt_valid_to_current`](/reference/resource-configs/dbt_valid_to_current), and `hard_deletes`) are best suited for new snapshots. For existing snapshots, we recommend the following to avoid any inconsistencies in your snapshots:
 
 #### For existing snapshots
 - Migrate tables &mdash; Migrate the previous snapshot to the new table schema and values:
   - Create a backup copy of your snapshots.
   - Use `alter` statements as needed (or a script to apply `alter` statements) to ensure table consistency.
-- New YAML config &mdash; Convert the YAML configurations one at a time, testing as you go. 
+- New configurations &mdash; Convert the configs one at a time, testing as you go. 
 
+:::warning
 If you use one of the latest configs, such as `dbt_valid_to_current`, without migrating your data, you may have mixed old and new data, leading to an incorrect downstream result.
-
+:::
 
 ### General configurations
 
@@ -273,7 +268,7 @@ snapshots:
 
 <VersionBlock firstVersion="1.9">
 
-<SnapshotsYamlConfig />
+Starting from Versionless and Core v1.9, defining snapshots in a `.sql` file using a config block is a legacy method. You can define snapshots in YAML format using the latest [configurations](/docs/build/snapshots#configuring-snapshots). You can also continue using the legacy method for existing snapshots, but we recommend migrating over to the latest YAML format for better readability and maintainability.
 
 </VersionBlock>
 
