@@ -175,7 +175,7 @@ python3 -m pip install --pre dbt-core dbt-adapter-name
 source venv/bin/activate
 dbt --version
 ```
-
+Not, the command `python3 -m pip install --pre dbt-core dbt-adapter-name` will also install any pre-releases of all dependencies.
 #### Install prereleases on different operating systems 
 
 To install or use packages within your virtual environment:
