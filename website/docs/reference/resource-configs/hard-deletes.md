@@ -65,16 +65,15 @@ If you're updating an existing snapshot to use the `hard_deletes` config, dbt _w
 
 By default, if you don’t specify `hard_deletes`, it'll automatically default to `ignore`. Deleted rows will not be tracked and their `dbt_valid_to` column remains `NULL`.
 
-The `hard_deletes` config has three options:
+The `hard_deletes` config has three methods:
 
-| Field | Description |
+| Methods | Description |
 | --------- | ----------- |
 | `ignore` (default) | No action for deleted records. |
 | `invalidate` | Behaves the same as the existing `invalidate_hard_deletes=true`, where deleted records are invalidated by setting `dbt_valid_to` to current time. |
 | `new_record` | Tracks deleted records as new rows using the `dbt_is_deleted` meta field when records are deleted.|
 
-## Impact on snapshot records
-
+## Considerations
 - **Backward compatibility**: The `invalidate_hard_deletes` config is still supported for existing snapshots but can't be used alongside `hard_deletes`.
 - **New snapshots**: For new snapshots, we recommend using `hard_deletes` instead of `invalidate_hard_deletes`.
 - **Migration**: If you switch an existing snapshot to use `hard_deletes` without migrating your data, you may encounter inconsistent or incorrect results, such as a mix of old and new data formats.

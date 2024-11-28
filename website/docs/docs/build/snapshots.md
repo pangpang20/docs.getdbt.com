@@ -351,8 +351,8 @@ snapshots:
 
 In dbt v1.9 and higher, the [`hard_deletes`](/reference/resource-configs/hard-deletes) config replaces the `invalidate_hard_deletes` config to give you more control on how to handle deleted rows from the source. The `hard_deletes` config is an additional opt-in feature that can be used with any snapshot strategy.
 
-The `hard_deletes` config has three options/fields:
-| Field | Description |
+The `hard_deletes` config has three methods:
+| Methods | Description |
 | --------- | ----------- |
 | `ignore` (default) | No action for deleted records. |
 | `invalidate` | Behaves the same as the existing `invalidate_hard_deletes=true`, where deleted records are invalidated by setting `dbt_valid_to` to the current time. |
