@@ -26,7 +26,7 @@ snapshots:
 ```yml
 snapshots:
   [<resource-path>](/reference/resource-configs/resource-path):
-    +hard_deletes: "ignore", "invalidate", or "new_record"
+    +hard_deletes: "ignore" | "invalidate" | "new_record"
 ```
 
 </File>
