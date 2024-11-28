@@ -73,7 +73,7 @@ By default, dbt snapshots use the following column names to track change history
 | `dbt_valid_to`   | The timestamp when this row is no longer valid. |  |
 | `dbt_scd_id`     | A unique key generated for each snapshot row. | This is used internally by dbt. |
 | `dbt_updated_at` | The `updated_at` timestamp of the source record when this snapshot row was inserted. | This is used internally by dbt. |
-| `dbt_is_deleted` | A boolean value indicating if the record has been deleted. `True` if deleted, `False` otherwise. | Added when `hard_deletes='new_record'` is configured. This is used internally by dbt |
+| `dbt_is_deleted` | A boolean value indicating if the record has been deleted. `True` if deleted, `False` otherwise. | Added when `hard_deletes='new_record'` is configured. |
 
 However, these column names can be customized using the `snapshot_meta_column_names` config.
 
