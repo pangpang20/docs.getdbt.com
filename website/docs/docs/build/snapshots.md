@@ -82,7 +82,7 @@ The following table outlines the configurations available for snapshots:
 | [updated_at](/reference/resource-configs/updated_at) | If using the `timestamp` strategy, the timestamp column to compare | Only if using the `timestamp` strategy | updated_at |
 | [dbt_valid_to_current](/reference/resource-configs/dbt_valid_to_current) | Set a custom indicator for the value of `dbt_valid_to` in current snapshot records (like a future date). By default, this value is `NULL`. When configured, dbt will use the specified value instead of `NULL` for `dbt_valid_to` for current records in the snapshot table.| No | string |
 | [snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names) | Customize the names of the snapshot meta fields | No | dictionary |
-| [hard_deletes](/reference/resource-configs/hard-deletes) | Track hard deletes by adding a new record when row become "deleted" in source | No | string |
+| [hard_deletes](/reference/resource-configs/hard-deletes) | Specify how to handle deleted rows from the source. Supported options are `ignore` (default), `invalidate` (replaces the legacy `invalidate_hard_deletes=true`), and `new_record`.| No | string |
 
 
 - In versions prior to v1.9, the `target_schema` (required) and `target_database` (optional) configurations defined a single schema or database to build a snapshot across users and environment. This created problems when testing or developing a snapshot, as there was no clear separation between development and production environments.  In v1.9, `target_schema` became optional, allowing snapshots to be environment-aware. By default, without `target_schema` or `target_database` defined, snapshots now use the `generate_schema_name` or `generate_database_name` macros to determine where to build. Developers can still set a custom location with [`schema`](/reference/resource-configs/schema) and [`database`](/reference/resource-configs/database)  configs, consistent with other resource types.
@@ -390,7 +390,7 @@ The resulting table will look like this:
 | 1  | pending | 2024-01-01 10:47 | 2024-01-01 10:47 | 2024-01-01 11:05 | False          |
 | 1  | shipped | 2024-01-01 11:05 | 2024-01-01 11:05 | 2024-01-01 11:20 | False          |
 | 1  | shipped | 2024-01-01 11:20 | 2024-01-01 11:20 |                  | True           |
-| 1  | restored | 2024-01-01 12:00 | 2024-01-01 12:00 |                 | False          |
+| 1  | shipped | 2024-01-01 12:00 | 2024-01-01 12:00 |                  | False          |
 
 </VersionBlock>
 
@@ -485,7 +485,7 @@ Snapshot results with `hard_deletes='new_record'`:
 |----|---------|------------------|------------------|------------------|------------------|----------------|
 | 1  | pending | 2024-01-01 10:47 | 2024-01-01 10:47 | 2024-01-01 11:05 | 2024-01-01 10:47 | False          |
 | 1  | shipped | 2024-01-01 11:05 | 2024-01-01 11:05 | 2024-01-01 11:20 | 2024-01-01 11:05 | False          |
-| 1  | deleted | 2024-01-01 11:20 | 2024-01-01 11:20 |              | 2024-01-01 11:20 | True           |
+| 1  | shipped | 2024-01-01 11:20 | 2024-01-01 11:20 |              | 2024-01-01 11:20 | True           |
 
 
 </details>
@@ -575,7 +575,7 @@ The following table outlines the configurations available for snapshots in versi
 | [unique_key](/reference/resource-configs/unique_key) | A <Term id="primary-key" /> column or expression for the record | Yes | id |
 | [check_cols](/reference/resource-configs/check_cols) | If using the `check` strategy, then the columns to check | Only if using the `check` strategy | ["status"] |
 | [updated_at](/reference/resource-configs/updated_at) | If using the `timestamp` strategy, the timestamp column to compare | Only if using the `timestamp` strategy | updated_at |
-| [invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) | Find hard deleted records in source, and set `dbt_valid_to` current time if no longer exists | No | True |
+| [invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) (legacy) | Find hard deleted records in source, and set `dbt_valid_to` current time if no longer exists. This is a legacy config replaced by [`hard_deletes`](/reference/resource-configs/hard-deletes) in dbt v1.9. | No | True |
 
 - A number of other configurations are also supported (e.g. `tags` and `post-hook`), check out the full list [here](/reference/snapshot-configs).
 - Snapshots can be configured from both your `dbt_project.yml` file and a `config` block, check out the [configuration docs](/reference/snapshot-configs) for more information.

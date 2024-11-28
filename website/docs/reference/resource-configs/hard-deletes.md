@@ -49,8 +49,7 @@ snapshots:
 
 ## Description
 
-Use the `hard_deletes` configuration to track hard deletes by adding a new record when row become "deleted" in source. 
-Replaces the `invalidate_hard_deletes` config to give you more control on how to handle deleted rows from the source.
+The `hard_deletes` config gives you more control on how to handle deleted rows from the source. Supported options are `ignore` (default), `invalidate` (replaces the legacy `invalidate_hard_deletes=true`), and `new_record`.
 
 import HardDeletes from '/snippets/_hard-deletes.md';
 
@@ -70,7 +69,7 @@ The `hard_deletes` config has three methods:
 | Methods | Description |
 | --------- | ----------- |
 | `ignore` (default) | No action for deleted records. |
-| `invalidate` | Behaves the same as the existing `invalidate_hard_deletes=true`, where deleted records are invalidated by setting `dbt_valid_to` to current time. |
+| `invalidate` | Behaves the same as the existing `invalidate_hard_deletes=true`, where deleted records are invalidated by setting `dbt_valid_to` to current time. This method replaces the `invalidate_hard_deletes` config to give you more control on how to handle deleted rows from the source. |
 | `new_record` | Tracks deleted records as new rows using the `dbt_is_deleted` meta field when records are deleted.|
 
 ## Considerations
@@ -105,7 +104,7 @@ The resulting snapshot table contains the `hard_deletes: new_record` configurati
 | id | dbt_scd_id           |   Status | dbt_updated_at       |   dbt_valid_from    |     dbt_valid_to     | dbt_is_deleted | 
 | -- | -------------------- | -----    | -------------------- | --------------------| -------------------- | ----------- |
 |  1 | 60a1f1dbdf899a4dd... | pending  | 2024-10-02 ...       | 2024-05-19...       | 2024-05-20 ...       | False       | 
-|  1 | b1885d098f8bcff51... | cancelled| 2024-10-02 ...       | 2024-05-20 ...      | 2024-06-03 ...       | True        | 
+|  1 | b1885d098f8bcff51... | pending  | 2024-10-02 ...       | 2024-05-20 ...      | 2024-06-03 ...       | True        | 
 |  1 | b1885d098f8bcff53... | shipped  | 2024-10-02 ...       | 2024-06-03 ...      |                      | False       | 
 |  2 | b1885d098f8bcff55... | active   | 2024-10-02 ...       | 2024-05-19 ...      |                      | False       | 
  

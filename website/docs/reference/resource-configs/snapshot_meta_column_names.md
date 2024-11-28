@@ -110,5 +110,6 @@ The resulting snapshot table contains the configured meta column names:
 
 | id | scd_id               |        modified_date |           start_date |             end_date | is_deleted |
 | -- | -------------------- | -------------------- | -------------------- | -------------------- | ---------- |
-|  1 | 60a1f1dbdf899a4dd... | 2024-10-02 ...       | 2024-10-02 ...       | 2024-10-02 ...       | False      |
-|  2 | b1885d098f8bcff51... | 2024-10-02 ...       | 2024-10-02 ...       |                      | False      |
+|  1 | 60a1f1dbdf899a4dd... | 2024-10-02 ...       | 2024-10-02 ...       | 2024-10-03 ...       | False      |
+|  1 | 60a1f1dbdf899a4dd... | 2024-10-03 ...       | 2024-10-03 ...       |                      | True      |
+|  2 | b1885d098f8bcff51... | 2024-10-02 ...       | 2024-10-02 ...       |                      | False     |
