@@ -1,7 +1,7 @@
 <Expandable alt_header="When to use the hard_deletes and invalidate_hard_deletes config?">
 
 **Use `invalidate_hard_deletes` (v1.8 and earlier) if:**
-- You want to invalidate deleted rows by setting their `dbt_valid_to` timestamp to the snapshot time (implicit delete).
+- You want to invalidate deleted rows by setting their `dbt_valid_to` timestamp to the current time (implicit delete).
 - You are working with smaller datasets where tracking deletions as a separate state is unnecessary.
 - Gaps in the snapshot history (missing records for deleted rows) are acceptable.
 
