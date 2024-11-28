@@ -20,7 +20,7 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
 
 ## December 2024
 
-- **New**: The [`hard_deletes`](/reference/resource-configs/hard-deletes) config replaces the `invalidate_hard_deletes` config to give you more control on how to handle deleted rows from the source. Supported options are `ignore`, `invalidate`, and `new_record`. 
+- **New**: The [`hard_deletes`](/reference/resource-configs/hard-deletes) config gives you more control on how to handle deleted rows from the source. Supported options are `ignore` (default), `invalidate` (replaces the legacy `invalidate_hard_deletes=true`), and `new_record`. 
 
 ## November 2024
 - **Fix**: Job environment variable overrides in credentials are now respected for Exports. Previously, they were ignored.
