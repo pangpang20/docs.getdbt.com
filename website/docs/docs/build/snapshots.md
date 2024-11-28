@@ -445,7 +445,7 @@ Starting in 1.9 or with [dbt Cloud Versionless](/docs/dbt-versions/upgrade-dbt-v
 | dbt_valid_to   | The timestamp when this row became invalidated. <br /> For current records, this is `NULL` by default <VersionBlock firstVersion="1.9"> or the value specified in `dbt_valid_to_current`.</VersionBlock> | The most recent snapshot record will have `dbt_valid_to` set to `NULL` <VersionBlock firstVersion="1.9"> or the specified value. </VersionBlock> |
 | dbt_scd_id     | A unique key generated for each snapshotted record. | This is used internally by dbt |
 | dbt_updated_at | The updated_at timestamp of the source record when this snapshot row was inserted. | This is used internally by dbt |
-| dbt_is_deleted | A boolean value indicating if the record has been deleted. `True` if deleted, `False` otherwise. | Added when `hard_deletes='new_record'` is configured. This is used internally by dbt |
+| dbt_is_deleted | A boolean value indicating if the record is in a deleted state. `True` if deleted, `False` otherwise. | Added when `hard_deletes='new_record'` is configured. |
 
 *The timestamps used for each column are subtly different depending on the strategy you use:
 
