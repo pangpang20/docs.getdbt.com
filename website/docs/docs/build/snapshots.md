@@ -349,7 +349,7 @@ snapshots:
 
 <VersionBlock firstVersion="1.9">
 
-In dbt v1.9 and higher, the [`hard_deletes`](/reference/resource-configs/hard-deletes) config replaces the `invalidate_hard_deletes` config to give you more control on how to handle deleted rows from the source. The `hard_deletes` config is not a separate strategy but an additional opt-in feature that can be used with any snapshot strategy.
+In dbt v1.9 and higher, the [`hard_deletes`](/reference/resource-configs/hard-deletes) config replaces the `invalidate_hard_deletes` config to give you more control on how to handle deleted rows from the source. The `hard_deletes` config is an additional opt-in feature that can be used with any snapshot strategy.
 
 The `hard_deletes` config has three options/fields:
 | Field | Description |
