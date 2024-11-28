@@ -356,7 +356,7 @@ The `hard_deletes` config has three options/fields:
 | --------- | ----------- |
 | `ignore` (default) | No action for deleted records. |
 | `invalidate` | Behaves the same as the existing `invalidate_hard_deletes=true`, where deleted records are invalidated by setting `dbt_valid_to` to the current time. |
-| `new_record` | Tracks deleted records as new rows using the `dbt_is_deleted` [meta field](#snapshot-meta-fields) when records are deleted.|
+| `new_record` | Tracks deleted records as new rows using the `dbt_is_deleted` [meta field](#snapshot-meta-fields) to indicate when records are in a deleted state.|
 
 import HardDeletes from '/snippets/_hard-deletes.md';
 
