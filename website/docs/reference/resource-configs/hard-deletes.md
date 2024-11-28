@@ -17,7 +17,7 @@ Available from dbt v1.9 or with [Versionless](/docs/dbt-versions/upgrade-dbt-ver
 snapshots:
   - name: <snapshot_name>
     config:
-      hard_deletes: 'ignore', 'invalidate', or 'new_record'
+      hard_deletes: 'ignore' | 'invalidate' | 'new_record'
 ```
 </File>
 
