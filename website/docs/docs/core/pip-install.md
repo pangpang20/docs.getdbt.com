@@ -175,30 +175,23 @@ python3 -m pip install --pre dbt-core dbt-adapter-name
 source venv/bin/activate
 dbt --version
 ```
-Not, the command `python3 -m pip install --pre dbt-core dbt-adapter-name` will also install any pre-releases of all dependencies.
+Note, this will also install any pre-releases of all dependencies.
+
 #### Install prereleases on different operating systems 
 
 To install or use packages within your virtual environment:
 
 - Activate the virtual environment to add its specific Python and `pip` executables to your shell’s PATH. This ensures you use the environment’s isolated setup. 
 
-   Select your operating system and run the following commands to activate it:
+   Select your operating system and run the following command to activate it:
 
 
 <Expandable alt_header="Unix/macOS" >
 
 ```shell
+python3 -m pip install --pre dbt-core dbt-adapter-name
 source .venv/bin/activate
-which python
-.venv/bin/python
-```
-
-These commands will install the prerelease:
-
-```shell
-python3 -m pip install --upgrade pip
-python3 -m pip --version
-pip 23.3.1 from .../.venv/lib/python3.9/site-packages (python 3.9)
+dbt --version
 ```
 
 </Expandable>
@@ -206,20 +199,66 @@ pip 23.3.1 from .../.venv/lib/python3.9/site-packages (python 3.9)
 <Expandable alt_header="Windows" >
 
 ```shell
+py -m pip install --pre dbt-core dbt-adapter-name
 .venv\Scripts\activate
-where python
-.venv\Scripts\python
-```
-These commands will install the prerelease:
-
-```shell
-py -m pip install --upgrade pip
-py -m pip --version
-pip 23.3.1 from .venv\lib\site-packages (Python 3.9.4)
+dbt --version
 ```
 
 </Expandable>
 
-If you’re using a different operating system, refer to [Git issue on Instructions to create a python virtual environment](https://github.com/dbt-labs/docs.getdbt.com/discussions/2143) for more information.
+<Expandable alt_header="POSIX bash/zsh" >
+
+```shell
+python3 -m pip install --pre dbt-core dbt-adapter-name
+source venv/bin/activate
+dbt --version
+```
+
+</Expandable>
+
+<Expandable alt_header="POSIX fish" >
+
+```shell
+python3 -m pip install --pre dbt-core dbt-adapter-name
+source venv/bin/activate.fish
+```
+
+</Expandable>
+
+<Expandable alt_header="POSIX csh/tcsh" >
+
+```shell
+python3 -m pip install --pre dbt-core dbt-adapter-name
+source venv/bin/activate.csh
+```
+
+</Expandable>
+
+<Expandable alt_header="POSIX PowerShell Core" >
+
+```shell
+python3 -m pip install --pre dbt-core dbt-adapter-name
+venv/bin/Activate.ps1
+```
+
+</Expandable>
+
+<Expandable alt_header="Windows cmd.exe" >
+
+```shell
+python -m pip install --pre dbt-core dbt-adapter-name
+venv\Scripts\activate.bat
+```
+
+</Expandable>
+
+<Expandable alt_header="Windows PowerShell" >
+
+```shell
+python -m pip install --pre dbt-core dbt-adapter-name
+venv\Scripts\Activate.ps1
+```
+
+</Expandable>
 
 </VersionBlock>
