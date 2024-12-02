@@ -67,7 +67,7 @@ In the staging layer, your models should be cleaning up or mitigating data issue
 
 ### Intermediate (if applicable)
 
-In your intermediate layer, focus on data hygiene and anomaly tests for new columns. Don’t re-test passthrough columns from sources or staging. Here are some examples of tests you might put in your intermediate layer based on the use cases of intermediate models we [outline in this guide.](https://docs.getdbt.com/best-practices/how-we-structure/3-intermediate#intermediate-models)
+In your intermediate layer, focus on data hygiene and anomaly tests for new columns. Don’t re-test passthrough columns from sources or staging. Here are some examples of tests you might put in your intermediate layer based on the use cases of intermediate models we [outline in this guide.](/best-practices/how-we-structure/3-intermediate#intermediate-models)
 
 - Intermediate models often re-grain models to prepare them for marts.
     - Add a primary key test to any re-grained models.
