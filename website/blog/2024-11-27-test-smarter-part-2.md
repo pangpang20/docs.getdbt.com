@@ -104,7 +104,7 @@ You should run a [slim CI](https://docs.getdbt.com/best-practices/best-practice-
 
 With CI/CD and your regular production runs, your testing framework can be on autopilot. 😎
 
-If and when you encounter failures, consult your trusty testing framework doc you built in our [earlier post.](https://docs.getdbt.com/blog/test-smarter-not-harder)
+If and when you encounter failures, consult your trusty testing framework doc you built in our [earlier post].(/blog/test-smarter-not-harder)
 
 ### Advanced CI
 
