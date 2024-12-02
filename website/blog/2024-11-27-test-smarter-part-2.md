@@ -57,9 +57,9 @@ Here’s our recommendation for what tests belong on your sources.
 
 ### Staging
 
-In the staging layer, focus on business anomaly detection as well as cleaning up or mitigating data issues that can't be fixed at the source.  
+In the staging layer, your models should be cleaning up or mitigating data issues that can't be fixed at the source, and your tests should be focused on business anomaly detection.
 
-- Data cleanup and issue mitigation: You will probably have data quality or hygiene issues that you can’t fix in your source system. This is what your staging layer is for. Use our [best practices around staging layers](https://docs.getdbt.com/best-practices/how-we-structure/2-staging) to clean things up. Don’t add tests to your cleanup efforts. If you’re filtering out nulls in a column, adding a not_null test is repetitive!  🌶️
+- Data cleanup and issue mitigation: Use our [best practices around staging layers](https://docs.getdbt.com/best-practices/how-we-structure/2-staging) to clean things up. Don’t add tests to your cleanup efforts. If you’re filtering out nulls in a column, adding a not_null test is repetitive!  🌶️
 - Business-focused anomaly examples: these are data quality issues you *should* test for in your staging layer, because they fall outside of your business’s defined norms. These might be:
     - Values inside a single column that fall outside of an acceptable range. For example, a sale amount that may indicate excessive discounting and require intervention.
     - A transaction size that usually indicates fraud and spurs further investigation into the offending transaction.
