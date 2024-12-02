@@ -51,7 +51,7 @@ You may have multiple jobs that run in the same environment, and you'd like the 
 
 When setting up or editing a job, you will see a section where you can override environment variable values defined at the environment or project level.
 
-<Lightbox src="/img/docs/dbt-cloud/using-dbt-cloud/Environment Variables/job-override.gif" title="Navigating to environment variables job override settings"/>
+<Lightbox src="/img/docs/dbt-cloud/using-dbt-cloud/Environment Variables/job-override1.png" title="Navigating to environment variables job override settings"/>
 
 
 Every job runs in a specific, deployment environment, and by default, a job will inherit the values set at the environment level (or the highest precedence level set) for the environment in which it runs. If you'd like to set a different value at the job level, edit the value to override it.
@@ -83,7 +83,7 @@ If you change the value of an environment variable mid-session while using the I
 
 To refresh the IDE mid-development, click on either the green 'ready' signal or the red 'compilation error' message at the bottom right corner of the IDE. A new modal will pop up, and you should select the Refresh IDE button. This will load your environment variables values into your development environment.
 
-<Lightbox src="/img/docs/dbt-cloud/using-dbt-cloud/Environment Variables/refresh-ide.gif" title="Refreshing IDE mid-session"/>
+<Lightbox src="/img/docs/dbt-cloud/using-dbt-cloud/Environment Variables/refresh-ide.png" title="Refreshing IDE mid-session"/>
 
 There are some known issues with partial parsing of a project and changing environment variables mid-session in the IDE. If you find that your dbt project is not compiling to the values you've set, try deleting the `target/partial_parse.msgpack` file in your dbt project which will force dbt to re-compile your whole project.
 
