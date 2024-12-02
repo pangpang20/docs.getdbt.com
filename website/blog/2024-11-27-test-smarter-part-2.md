@@ -74,7 +74,7 @@ In your intermediate layer, focus on data hygiene and anomaly tests for new colu
     - Additionally, consider adding a primary key test to models where the grain *has remained the same* but has been *enriched.* This helps future-proof your enriched models against future developers who may not be able to glean your intention from SQL alone.
 - Intermediate models may perform a first set of joins or aggregations to reduce complexity in a final mart.
     - Add simple anomaly tests to verify the behavior of your sets of joins and aggregations. This may look like:
-        - An [accepted_values](https://docs.getdbt.com/reference/resource-properties/data-tests#accepted_values) test on a newly calculated categorical column.
+        - An [accepted_values](/reference/resource-properties/data-tests#accepted_values) test on a newly calculated categorical column.
         - A [mutually_exclusive_ranges](https://docs.getdbt.com/reference/resource-properties/data-tests#accepted_values) test on two columns whose values behave in relation to one another (ex: asserting age ranges do not overlap).
         - A [not_constant](https://docs.getdbt.com/reference/resource-properties/data-tests#accepted_values) test on a column whose value should be continually changing (ex: page view counts on website analytics).
 - Intermediate models may isolate complex operations.
