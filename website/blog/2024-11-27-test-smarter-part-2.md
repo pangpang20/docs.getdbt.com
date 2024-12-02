@@ -79,7 +79,7 @@ In your intermediate layer, focus on data hygiene and anomaly tests for new colu
         - A [not_constant](https://github.com/dbt-labs/dbt-utils#not_constant-source) test on a column whose value should be continually changing (ex: page view counts on website analytics).
 - Intermediate models may isolate complex operations.
     - The anomaly tests we list above may suffice here.
-    - You might also consider [unit testing](https://docs.getdbt.com/docs/build/unit-tests) any particularly complex pieces of SQL logic.
+    - You might also consider [unit testing](/docs/build/unit-tests) any particularly complex pieces of SQL logic.
 
 ### Marts
 
