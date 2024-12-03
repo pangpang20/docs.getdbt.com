@@ -40,7 +40,7 @@ Once AI features have been enabled, you can provide your organization's OpenAI A
 
 Configure AI keys using:
 - [dbt Labs-managed OpenAI API key](/docs/cloud/account-integrations#dbt-labs-openai)
-- [Azure OpenAI](/docs/cloud/account-integrations#azure-openai)
+- [Azure OpenAI](/docs/cloud/account-integrations#azure-openai) <Lifecycle status="beta" />
 - Or your own [OpenAI API key](/docs/cloud/account-integrations#openai-key)
 
 For configuration details, see [Account integrations](/docs/cloud/account-integrations#ai).

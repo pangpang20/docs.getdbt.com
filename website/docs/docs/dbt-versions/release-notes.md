@@ -19,7 +19,7 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
 \* The official release date for this new format of release notes is May 15th, 2024. Historical release notes for prior dates may not reflect all available features released earlier this year or their tenancy availability.
 
 ## December 2024
-- **New**: You can now configure AI keys using [Azure OpenAI](/docs/cloud/account-integrations#azure-openai). Additionally, you can use your own [OpenAI API key](/docs/cloud/account-integrations#openai-key) or use [dbt Labs-managed OpenAI](/docs/cloud/account-integrations#dbt-labs-openai) key. Refer to [Bring your own OpenAI API key (BYOK)](/docs/cloud/enable-dbt-copilot#bringing-your-own-openai-api-key-byok) for more information.
+- **New**: You can now configure AI keys using [Azure OpenAI](/docs/cloud/account-integrations#azure-openai), available in beta. Additionally, you can use your own [OpenAI API key](/docs/cloud/account-integrations#openai-key) or use [dbt Labs-managed OpenAI](/docs/cloud/account-integrations#dbt-labs-openai) key. Refer to [Bring your own OpenAI API key (BYOK)](/docs/cloud/enable-dbt-copilot#bringing-your-own-openai-api-key-byok) for more information.
 
 ## November 2024
 - **Fix**: Job environment variable overrides in credentials are now respected for Exports. Previously, they were ignored.

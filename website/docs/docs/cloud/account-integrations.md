@@ -57,7 +57,7 @@ To configure the AI integration in your dbt Cloud account, a dbt Cloud admin can
 2. Enter the API key.
 3. Click **Save**.
 
-### Azure OpenAI
+### Azure OpenAI <Lifecycle status="beta" />
 
 **Deploying your own OpenAI model on Azure** https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-openai
 
