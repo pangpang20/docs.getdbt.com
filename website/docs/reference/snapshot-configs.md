@@ -18,12 +18,6 @@ import ConfigGeneral from '/snippets/_config-description-general.md';
 
 <ConfigResource meta={frontMatter.meta} />
 
-<VersionBlock lastVersion="1.8">
-
-Starting from Versionless and Core v1.9, defining snapshots in a `.sql` file using a config block is a legacy method. You can define snapshots in YAML format using the latest [snapshot-specific configurations](/docs/build/snapshot-configs#snapshot-specific-configurations). For new snapshots, we recommend using these latest configs. If applying them to existing snapshots, you'll need to migrate over.
-
-</VersionBlock>
-
 <Tabs
   groupId="config-languages"
   defaultValue="project-yaml"
@@ -117,12 +111,9 @@ snapshots:
 
 <TabItem value="config-resource">
 
-<VersionBlock firstVersion="1.9">
+import LegacySnapshotConfig from '/snippets/_legacy-snapshot-config.md';
 
-Starting from Versionless and Core v1.9, defining snapshots in a `.sql` file using a config block is a legacy method. You can define snapshots in YAML format using the latest [snapshot-specific configurations](/docs/build/snapshots#snapshot-meta-fields). For new snapshots, we recommend using these latest configs. If applying them to existing snapshots, you'll need to migrate over.
-
-
-</VersionBlock>
+<LegacySnapshotConfig />
 
 <VersionBlock lastVersion="1.8">
 
@@ -264,11 +255,8 @@ snapshots:
 
 <TabItem value="config">
 
-<VersionBlock firstVersion="1.9">
+<LegacySnapshotConfig />
 
-Starting from Versionless and Core v1.9, defining snapshots in a `.sql` file using a config block is a legacy method. You can define snapshots in YAML format using the latest [configurations](/docs/build/snapshots#configuring-snapshots). You can also continue using the legacy method for existing snapshots, but we recommend migrating over to the latest YAML format for better readability and maintainability.
-
-</VersionBlock>
 
 <VersionBlock lastVersion="1.8">
 
@@ -303,11 +291,9 @@ Snapshots can be configured in multiple ways:
 
 <VersionBlock lastVersion="1.8">
 
-1. Defined in YAML files using a `config` [resource property](/reference/model-properties), typically in your [snapshots directory](/reference/project-configs/snapshot-paths) (available in [Versionless](/docs/dbt-versions/versionless-cloud) or and dbt Core v1.9 and higher).
-2. Using a `config` block within a snapshot defined in Jinja SQL
+1. Defined in a YAML file using a `config` [resource property](/reference/model-properties), typically in your [snapshots directory](/reference/project-configs/snapshot-paths) (available in [Versionless](/docs/dbt-versions/versionless-cloud) or and dbt Core v1.9 and higher). The latest snapshot YAML syntax provides faster and more efficient management.
+2. Using a `config` block within a snapshot defined in Jinja SQL.
 3. From the `dbt_project.yml` file, under the `snapshots:` key. To apply a configuration to a snapshot, or directory of snapshots, define the resource path as nested dictionary keys.
-
-Note that in Versionless and dbt v1.9 and later, snapshots are defined in an updated syntax using a YAML file within your `snapshots/` directory (as defined by the [`snapshot-paths` config](/reference/project-configs/snapshot-paths)). For faster and more efficient management, consider the updated snapshot YAML syntax, [available in Versionless](/docs/dbt-versions/versionless-cloud) or [dbt Core v1.9 and later](/docs/dbt-versions/core).
 
 </VersionBlock>
 
