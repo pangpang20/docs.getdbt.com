@@ -18,9 +18,9 @@ To configure a Git account integration:
 3. Click on the Git provider from the list and select the **Pencil** icon to the right of the provider.
 4. dbt Cloud [natively connects](/docs/cloud/git/git-configuration-in-dbt-cloud) to the following Git providers:
 
-   - GitHub
-   - GitLab
-   - Azure DevOps <Lifecycle status="enterprise" />
+   - [GitHub](/docs/cloud/git/connect-github)
+   - [GitLab](/docs/cloud/git/connect-gitlab)
+   - [Azure DevOps](/docs/cloud/git/connect-azure-devops) <Lifecycle status="enterprise" />
 
 You can connect your dbt Cloud account to additional Git providers by importing a git repository from any valid git URL. Refer to [Import a git repository](/docs/cloud/git/import-a-project-by-git-url) for more information.
 
