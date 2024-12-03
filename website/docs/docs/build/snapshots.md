@@ -440,7 +440,7 @@ Starting in 1.9 or with [dbt Cloud Versionless](/docs/dbt-versions/upgrade-dbt-v
 - Use the [`hard_deletes`](/reference/resource-configs/hard-deletes) config to track deleted records as new rows with the `dbt_is_deleted` meta field when using the `hard_deletes='new_record'` field.
 
 | Field          | Meaning | Usage |
-| -------------- | ------- | ----- | 
+| -------------- | ------- | ----- |
 | dbt_valid_from | The timestamp when this snapshot row was first inserted | This column can be used to order the different "versions" of a record. |
 | dbt_valid_to   | The timestamp when this row became invalidated. <br /> For current records, this is `NULL` by default <VersionBlock firstVersion="1.9"> or the value specified in `dbt_valid_to_current`.</VersionBlock> | The most recent snapshot record will have `dbt_valid_to` set to `NULL` <VersionBlock firstVersion="1.9"> or the specified value. </VersionBlock> |
 | dbt_scd_id     | A unique key generated for each snapshotted record. | This is used internally by dbt |
