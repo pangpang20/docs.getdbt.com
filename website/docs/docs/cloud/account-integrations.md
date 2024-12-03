@@ -64,19 +64,21 @@ To configure the AI integration in your dbt Cloud account, a dbt Cloud admin can
 
 **Deploying your own OpenAI model on Azure** https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-openai
 
+<Lightbox src="/img/docs/dbt-cloud/account-integration-ai.jpg" width="85%" title="Example of the AI integration page" />
+
 :::info
-dbt Cloud's AI is optimized for OpenAIs gpt-4o. Using other models can negatively affect performance and accuracy.
-(We cannot guarantee things will be working as expected for any other model)
+dbt Cloud's AI is optimized for OpenAIs gpt-4o. Using other models can affect performance and accuracy, and functionality with alternative models isn't guaranteed.
 :::
 
 You can configure credentials for your Azure OpenAI deployment in the following two ways:
+
 
 - <Expandable alt_header="From a Target URI">
 
     **Locate your Azure OpenAI deployment URI**
     ref to Azure docs
 
-    ADD SCREENSHOT
+    <Lightbox src="/img/docs/dbt-cloud/account-integration-azure-target.jpg" width="85%" title="Example of Azure OpenAI integration section" />
 
     1. Select **Azure OpenAI**.
     2. Select the tab **From Target URI**.
@@ -91,7 +93,7 @@ You can configure credentials for your Azure OpenAI deployment in the following 
     **Locate your Azure OpenAI configuration**
     ref to Azure docs
 
-    ADD SCREENSHOT
+    <Lightbox src="/img/docs/dbt-cloud/account-integration-azure-manual.jpg" width="85%" title="Example of Azure OpenAI integration section" />
 
     1. Select **Azure OpenAI**.
     2. Select the tab **Manual Input**.
