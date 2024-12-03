@@ -189,8 +189,8 @@ Several configurations are relevant to microbatch models, and some are required:
 | `partition_by` | A column(s) (string or array) or expression for the record. Required for the `check` strategy. | N/A | String | Optional* |
 
 ***Note:**
-- `unique_key` is _required_ for the check strategy when using the `dbt-postgres` adapter.
-- `partition_by` is _required_ for the check strategy when using the `dbt-spark` and `dbt-bigquery` adapters.
+- `unique_key` is _required_ for the microbatch strategy when using the `dbt-postgres` adapter.
+- `partition_by` is _required_ for the microbatch strategy when using the `dbt-spark` and `dbt-bigquery` adapters.
 
 <Lightbox src="/img/docs/building-a-dbt-project/microbatch/event_time.png" title="The event_time column configures the real-world time of this record"/>
 
