@@ -33,7 +33,7 @@ To configure an OAuth account integration:
 - For Slack, click on **Link** to connect your Slack account.
 - For custom OAuth providers, under **Custom OAuth integrations**, click on **Add integration** and select the OAuth provider from the list. Fill in the required fields and click **Save**.
 
-<Lightbox src="/img/docs/dbt-cloud/account-integration-auth.jpg" width="85%" title="Example of the OAuth integration page" />
+<Lightbox src="/img/docs/dbt-cloud/account-integration-oauth.jpg" width="85%" title="Example of the OAuth integration page" />
 
 ## AI
 
@@ -44,6 +44,8 @@ To configure the AI integration in your dbt Cloud account, a dbt Cloud admin can
 2. Under the **Settings** section, click on **Integrations**.
 3. Scroll to **AI**.
 4. Click on the **Pencil** icon to the right of **OpenAI** to configure the AI integration.
+
+<Lightbox src="/img/docs/dbt-cloud/account-integration-ai.jpg" width="85%" title="Example of the AI integration page" />
 
 ### dbt Labs OpenAI
 
@@ -69,7 +71,7 @@ You can configure credentials for your Azure OpenAI deployment in the following 
 - <Expandable alt_header="From a Target URI">
 
     **Locate your Azure OpenAI deployment URI**
-    {ref to Azure docs}
+    ref to Azure docs
 
     ADD SCREENSHOT
 
@@ -79,13 +81,12 @@ You can configure credentials for your Azure OpenAI deployment in the following 
     4. Verify the **Endpoint**, **Model Name**, and **API Version** are correct.
     5. Enter your Azure OpenAI API key.
     6. Click **Save**.
-
-</Expandable>
+  </Expandable>
 
 - <Expandable alt_header="Manually providing the credentials">
 
     **Locate your Azure OpenAI configuration**
-    {ref to Azure docs}
+    ref to Azure docs
 
     ADD SCREENSHOT
 
@@ -96,6 +97,6 @@ You can configure credentials for your Azure OpenAI deployment in the following 
     5. Enter the **API Version**.
     6. Enter your Azure OpenAI API key.
     7. Click **Save**.
-</Expandable>
+  </Expandable>
 
-<Lightbox src="/img/docs/dbt-cloud/account-integration-ai.jpg" width="85%" title="Example of the AI integration page" />
+
