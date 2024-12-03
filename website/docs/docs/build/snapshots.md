@@ -64,7 +64,7 @@ snapshots:
       [updated_at](/reference/resource-configs/updated_at): column_name
       [snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names): dictionary
       [dbt_valid_to_current](/reference/resource-configs/dbt_valid_to_current): string
-      [hard_deletes](/reference/resource-configs/hard-deletes): string
+      [hard_deletes](/reference/resource-configs/hard-deletes): ignore | invalidate | new_record 
 ```
 
 </File>
@@ -349,14 +349,14 @@ snapshots:
 
 <VersionBlock firstVersion="1.9">
 
-In dbt v1.9 and higher, the [`hard_deletes`](/reference/resource-configs/hard-deletes) config replaces the `invalidate_hard_deletes` config to give you more control on how to handle deleted rows from the source. The `hard_deletes` config is an additional opt-in feature that can be used with any snapshot strategy.
+In dbt v1.9 and higher, the [`hard_deletes`](/reference/resource-configs/hard-deletes) config replaces the `invalidate_hard_deletes` config to give you more control on how to handle deleted rows from the source. The `hard_deletes` config is not a separate strategy but an additional opt-in feature that can be used with any snapshot strategy.
 
-The `hard_deletes` config has three methods:
-| Methods | Description |
+The `hard_deletes` config has three options/fields:
+| Field | Description |
 | --------- | ----------- |
 | `ignore` (default) | No action for deleted records. |
-| `invalidate` | Behaves the same as the existing `invalidate_hard_deletes=true`, where deleted records are invalidated by setting `dbt_valid_to` to the current time. |
-| `new_record` | Tracks deleted records as new rows using the `dbt_is_deleted` [meta field](#snapshot-meta-fields) to indicate when records are in a deleted state.|
+| `invalidate` | Behaves the same as the existing `invalidate_hard_deletes=true`, where deleted records are invalidated by setting `dbt_valid_to`. |
+| `new_record` | Tracks deleted records as new rows using the `dbt_is_deleted` [meta field](#snapshot-meta-fields) when records are deleted.|
 
 import HardDeletes from '/snippets/_hard-deletes.md';
 
@@ -380,7 +380,7 @@ snapshots:
 
 </File>
 
-In this example, the `hard_deletes: new_record` config will add a new row for deleted records with the `dbt_is_deleted` column set to `True`.
+In this example, the `hard_deletes: new_record` config will add a new row for deleted records woth the `dbt_is_deleted` column set to `True`.
 Any restored records are added as new rows with the `dbt_is_deleted` field set to `False`.
 
 The resulting table will look like this:
@@ -389,8 +389,8 @@ The resulting table will look like this:
 | -- | ------ | ---------- | -------------- | ------------ | -------------- |
 | 1  | pending | 2024-01-01 10:47 | 2024-01-01 10:47 | 2024-01-01 11:05 | False          |
 | 1  | shipped | 2024-01-01 11:05 | 2024-01-01 11:05 | 2024-01-01 11:20 | False          |
-| 1  | shipped | 2024-01-01 11:20 | 2024-01-01 11:20 |                  | True           |
-| 1  | shipped | 2024-01-01 12:00 | 2024-01-01 12:00 |                  | False          |
+| 1  | deleted | 2024-01-01 11:20 | 2024-01-01 11:20 | 2024-01-01 12:00 | True           |
+| 1  | restored | 2024-01-01 12:00 | 2024-01-01 12:00 |                 | False        |
 
 </VersionBlock>
 
@@ -402,7 +402,7 @@ This configuration is not a different strategy as described above, but is an add
 
 For this configuration to work with the `timestamp` strategy, the configured `updated_at` column must be of timestamp type. Otherwise, queries will fail due to mixing data types.
 
-Note, in v1.9 and higher, setting the [`hard_deletes`](/reference/resource-configs/hard-deletes) config to `invalidate` replaces the `invalidate_hard_deletes` config for better control over how to handle deleted rows from the source.
+Note, in v1.9 and higher, the [`hard_deletes`](/reference/resource-configs/hard-deletes) config replaces the `invalidate_hard_deletes` config for better control over how to handle deleted rows from the source.
 
 #### Example usage
 
@@ -437,7 +437,7 @@ Snapshot <Term id="table">tables</Term> will be created as a clone of your sourc
 Starting in 1.9 or with [dbt Cloud Versionless](/docs/dbt-versions/upgrade-dbt-version-in-cloud#versionless):
 - These column names can be customized to your team or organizational conventions using the [`snapshot_meta_column_names`](/reference/resource-configs/snapshot_meta_column_names) config. 
 - Use the [`dbt_valid_to_current` config](/reference/resource-configs/dbt_valid_to_current) to set a custom indicator for the value of `dbt_valid_to` in current snapshot records (like a future date such as `9999-12-31`). By default, this value is `NULL`. When set, dbt will use this specified value instead of `NULL` for `dbt_valid_to` for current records in the snapshot table.
-- Use the [`hard_deletes`](/reference/resource-configs/hard-deletes) config and `new_record` method to track deleted records as new rows with the `dbt_is_deleted` meta field.
+- Use the [`hard_deletes`](/reference/resource-configs/hard-deletes) config to track deleted records as new rows with the `dbt_is_deleted` meta field when using the `hard_deletes='new_record'` field.
 
 | Field          | Meaning | Usage |
 | -------------- | ------- | ----- | 
@@ -445,7 +445,7 @@ Starting in 1.9 or with [dbt Cloud Versionless](/docs/dbt-versions/upgrade-dbt-v
 | dbt_valid_to   | The timestamp when this row became invalidated. <br /> For current records, this is `NULL` by default <VersionBlock firstVersion="1.9"> or the value specified in `dbt_valid_to_current`.</VersionBlock> | The most recent snapshot record will have `dbt_valid_to` set to `NULL` <VersionBlock firstVersion="1.9"> or the specified value. </VersionBlock> |
 | dbt_scd_id     | A unique key generated for each snapshotted record. | This is used internally by dbt |
 | dbt_updated_at | The updated_at timestamp of the source record when this snapshot row was inserted. | This is used internally by dbt |
-| dbt_is_deleted | A boolean value indicating if the record is in a deleted state. `True` if deleted, `False` otherwise. | Added when `hard_deletes='new_record'` is configured. |
+| dbt_is_deleted | A boolean value indicating if the record has been deleted. `True` if deleted, `False` otherwise. | Added when `hard_deletes='new_record'` is configured. This is used internally by dbt |
 
 *The timestamps used for each column are subtly different depending on the strategy you use:
 
@@ -485,7 +485,7 @@ Snapshot results with `hard_deletes='new_record'`:
 |----|---------|------------------|------------------|------------------|------------------|----------------|
 | 1  | pending | 2024-01-01 10:47 | 2024-01-01 10:47 | 2024-01-01 11:05 | 2024-01-01 10:47 | False          |
 | 1  | shipped | 2024-01-01 11:05 | 2024-01-01 11:05 | 2024-01-01 11:20 | 2024-01-01 11:05 | False          |
-| 1  | shipped | 2024-01-01 11:20 | 2024-01-01 11:20 |              | 2024-01-01 11:20 | True           |
+| 1  | deleted | 2024-01-01 11:20 | 2024-01-01 11:20 |              | 2024-01-01 11:20 | True           |
 
 
 </details>
@@ -530,7 +530,7 @@ Snapshot results:
 
 For information about configuring snapshots in dbt versions 1.8 and earlier, select **1.8** from the documentation version picker, and it will appear in this section.
 
-To configure snapshots in versions 1.9 and later, refer to [Configuring snapshots](#configuring-snapshots). The latest versions use a more ergonomic snapshot configuration syntax that also speeds up parsing and compilation.
+To configure snapshots in versions 1.9 and later, refer to [Configuring snapshots](#configuring-snapshots). The latest versions use an updated snapshot configuration syntax that optimizes performance.
 
 </VersionBlock>
 
@@ -575,7 +575,7 @@ The following table outlines the configurations available for snapshots in versi
 | [unique_key](/reference/resource-configs/unique_key) | A <Term id="primary-key" /> column or expression for the record | Yes | id |
 | [check_cols](/reference/resource-configs/check_cols) | If using the `check` strategy, then the columns to check | Only if using the `check` strategy | ["status"] |
 | [updated_at](/reference/resource-configs/updated_at) | If using the `timestamp` strategy, the timestamp column to compare | Only if using the `timestamp` strategy | updated_at |
-| [invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) (legacy) | Find hard deleted records in source, and set `dbt_valid_to` current time if no longer exists. This is a legacy config replaced by [`hard_deletes`](/reference/resource-configs/hard-deletes) in dbt v1.9. | No | True |
+| [invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) | Find hard deleted records in source, and set `dbt_valid_to` current time if no longer exists | No | True |
 
 - A number of other configurations are also supported (e.g. `tags` and `post-hook`), check out the full list [here](/reference/snapshot-configs).
 - Snapshots can be configured from both your `dbt_project.yml` file and a `config` block, check out the [configuration docs](/reference/snapshot-configs) for more information.
