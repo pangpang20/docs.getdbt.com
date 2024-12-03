@@ -380,7 +380,7 @@ snapshots:
 
 </File>
 
-In this example, the `hard_deletes: new_record` config will add a new row for deleted records woth the `dbt_is_deleted` column set to `True`.
+In this example, the `hard_deletes: new_record` config will add a new row for deleted records with the `dbt_is_deleted` column set to `True`.
 Any restored records are added as new rows with the `dbt_is_deleted` field set to `False`.
 
 The resulting table will look like this:
