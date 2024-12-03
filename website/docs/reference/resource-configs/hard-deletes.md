@@ -2,7 +2,7 @@
 title: hard_deletes
 resource_types: [snapshots]
 description: "Use the `hard_deletes` config to control how deleted rows are tracked in your snapshot table."
-datatype: "{<dictionary>}"
+datatype: "boolean"
 default_value: {ignore}
 id: "hard-deletes"
 sidebar_label: "hard_deletes"
