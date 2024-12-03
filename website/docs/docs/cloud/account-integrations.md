@@ -67,7 +67,7 @@ To configure the AI integration in your dbt Cloud account, a dbt Cloud admin can
 <Lightbox src="/img/docs/dbt-cloud/account-integration-ai.jpg" width="85%" title="Example of the AI integration page" />
 
 :::info
-dbt Cloud's AI is optimized for OpenAIs gpt-4o. Using other models can affect performance and accuracy, and functionality with alternative models isn't guaranteed.
+dbt Cloud's AI is optimized for OpenAIs gpt-4o. Using other models can affect performance and accuracy, and functionality with other models isn't guaranteed.
 :::
 
 You can configure credentials for your Azure OpenAI deployment in the following two ways:
