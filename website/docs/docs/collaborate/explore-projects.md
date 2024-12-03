@@ -164,7 +164,7 @@ Under the the **Models** option, you can filter on model properties (access or m
 
 <Expandable alt_header="Trust signals for resources" lifecycle="preview">
 
-Trust signal icons offer a quick, at-a-glance view of data health when browsing your models in dbt Explorer. These icons keep you informed on the status of your resource's health using the indicators **Healthy**, **Caution**, **Degraded**, and **Unknown**. For accurate health data, ensure the resource is up-to-date and has had a recent job run. Supported resources are models, sources, and exposures.
+Trust signal icons offer a quick, at-a-glance view of data health when browsing your resources in dbt Explorer. These icons keep you informed on the status of your resource's health using the indicators **Healthy**, **Caution**, **Degraded**, and **Unknown**. For accurate health data, ensure the resource is up-to-date and has had a recent job run. Supported resources are models, sources, and exposures.
 
 Each trust signal icon reflects key data health components, such as test success status, missing resource descriptions, absence of builds in 30-day windows, and more. 
 
