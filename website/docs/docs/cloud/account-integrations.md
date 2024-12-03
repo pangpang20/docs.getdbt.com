@@ -12,13 +12,15 @@ The following sections describe the different **Account integrations** available
 
 Connect your dbt Cloud account to your Git provider to enable dbt Cloud users to authenticate your personal accounts. dbt Cloud will perform Git actions on behalf of your authenticated self, against repositories to which you have access according to your Git provider permissions.
 
-To configure a Git account integration, click on the Git provider from the list and select the **Pencil** icon to the right of the provider.
+To configure a Git account integration:
+1. Navigate to Account settings in the side menu.
+2. Under the **Settings** section, click on **Integrations**.
+3. Click on the Git provider from the list and select the **Pencil** icon to the right of the provider.
+4. dbt Cloud [natively connects](/docs/cloud/git/git-configuration-in-dbt-cloud) to the following Git providers:
 
-dbt Cloud [natively connects](/docs/cloud/git/git-configuration-in-dbt-cloud) to the following Git providers:
-
-- GitHub
-- GitLab
-- Azure DevOps <Lifecycle status="enterprise" />
+   - GitHub
+   - GitLab
+   - Azure DevOps <Lifecycle status="enterprise" />
 
 You can connect your dbt Cloud account to additional Git providers by importing a git repository from any valid git URL. Refer to [Import a git repository](/docs/cloud/git/import-a-project-by-git-url) for more information.
 
@@ -29,9 +31,10 @@ You can connect your dbt Cloud account to additional Git providers by importing 
 Connect your dbt Cloud account to an OAuth provider that are integrated with dbt Cloud. 
 
 To configure an OAuth account integration:
-- Click on **Integrations** from the sidebar.
-- For Slack, click on **Link** to connect your Slack account.
-- For custom OAuth providers, under **Custom OAuth integrations**, click on **Add integration** and select the OAuth provider from the list. Fill in the required fields and click **Save**.
+1. Navigate to Account settings in the side menu.
+2. Under the **Settings** section, click on **Integrations**.
+3. Under **OAuth**, and click on **Link** to connect your Slack account.
+4. For custom OAuth providers, under **Custom OAuth integrations**, click on **Add integration** and select the OAuth provider from the list. Fill in the required fields and click **Save**.
 
 <Lightbox src="/img/docs/dbt-cloud/account-integration-oauth.jpg" width="85%" title="Example of the OAuth integration page" />
 
