@@ -191,7 +191,7 @@ Several configurations are relevant to microbatch models, and some are required:
 As a best practice, we recommend configuring `full_refresh: False` on microbatch models so that they ignore invocations with the `--full-refresh` flag. If you need to reprocess historical data, do so with a targeted backfill that specifies explicit start and end dates.
 
 ### Usage
-
+ 
 **You must write your model query to process (read and return) exactly one "batch" of data**. This is a simplifying assumption and a powerful one:
 - You don’t need to think about `is_incremental` filtering
 - You don't need to pick among DML strategies (upserting/merging/replacing)
