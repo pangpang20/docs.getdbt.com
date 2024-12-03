@@ -68,6 +68,8 @@ Beginning in dbt Core 1.9, we've streamlined snapshot configuration and added a 
 
 Read more about [Snapshots meta fields](/docs/build/snapshots#snapshot-meta-fields).
 
+To learn how to safely migrate existing snapshots, refer to [Snapshot configuration migration](/reference/snapshot-configs#snapshot-configuration-migration) for more information. 
+
 ### `state:modified` improvements
 
 We’ve made improvements to `state:modified` behaviors to help reduce the risk of false positives and negatives. Read more about [the `state:modified` behavior flag](#managing-changes-to-legacy-behaviors) that unlocks this improvement:
