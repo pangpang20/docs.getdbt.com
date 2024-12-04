@@ -60,7 +60,7 @@ The following table describes the properties of the `batch` object. Note that db
 
 #### Example: Safeguard access to batch properties
 
-We recommend to always check if `model.batch` is populated before accessing its properties. Use an `if` statement to ensure safe access to batch properties:
+We recommend to always check if `model.batch` is populated before accessing its properties. To do this, use an `if` statement for safe access to `batch` properties:
 
 ```jinja
 {% if model.batch %}
