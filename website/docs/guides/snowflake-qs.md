@@ -237,7 +237,7 @@ If you receive an insufficient privileges error on Snowflake at this point, it m
 grant all on database raw to role snowflake_role_name;
 grant all on database analytics to role snowflake_role_name;
 
-grant all on schema raw.jaffle_shop to role <snowflake_role>;
+grant all on schema raw.jaffle_shop to role snowflake_role_name;
 grant all on schema raw.stripe to role <snowflake_role>;
 
 grant all on all tables in database raw to role <snowflake_role>;
