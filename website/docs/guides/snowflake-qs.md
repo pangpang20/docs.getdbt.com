@@ -241,7 +241,7 @@ grant all on schema raw.jaffle_shop to role snowflake_role_name;
 grant all on schema raw.stripe to role snowflake_role_name;
 
 grant all on all tables in database raw to role snowflake_role_name;
-grant all on future tables in database raw to role <snowflake_role>;
+grant all on future tables in database raw to role snowflake_role_name;
 ```
 
 Note to replace `<snowflake_role>` with the role you intend to use. If you launched dbt Cloud with Partner Connect, then this role will be `pc_dbt_role`.
