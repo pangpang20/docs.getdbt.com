@@ -234,7 +234,7 @@ Now that you have a repository configured, you can initialize your project and s
 If you receive an insufficient privileges error on Snowflake at this point, it may be because your Snowflake role doesn't have permission to access the raw source data, to build target tables and views, or both. To troubleshoot, use a role with sufficient privileges (like `ACCOUNTADMIN`) and run the following commands in Snowflake:
 
 ```
-grant all on database raw to role <snowflake_role>;
+grant all on database raw to role snowflake_role_name;
 grant all on database analytics to role <snowflake_role>;
 
 grant all on schema raw.jaffle_shop to role <snowflake_role>;
