@@ -100,7 +100,7 @@ Marts layer testing will follow the same hygiene-or-anomaly pattern as staging a
 
 All of the testing you’ve applied in your different layers is the manual work of constructing your framework. CI/CD is where it gets automated. 
 
-You should run a [slim CI](https://docs.getdbt.com/best-practices/best-practice-workflows#run-only-modified-models-to-test-changes-slim-ci) by default, unless there’s good reason to build everything in your project. 
+You should run a [slim CI](/best-practices/best-practice-workflows#run-only-modified-models-to-test-changes-slim-ci) to optimize your resource consumption. 
 
 With CI/CD and your regular production runs, your testing framework can be on autopilot. 😎
 
