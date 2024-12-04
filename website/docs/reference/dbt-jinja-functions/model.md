@@ -84,7 +84,6 @@ This is a practical example of how you might use `model.batch` in a microbatch m
 ```
 In this example, the `if model.batch` statement makes sure that the code only runs during a batch execution. `log()` is used to print the `batch` properties for debugging.
 
-
 ## Model structure and JSON schema
 
 To view the structure of `models` and their definitions:
