@@ -223,7 +223,7 @@ from {{ source('sales', 'transactions') }}
 
 ```
 
- In this example, `unique_key` is required because `dbt-postgres`' microbatch uses the `merge` strategy, which needs a `unique_key` to identify which rows in the data warehouse need to get merged. Without a `unique_key`, dbt won't be able to match rows between the incoming batch and the existing table.
+ In this example, `unique_key` is required because `dbt-postgres` microbatch uses the `merge` strategy, which needs a `unique_key` to identify which rows in the data warehouse need to get merged. Without a `unique_key`, dbt won't be able to match rows between the incoming batch and the existing table.
 
 </File>
 
