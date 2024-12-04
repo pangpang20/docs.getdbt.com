@@ -49,8 +49,8 @@ You may have issues that can *technically* get fixed at the source, but it won't
 Here’s our recommendation for what tests belong on your sources. 
 
 - Source freshness: testing data freshness for sources that are critical to your pipelines.
-    - If any sources feed into any of the “top 3” [priority categories](https://docs.getdbt.com/blog/test-smarter-not-harder#how-to-prioritize-data-quality-concerns-in-your-pipeline) in our last post, use [`dbt source freshness`](https://docs.getdbt.com/docs/deploy/source-freshness) in your job execution commands and set the severity to [`error`]. That way, if source freshness fails, so does your job.
-    - If none of your sources feed into high priority categories, set your source freshness severity to [`warn`] and add source freshness to your job execution commands. That way, you still get source freshness information but stale data won't fail your pipeline.
+    - If any sources feed into any of the “top 3” [priority categories](https://docs.getdbt.com/blog/test-smarter-not-harder#how-to-prioritize-data-quality-concerns-in-your-pipeline) in our last post, use [`dbt source freshness`](https://docs.getdbt.com/docs/deploy/source-freshness) in your job execution commands and set the severity to `error`. That way, if source freshness fails, so does your job.
+    - If none of your sources feed into high priority categories, set your source freshness severity to `warn` and add source freshness to your job execution commands. That way, you still get source freshness information but stale data won't fail your pipeline.
 - Data hygiene: tests that are *fixable* in the source system (see our note above on “fixability”).
     - Examples:
         - Duplicate customer records that can be deleted in the source system
