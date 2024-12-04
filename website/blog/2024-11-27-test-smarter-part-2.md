@@ -110,7 +110,7 @@ If and when you encounter failures, consult your trusty testing framework doc yo
 
 ### Advanced CI
 
-In the early stages of your smarter testing journey, start with dbt Cloud’s built-in flags for [advanced CI](https://www.notion.so/Test-Smarter-Where-should-tests-go-in-your-pipeline-128bb38ebda7803bb5c2e274c49b2599?pvs=21). In PRs with advanced CI enabled, dbt Cloud will flag what has been modified, added, or removed in the “compare changes” section. These three flags offer confidence and evidence that your changes are what you expect. Then, hand them off for peer review. Advanced CI helps jump start your colleague’s review of your work by bringing all of the implications of the change into one place. 
+In the early stages of your smarter testing journey, start with dbt Cloud’s built-in flags for [advanced CI](/docs/deploy/advanced-ci). In PRs with advanced CI enabled, dbt Cloud will flag what has been modified, added, or removed in the “compare changes” section. These three flags offer confidence and evidence that your changes are what you expect. Then, hand them off for peer review. Advanced CI helps jump start your colleague’s review of your work by bringing all of the implications of the change into one place. 
 
 We consider usage of Advanced CI beyond the modified, added, or changed gut checks to be an advanced (heh) testing strategy, and look forward to hearing how you use it. 
 
