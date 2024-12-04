@@ -57,7 +57,7 @@ import HardDeletes from '/snippets/_hard-deletes.md';
 
 :::warning
 
-If you're updating an existing snapshot to use the `hard_deletes` config, dbt _will not_ handle migrations automatically. We recommend either only using these settings for net-new snapshots, or arranging an update of pre-existing tables before enabling this setting.
+If you're updating an existing snapshot to use the `hard_deletes` config, dbt _will not_ handle migrations automatically. We recommend either only using these settings for net-new snapshots, or [arranging an update](/reference/snapshot-configs#snapshot-configuration-migration) of pre-existing tables before enabling this setting.
 :::
 
 ## Default
