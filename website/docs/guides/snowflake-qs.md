@@ -240,7 +240,7 @@ grant all on database analytics to role snowflake_role_name;
 grant all on schema raw.jaffle_shop to role snowflake_role_name;
 grant all on schema raw.stripe to role snowflake_role_name;
 
-grant all on all tables in database raw to role <snowflake_role>;
+grant all on all tables in database raw to role snowflake_role_name;
 grant all on future tables in database raw to role <snowflake_role>;
 ```
 
