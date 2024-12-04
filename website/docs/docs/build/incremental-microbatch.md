@@ -186,7 +186,7 @@ Several configurations are relevant to microbatch models, and some are required:
 | `batch_size` |  The granularity of your batches. Supported values are `hour`, `day`, `month`, and `year`    | N/A     | String  | Required |
 | `lookback`   | Process X batches prior to the latest bookmark to capture late-arriving records.    | `1`     | Integer | Optional |
 | `unique_key` |  A column(s) (string or array) or expression for the record. Required for the `check` strategy. | N/A | String <br />  | Optional* |
-| `partition_by` | A column(s) (string or array) or expression for the record. Required for the `check` strategy. | N/A | String | Optional* |
+| `partition_by` | A column(s) (string or array) or expression for the record. | N/A | String | Optional* |
 
 ***Note:**
 - `unique_key` is _required_ for the microbatch strategy when using the `dbt-postgres` adapter.
