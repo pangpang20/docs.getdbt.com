@@ -231,7 +231,7 @@ Now that you have a repository configured, you can initialize your project and s
     - In the command line bar at the bottom, enter `dbt run` and click **Enter**. You should see a `dbt run succeeded` message.
 
 :::warning
-If you receive an insufficient privileges error on Snowflake at this point, it may be because your Snowflake role is not permitted to access the raw source data, to build target tables and views, or both. If this happens, you may consider troubleshooting by running the following commands in Snowflake using a role with sufficient privilieges (e.g., `ACCOUNTADMIN`):
+If you receive an insufficient privileges error on Snowflake at this point, it may be because your Snowflake role doesn't have permission to access the raw source data, to build target tables and views, or both. To troubleshoot, use a role with sufficient privileges (like `ACCOUNTADMIN`) and run the following commands in Snowflake:
 
 ```
 grant all on database raw to role <snowflake_role>;
