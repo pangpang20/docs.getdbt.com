@@ -24,7 +24,7 @@ First, here’s our opinions on where specific tests should go:
 - Staging tests should be business-focused anomalies specific to individual tables, such as accepted ranges or ensuring sequential values. In addition to these tests, your staging layer should clean up any nulls, duplicates, or outliers that you can’t fix in your source system. You generally don’t need to test your cleanup efforts.
 - Intermediate and marts layer tests should be business-focused anomalies resulting specifically from joins or calculations.  You also may consider adding additional primary key and not null tests on columns where it’s especially important to protect the grain.
 
-<--! truncate -->
+<!--truncate-->
 
 ## Where should tests go in your pipeline?
 
