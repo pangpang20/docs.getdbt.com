@@ -185,7 +185,7 @@ Several configurations are relevant to microbatch models, and some are required:
 | `begin`      |  The "beginning of time" for the microbatch model. This is the starting point for any initial or full-refresh builds. For example, a daily-grain microbatch model run on `2024-10-01` with `begin = '2023-10-01` will process 366 batches (it's a leap year!) plus the batch for "today."        | N/A     | Date   | Required |
 | `batch_size` |  The granularity of your batches. Supported values are `hour`, `day`, `month`, and `year`    | N/A     | String  | Required |
 | `lookback`   | Process X batches prior to the latest bookmark to capture late-arriving records.    | `1`     | Integer | Optional |
-| `unique_key` |  A column(s) (string or array) or expression for the record. Required for the `check` strategy. | N/A | String <br />  | Optional* |
+| `unique_key` |  A column(s) (string or array) or expression for the record. | N/A | String <br />  | Optional* |
 | `partition_by` | A column(s) (string or array) or expression for the record. | N/A | String | Optional* |
 
 ***Note:**
