@@ -51,9 +51,11 @@ Starting in Core 1.9, you can use the new [microbatch strategy](/docs/build/incr
 
 Currently microbatch is supported on these adapters with more to come:
  * postgres
+ * redshift
  * snowflake
  * bigquery
  * spark
+ * databricks
   
 ### Snapshots improvements
 
@@ -68,6 +70,8 @@ Beginning in dbt Core 1.9, we've streamlined snapshot configuration and added a 
 - Use the [`hard_deletes`](/reference/resource-configs/hard-deletes) configuration to get more control on how to handle deleted rows from the source. Supported methods are `ignore` (default), `invalidate` (replaces legacy `invalidate_hard_deletes=true`), and `new_record`. Setting  `hard_deletes='new_record'` allows you to track hard deletes by adding a new record when row becomes "deleted" in source. 
 
 Read more about [Snapshots meta fields](/docs/build/snapshots#snapshot-meta-fields).
+
+To learn how to safely migrate existing snapshots, refer to [Snapshot configuration migration](/reference/snapshot-configs#snapshot-configuration-migration) for more information. 
 
 ### `state:modified` improvements
 
