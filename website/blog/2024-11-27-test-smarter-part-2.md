@@ -65,8 +65,8 @@ In the staging layer, your models should be cleaning up or mitigating data issue
 - Business-focused anomaly examples: these are data quality issues you *should* test for in your staging layer, because they fall outside of your business’s defined norms. These might be:
     - Values inside a single column that fall outside of an acceptable range. For example, a store selling a greater quantity of limited-edition items than they received in their stock delivery.
     - Values that should always positive, are positive. This might look like a negative transaction amount that isn’t classified as a return. This failing test would then spur further investigation into the offending transaction.
-    - An unexpected uptick in volume of a quantity column beyond a pre-defined percentage. This might look like a store’s customer volume spiking unexpectedly, and would spur further investigation into the cause of the spike.
-
+    - An unexpected uptick in volume of a quantity column beyond a pre-defined percentage. This might look like a store’s customer volume spiking unexpectedly and outside of expected seasonal norms--an anomaly that could indicate a bug or modeling issue.
+  
 ### Intermediate (if applicable)
 
 In your intermediate layer, focus on data hygiene and anomaly tests for new columns. Don’t re-test passthrough columns from sources or staging. Here are some examples of tests you might put in your intermediate layer based on the use cases of intermediate models we [outline in this guide](/best-practices/how-we-structure/3-intermediate#intermediate-models).
