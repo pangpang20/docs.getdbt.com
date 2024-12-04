@@ -19,7 +19,7 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
 \* The official release date for this new format of release notes is May 15th, 2024. Historical release notes for prior dates may not reflect all available features released earlier this year or their tenancy availability.
 
 ## December 2024
-- **New**: [Auto exposures](/docs/collaborate/auto-exposures), available to dbt Cloud Enterprise plans, is now generally available in dbt Cloud. Auto-exposures integrate natively with Tableau (Power BI coming soon) and auto-generate downstream lineage in dbt Explorer for a richer experience.
+- **New**: [Auto exposures](/docs/collaborate/auto-exposures) are now generally available to dbt Cloud Enterprise plans. Auto-exposures integrate natively with Tableau (Power BI coming soon) and auto-generate downstream lineage in dbt Explorer for a richer experience.
 
 ## November 2024
 - **Bug**: Identified and fixed an error with Semantic Layer queries that take longer than 10 minutes to complete.
