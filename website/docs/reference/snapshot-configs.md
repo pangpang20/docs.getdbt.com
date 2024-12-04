@@ -138,7 +138,7 @@ import LegacySnapshotConfig from '/snippets/_legacy-snapshot-config.md';
 
 ### Snapshot configuration migration
 
-The latest snapshot configurations introduced in dbt v1.9 (such as [`snapshot_meta_column_names`](/reference/resource-configs/snapshot_meta_column_names), [`dbt_valid_to_current`](/reference/resource-configs/dbt_valid_to_current), and `hard_deletes`) are best suited for new snapshots. For existing snapshots, we recommend the following to avoid any inconsistencies in your snapshots:
+The latest snapshot configurations introduced in dbt Core v1.9 (such as [`snapshot_meta_column_names`](/reference/resource-configs/snapshot_meta_column_names), [`dbt_valid_to_current`](/reference/resource-configs/dbt_valid_to_current), and `hard_deletes`) are best suited for new snapshots. For existing snapshots, we recommend the following to avoid any inconsistencies in your snapshots:
 
 #### For existing snapshots
 - Migrate tables &mdash; Migrate the previous snapshot to the new table schema and values:
@@ -300,7 +300,14 @@ Snapshots can be configured in multiple ways:
 Snapshot configurations are applied hierarchically in the order above with higher taking precedence.
 
 ### Examples
-The following examples demonstrate how to configure snapshots using the `dbt_project.yml` file, a `config` block within a snapshot, and a `.yml` file.
+
+<VersionBlock firstVersion="1.9">
+The following examples demonstrate how to configure snapshots using the `dbt_project.yml` file and a `.yml` file.
+</VersionBlock>
+
+<VersionBlock lastVersion="1.8">
+The following examples demonstrate how to configure snapshots using the `dbt_project.yml` file, a `config` block within a snapshot (legacy method), and a `.yml` file.
+</VersionBlock>
 
 - #### Apply configurations to all snapshots
   To apply a configuration to all snapshots, including those in any installed [packages](/docs/build/packages), nest the configuration directly under the `snapshots` key:

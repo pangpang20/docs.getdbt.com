@@ -51,9 +51,11 @@ Starting in Core 1.9, you can use the new [microbatch strategy](/docs/build/incr
 
 Currently microbatch is supported on these adapters with more to come:
  * postgres
+ * redshift
  * snowflake
  * bigquery
  * spark
+ * databricks
   
 ### Snapshots improvements
 
