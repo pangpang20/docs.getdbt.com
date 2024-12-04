@@ -230,6 +230,23 @@ Now that you have a repository configured, you can initialize your project and s
         ```
     - In the command line bar at the bottom, enter `dbt run` and click **Enter**. You should see a `dbt run succeeded` message.
 
+:::warning
+If you receive an insufficient privileges error on Snowflake at this point, it may be because your Snowflake role is not permitted to access the raw source data, to build target tables and views, or both. If this happens, you may consider troubleshooting by running the following commands in Snowflake using a role with sufficient privilieges (e.g., `ACCOUNTADMIN`):
+
+```
+grant all on database raw to role <snowflake_role>;
+grant all on database analytics to role <snowflake_role>;
+
+grant all on schema raw.jaffle_shop to role <snowflake_role>;
+grant all on schema raw.stripe to role <snowflake_role>;
+
+grant all on all tables in database raw to role <snowflake_role>;
+grant all on future tables in database raw to role <snowflake_role>;
+```
+
+Note to replace `<snowflake_role>` with the role you intend to use. If you launched dbt Cloud with Partner Connect, then this role will be `pc_dbt_role`.
+:::
+
 ## Build your first model
 
 You have two options for working with files in the dbt Cloud IDE:
