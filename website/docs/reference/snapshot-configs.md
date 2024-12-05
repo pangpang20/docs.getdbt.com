@@ -64,9 +64,9 @@ snapshots:
     [+](/reference/resource-configs/plus-prefix)[strategy](/reference/resource-configs/strategy): timestamp | check
     [+](/reference/resource-configs/plus-prefix)[updated_at](/reference/resource-configs/updated_at): <column_name>
     [+](/reference/resource-configs/plus-prefix)[check_cols](/reference/resource-configs/check_cols): [<column_name>] | all
-    [+](/reference/resource-configs/plus-prefix)[invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) : true | false    
     [+](/reference/resource-configs/plus-prefix)[snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names): {<dictionary>}
     [+](/reference/resource-configs/plus-prefix)[dbt_valid_to_current](/reference/resource-configs/dbt_valid_to_current): <string> 
+    [+](/reference/resource-configs/plus-prefix)[hard_deletes](/reference/resource-configs/hard-deletes): string
 ```
 
 </File>
@@ -99,8 +99,8 @@ snapshots:
       [strategy](/reference/resource-configs/strategy): timestamp | check
       [updated_at](/reference/resource-configs/updated_at): <column_name>
       [check_cols](/reference/resource-configs/check_cols): [<column_name>] | all
-      [invalidate_hard_deletes](/reference/resource-configs/invalidate_hard_deletes) : true | false
       [snapshot_meta_column_names](/reference/resource-configs/snapshot_meta_column_names): {<dictionary>}
+      [hard_deletes](/reference/resource-configs/hard-deletes): string
       [dbt_valid_to_current](/reference/resource-configs/dbt_valid_to_current): <string>
 ```
 </File>
@@ -257,7 +257,6 @@ snapshots:
 
 <LegacySnapshotConfig />
 
-
 <VersionBlock lastVersion="1.8">
 
 ```jinja
@@ -285,13 +284,13 @@ Snapshots can be configured in multiple ways:
 
 <VersionBlock firstVersion="1.9">
 
-1. Defined in YAML files using a `config` [resource property](/reference/model-properties), typically in your [snapshots directory](/reference/project-configs/snapshot-paths) (available in [Versionless](/docs/dbt-versions/versionless-cloud) or and dbt Core v1.9 and higher).
+1. Defined in YAML files using a `config` [resource property](/reference/model-properties), typically in your [snapshots directory](/reference/project-configs/snapshot-paths) (available in [the dbt Cloud release track](/docs/dbt-versions/cloud-release-tracks) and dbt v1.9 and higher).
 2. From the `dbt_project.yml` file, under the `snapshots:` key. To apply a configuration to a snapshot, or directory of snapshots, define the resource path as nested dictionary keys.
 </VersionBlock>
 
 <VersionBlock lastVersion="1.8">
 
-1. Defined in a YAML file using a `config` [resource property](/reference/model-properties), typically in your [snapshots directory](/reference/project-configs/snapshot-paths) (available in [Versionless](/docs/dbt-versions/versionless-cloud) or and dbt Core v1.9 and higher). The latest snapshot YAML syntax provides faster and more efficient management.
+1. Defined in a YAML file using a `config` [resource property](/reference/model-properties), typically in your [snapshots directory](/reference/project-configs/snapshot-paths) (available in  [the dbt Cloud "Latest" release track](/docs/dbt-versions/cloud-release-tracks) and dbt v1.9 and higher). The latest snapshot YAML syntax provides faster and more efficient management.
 2. Using a `config` block within a snapshot defined in Jinja SQL.
 3. From the `dbt_project.yml` file, under the `snapshots:` key. To apply a configuration to a snapshot, or directory of snapshots, define the resource path as nested dictionary keys.
 
