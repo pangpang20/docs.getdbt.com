@@ -12,7 +12,7 @@ This page explains how to enable the dbt Copilot engine in dbt Cloud, leveraging
 
 - Available in the dbt Cloud IDE only.
 - Must have an active [dbt Cloud Enterprise account](https://www.getdbt.com/pricing).
-- Development environment has been upgraded to ["Versionless"](/docs/dbt-versions/upgrade-dbt-version-in-cloud#versionless).
+- Development environment is on a supported [release track](/docs/dbt-versions/cloud-release-tracks) to receive ongoing updates.
 - By default, dbt Copilot deployments use a central OpenAI API key managed by dbt Labs. Alternatively, you can [provide your own OpenAI API key](#bringing-your-own-openai-api-key-byok).
 - Accept and sign legal agreements. Reach out to your Account team to begin this process.
 
@@ -36,7 +36,7 @@ Note: To disable (only after enabled), repeat steps 1 to 3, toggle off in step 4
 
 ### Bringing your own OpenAI API key (BYOK)
 
-Once AI features have been enabled, you can provide your organization's OpenAI API key. dbt Cloud will then leverage your OpenAI account and terms to power dbt CoPilot. This will incur billing charges to your organization from OpenAI for requests made by dbt CoPilot.
+Once AI features have been enabled, you can provide your organization's OpenAI API key. dbt Cloud will then leverage your OpenAI account and terms to power dbt Copilot. This will incur billing charges to your organization from OpenAI for requests made by dbt Copilot.
 
 Note that Azure OpenAI is not currently supported, but will be in the future.
 
