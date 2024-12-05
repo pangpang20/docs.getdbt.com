@@ -61,9 +61,15 @@ To set up [personal access tokens (PATs)](https://help.tableau.com/current/serve
    <Lightbox src="/img/docs/cloud-integrations/auto-exposures/cloud-integration-details.jpg" title="Enter the details for the exposure connection."/>
 4. Select the collections you want to include for auto exposures. 
    
-   dbt Cloud automatically imports and syncs any workbook within the selected collections. New additions to the collections will be added to the lineage in dbt Cloud during the next automatic sync (usually once per day).
    <Lightbox src="/img/docs/cloud-integrations/auto-exposures/cloud-select-collections.jpg" title="Select the collections you want to include for auto exposures."/>
-5. Click **Save**. 
+
+   :::info Syncing collections
+   dbt Cloud automatically imports and syncs any workbook within the selected collections. New additions to the collections will be added to the lineage in dbt Cloud during the next automatic sync (usually once per day).
+
+   To manually trigger a sync and update collections (including additions or deletions), go to **Collections**, click **Edit**, make your selections or deselections, and then click **Save**.
+   :::
+
+6. Click **Save**. 
 
 dbt Cloud imports everything in the collection(s) and you can continue to view them in Explorer. For more information on how to view and use auto-exposures, refer to [View auto-exposures from dbt Explorer](/docs/collaborate/auto-exposures) page.
 
