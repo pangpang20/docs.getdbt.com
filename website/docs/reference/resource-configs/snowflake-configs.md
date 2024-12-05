@@ -470,6 +470,12 @@ In this example, you can set up a query tag to be applied to every query with th
 
 The [`incremental_strategy` config](/docs/build/incremental-strategy) controls how dbt builds incremental models. By default, dbt will use a [merge statement](https://docs.snowflake.net/manuals/sql-reference/sql/merge.html) on Snowflake to refresh incremental tables.
 
+Snowflake supports the following incremental strategies:
+- Merge (default)
+- Append
+- Delete+insert
+- [`microbatch`](/docs/build/incremental-microbatch)
+
 Snowflake's `merge` statement fails with a "nondeterministic merge" error if the `unique_key` specified in your model config is not actually unique. If you encounter this error, you can instruct dbt to use a two-step incremental approach by setting the `incremental_strategy` config for your model to `delete+insert`.
 
 Snowflake also supports the [`microbatch`](/docs/build/incremental-microbatch) incremental strategy.
