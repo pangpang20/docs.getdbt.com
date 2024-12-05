@@ -20,7 +20,7 @@ In [our first post](/blog/test-smarter-not-harder) on refining testing best prac
 
 First, here’s our opinions on where specific tests should go:
 
-- Source tests should be fixable data quality concerns. (See the callout box below for what we mean by “fixable”)
+- Source tests should be fixable data quality concerns. See the callout box below for what we mean by “fixable”.
 - Staging tests should be business-focused anomalies specific to individual tables, such as accepted ranges or ensuring sequential values. In addition to these tests, your staging layer should clean up any nulls, duplicates, or outliers that you can’t fix in your source system. You generally don’t need to test your cleanup efforts.
 - Intermediate and marts layer tests should be business-focused anomalies resulting specifically from joins or calculations.  You also may consider adding additional primary key and not null tests on columns where it’s especially important to protect the grain.
 
@@ -59,13 +59,13 @@ Here’s our recommendation for what tests belong on your sources.
 
 ### Staging
 
-In the staging layer, your models should be cleaning up or mitigating data issues that can't be fixed at the source, and your tests should be focused on business anomaly detection.
+In the staging layer, your models should be cleaning up or mitigating data issues that can't be fixed at the source. Your tests should be focused on business anomaly detection.
 
 - Data cleanup and issue mitigation: Use our [best practices around staging layers](https://docs.getdbt.com/best-practices/how-we-structure/2-staging) to clean things up. Don’t add tests to your cleanup efforts. If you’re filtering out nulls in a column, adding a not_null test is repetitive!  🌶️
 - Business-focused anomaly examples: these are data quality issues you *should* test for in your staging layer, because they fall outside of your business’s defined norms. These might be:
     - Values inside a single column that fall outside of an acceptable range. For example, a store selling a greater quantity of limited-edition items than they received in their stock delivery.
-    - Values that should always positive, are positive. This might look like a negative transaction amount that isn’t classified as a return. This failing test would then spur further investigation into the offending transaction.
-    - An unexpected uptick in volume of a quantity column beyond a pre-defined percentage. This might look like a store’s customer volume spiking unexpectedly and outside of expected seasonal norms--an anomaly that could indicate a bug or modeling issue.
+    - Values that should always be positive, are positive. This might look like a negative transaction amount that isn’t classified as a return. This failing test would then spur further investigation into the offending transaction.
+    - An unexpected uptick in volume of a quantity column beyond a pre-defined percentage. This might look like a store’s customer volume spiking unexpectedly and outside of expected seasonal norms. This is an anomaly that could indicate a bug or modeling issue.
   
 ### Intermediate (if applicable)
 
