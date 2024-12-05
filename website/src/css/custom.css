@@ -2144,3 +2144,65 @@ table th {
   color: #000000; /* Black text on darker background */
   font-weight: bold;
 }
+
+.tabs {
+  background-color: transparent;
+  padding: 10px;
+}
+
+/* Default color and border for tabs */
+.tabs__item {
+  background-color: #f9fbfc; /* Sets the tab color the same as the file borders */
+  border: 2px solid #ccc;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Default color and border for tabs in dark mode */
+[data-theme='dark'] .tabs__item {
+  background-color: #000000;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/*Color when hovering over tabs */
+.tabs__item:hover {
+  background-color: #D95B3B;
+}
+
+/* Color when the tab is clicked*/
+.tabs__item--active {
+  background-color: #D95B3B;
+  color: rgb(0, 0, 0);
+  border-color: #D95B3B;
+}
+
+[data-theme='dark'] .tabs__item--active {
+  background-color: #D95B3B;
+  color: white;
+  border-color: #D95B3B;
+}
+
+/* Sets the tab content border and background color */
+[data-theme='dark'] .tabs-container{
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: transparent;
+}
+
+[data-theme='light'] .tabs-container{
+  border: 1px solid #000000;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: transparent;
+}
