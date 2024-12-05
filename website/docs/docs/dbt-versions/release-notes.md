@@ -19,7 +19,10 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
 \* The official release date for this new format of release notes is May 15th, 2024. Historical release notes for prior dates may not reflect all available features released earlier this year or their tenancy availability.
 
 ## December 2024
+
 - **New**: [Model notifications](/docs/deploy/model-notifications) are now generally available in dbt Cloud. These notifications alert model owners through email about any issues encountered by models and tests as soon as they occur while running a job.
+- **New**: The [`hard_deletes`](/reference/resource-configs/hard-deletes) config gives you more control on how to handle deleted rows from the source. Supported options are `ignore` (default), `invalidate` (replaces the legacy `invalidate_hard_deletes=true`), and `new_record`. Note that `new_record` will create a new metadata column in the snapshot table.
+
 
 ## November 2024
 - **Enhancement**: Trust signal icons in dbt Explorer are now available for Exposures, providing a quick view of data health while browsing resources. To view trust signal icons, go to dbt Explorer and click **Exposures** under the **Resource** tab. Refer to [Trust signal for resources](/docs/collaborate/explore-projects#trust-signals-for-resources) for more info.
