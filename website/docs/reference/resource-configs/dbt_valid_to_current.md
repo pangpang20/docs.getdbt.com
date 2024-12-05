@@ -6,7 +6,9 @@ default_value: {NULL}
 id: "dbt_valid_to_current"
 ---
 
-Available from dbt v1.9 or with [the dbt Cloud "Latest" release track](/docs/dbt-versions/cloud-release-tracks) dbt Cloud.
+import VersionCallout from '/snippets/_version-callout.md';
+
+<VersionCallout version="1.9" />
 
 <File name='snapshots/schema.yml'>
 
