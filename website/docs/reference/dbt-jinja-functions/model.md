@@ -72,7 +72,7 @@ We recommend to always check if `model.batch` is populated before accessing its 
 
 In this example, the `if model.batch` statement makes sure that the code only runs during a batch execution. `log()` is used to print the `batch` properties for debugging.
 
-#### Example: Log batch details
+#### Example of log batch details
 
 This is a practical example of how you might use `model.batch` in a microbatch model to log batch details for the `batch.id`:
 
