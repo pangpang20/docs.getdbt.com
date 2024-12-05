@@ -58,7 +58,7 @@ The following table describes the properties of the `batch` object. Note that db
 
 `model.batch` is only available during the execution of a microbatch model batch. Outside of the microbatch execution, `model.batch` is `None`, and its sub-properties aren't accessible.
 
-#### Example: Safeguard access to batch properties
+#### Example of safeguarding access to batch properties
 
 We recommend to always check if `model.batch` is populated before accessing its properties. To do this, use an `if` statement for safe access to `batch` properties:
 
