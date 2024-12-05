@@ -1,5 +1,5 @@
 ---
-title: "Test smarter: Where should tests go in your pipeline?"
+title: "Test smarter not harder: Where should tests go in your pipeline?"
 description: "Testing your data should drive action, not accumulate alerts. We take our testing framework developed in our last post and make recommendations for where tests ought to go at each transformation stage."
 slug: test-smarter-where-tests-should-go
 
