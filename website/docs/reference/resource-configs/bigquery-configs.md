@@ -425,7 +425,7 @@ Please note that in order for policy tags to take effect, [column-level `persist
 
 The [`incremental_strategy` config](/docs/build/incremental-strategy) controls how dbt builds incremental models. dbt uses a [merge statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-syntax) on BigQuery to refresh incremental tables.
 
-The `incremental_strategy` config can be set to one of two values:
+The `incremental_strategy` config can be set to one of the following values:
 - `merge` (default)
 - `insert_overwrite`
 - [`microbatch`](/docs/build/incremental-microbatch)
