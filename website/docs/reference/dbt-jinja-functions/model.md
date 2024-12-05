@@ -22,7 +22,7 @@ To view the contents of `model` for a given model:
 
 <TabItem value="cli" label="Command line interface">
 
-If you're using the Command line interface (CLI), use [log()](/reference/dbt-jinja-functions/log) to print the full contents:
+If you're using the command line interface (CLI), use [log()](/reference/dbt-jinja-functions/log) to print the full contents:
 
 ```jinja
 {{ log(model, info=True) }}
