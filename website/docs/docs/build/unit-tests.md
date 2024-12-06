@@ -28,7 +28,7 @@ Starting in dbt Core v1.8, we have introduced an additional type of test to dbt 
 - Unit tests must be defined in a YML file in your `models/` directory.
 - Table names must be [aliased](/docs/build/custom-aliases) in order to unit test `join` logic.
 
-Adapter-specific caveats:
+#### Adapter-specific caveats
 - You must specify all fields in a BigQuery `STRUCT` in a unit test. You cannot use only a subset of fields in a `STRUCT`.
 - Redshift customers need to be aware of a [limitation when building unit tests](/reference/resource-configs/redshift-configs#unit-test-limitations) that requires a workaround.
 
