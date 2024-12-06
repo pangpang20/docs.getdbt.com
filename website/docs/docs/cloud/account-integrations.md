@@ -73,11 +73,11 @@ To configure the AI integration in your dbt Cloud account, a dbt Cloud admin can
 
   <TabItem value="azure" label="Azure OpenAI (beta)">
 
-  **Deploying your own OpenAI model on Azure** https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-openai
-
   You can configure credentials for your Azure OpenAI deployment in the following two ways:
     - [From a Target URI](#from-a-target-uri)
     - [Manually providing the credentials](#manually-providing-the-credentials)
+
+  To learn about deploying your own OpenAI model on Azure, refer to [Deploy models on Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-openai).
 
   #### From a Target URI
 
