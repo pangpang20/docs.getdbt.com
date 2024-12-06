@@ -40,7 +40,7 @@ metrics:
     type_params: # Required
       measure: 
         name: The name of your measure # Required
-        alias: The alias used to rename the measure. # Optional
+        alias: The alias applied to the measure. # Optional
         filter: The filter used to apply to the measure. # Optional
         fill_nulls_with: Set value instead of null  (such as zero) # Optional
         join_to_timespine: true/false # Boolean that indicates if the aggregated measure should be joined to the time spine table to fill in missing dates. # Optional
