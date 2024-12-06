@@ -34,13 +34,13 @@ Note: To disable (only after enabled), repeat steps 1 to 3, toggle off in step 4
 
 <Lightbox src="/img/docs/deploy/example-account-settings.png" width="90%" title="Example of the 'Enable account access to AI-powered feature' option in Account settings" />
 
-### Bringing your own OpenAI API key (BYOK)
+## Bringing your own OpenAI API key (BYOK)
 
 Once AI features have been enabled, you can provide your organization's OpenAI API key. dbt Cloud will then leverage your OpenAI account and terms to power dbt Copilot. This will incur billing charges to your organization from OpenAI for requests made by dbt Copilot.
 
 Configure AI keys using:
-- [dbt Labs-managed OpenAI API key](/docs/cloud/account-integrations#dbt-labs-openai)
-- [Azure OpenAI](/docs/cloud/account-integrations#azure-openai) <Lifecycle status="beta" />
-- Or your own [OpenAI API key](/docs/cloud/account-integrations#openai-key)
+- [dbt Labs-managed OpenAI API key](/docs/cloud/account-integrations?ai-integration=dbtlabs#ai-integrations)
+- Your own [OpenAI API key](/docs/cloud/account-integrations?ai-integration=openai#ai-integrations)
+- [Azure OpenAI](/docs/cloud/account-integrations?ai-integration=azure#ai-integrations) <Lifecycle status="beta" />
 
-For configuration details, see [Account integrations](/docs/cloud/account-integrations#ai).
+For configuration details, see [Account integrations](/docs/cloud/account-integrations#ai-integrations).

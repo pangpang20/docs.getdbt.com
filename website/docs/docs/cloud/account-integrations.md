@@ -57,7 +57,7 @@ To configure the AI integration in your dbt Cloud account, a dbt Cloud admin can
    <Lightbox src="/img/docs/dbt-cloud/account-integration-ai.jpg" width="85%" title="Example of the AI integration page" />
 4. Configure the AI integration for either **dbt Labs OpenAI**, **OpenAI**, or **Azure OpenAI**.
 
-  <Tabs> 
+  <Tabs queryString="ai-integration"> 
   <TabItem value="dbtlabs" label="dbt Labs OpenAI">
 
   1. Select the toggle for **dbt Labs** to use dbt Labs' managed OpenAI key.
