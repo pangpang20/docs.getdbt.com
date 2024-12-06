@@ -16,11 +16,10 @@
 exports.versions = [
   {
     version: "1.10",
-    customDisplay: "Cloud (Versionless)",
+    customDisplay: "Cloud (Latest)",
   },
   {
     version: "1.9",
-    isPrerelease: true,
   },
   {
     version: "1.8",
