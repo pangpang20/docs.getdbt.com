@@ -26,7 +26,7 @@ Starting in dbt Core v1.8, we have introduced an additional type of test to dbt 
 - We currently _don't_ support unit testing models that use recursive SQL.
 - You must specify all fields in a BigQuery STRUCT in a unit test. You cannot use only a subset of fields in a STRUCT.
 - If your model has multiple versions, by default the unit test will run on *all* versions of your model. Read [unit testing versioned models](/reference/resource-properties/unit-testing-versions) for more information.
-- Unit tests must be defined in a YML file in your `models/` directory.
+- Unit tests must be defined in a YML file in your [`models/` directory](/reference/project-configs/model-paths).
 - Table names must be [aliased](/docs/build/custom-aliases) in order to unit test `join` logic.
 - Redshift customers need to be aware of a [limitation when building unit tests](/reference/resource-configs/redshift-configs#unit-test-limitations) that requires a workaround. 
 
