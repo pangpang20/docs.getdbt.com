@@ -82,7 +82,7 @@ To configure the AI integration in your dbt Cloud account, a dbt Cloud admin can
 
   #### From a Target URI
 
-  1. Locate your Azure OpenAI deployment URI - ref to Azure docs
+  1. Locate your Azure OpenAI deployment URI. Find this in Azure AI Foundry | Azure OpenAI Services -> Shared Resources -> Deployments.
   2. In the dbt Cloud **Azure OpenAI** section, select the tab **From Target URI**.
   3. Paste the URI into the **Target URI** field.
   4. Enter your Azure OpenAI API key.
