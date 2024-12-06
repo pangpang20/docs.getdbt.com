@@ -92,7 +92,7 @@ To configure the AI integration in your dbt Cloud account, a dbt Cloud admin can
 
   #### Manually providing the credentials
 
-  1. Locate your Azure OpenAI configuration. Find this in Azure AI Foundry | Azure OpenAI Services -> Shared Resources -> Deployments.
+  1. Locate your Azure OpenAI configuration in your Azure Deployment details page.
   2. In the dbt Cloud **Azure OpenAI** section, select the tab **Manual Input**.
   2. Enter your Azure OpenAI API key.
   3. Enter the **Endpoint**, **API Version**, and **Deployment Name**.
