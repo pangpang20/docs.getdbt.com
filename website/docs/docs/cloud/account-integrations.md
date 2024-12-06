@@ -13,7 +13,7 @@ The following sections describe the different **Account integrations** available
 Connect your dbt Cloud account to your Git provider to enable dbt Cloud users to authenticate your personal accounts. dbt Cloud will perform Git actions on behalf of your authenticated self, against repositories to which you have access according to your Git provider permissions.
 
 To configure a Git account integration:
-1. Navigate to Account settings in the side menu.
+1. Navigate to **Account settings** in the side menu.
 2. Under the **Settings** section, click on **Integrations**.
 3. Click on the Git provider from the list and select the **Pencil** icon to the right of the provider.
 4. dbt Cloud [natively connects](/docs/cloud/git/git-configuration-in-dbt-cloud) to the following Git providers:
