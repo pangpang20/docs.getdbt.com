@@ -12,9 +12,9 @@ With model-level notifications, model owners can be the first ones to know about
 
 To be timely and keep the number of notifications to a reasonable amount when multiple models or tests trigger them, dbt observes the following guidelines when notifying the owners:  
 
-- Send a notification to each unique owner/email during a job run about any models (with status of failure/success) or tests (with status of warning/failure/success). Each owner receives only one notification, the initial one.
-- Don't send any notifications about subsequent models or tests while a dbt job is still running.
-- At the end of a job run, each owner receives a notification, for each of the statuses they specified to be notified about, with a list of models and tests that have that status. 
+- Each owner/user who subscribes to notifications for one or more statuses (like failure, success, warning) will receive only _one_ email notification at the end of the job run.
+- The email includes a consolidated list of all models or tests that match the statuses the user subscribed to, instead of sending separate emails for each status.
+- Notifications about subsequent models or tests aren't sent while a dbt job is still running. Users are only notified once the job has fully completed.
 
 Create configuration YAML files in your project for dbt to send notifications about the status of your models and tests.
 
