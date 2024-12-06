@@ -40,9 +40,9 @@ To configure an OAuth account integration:
 
 ## AI integrations
 
-Once AI features have been [enabled](/docs/cloud/enable-dbt-copilot#enable-dbt-copilot), you can use dbt Labs' AI integration or bring-your-own provider to support AI-powered dbt Cloud features like [dbt Copilot](/docs/cloud/dbt-copilot) and [Ask dbt](/docs/cloud-integrations/snowflake-native-app) (both available on [dbt Cloud Enterprise plans](https://www.getdbt.com/pricing)). 
+Once AI features have been [enabled](/docs/cloud/enable-dbt-copilot#enable-dbt-copilot), you can use dbt Labs' AI integration or bring-your-own provider to support AI-powered dbt Cloud features like [dbt Copilot](/docs/cloud/dbt-copilot) and [Ask dbt](/docs/cloud-integrations/snowflake-native-app) (both available on [dbt Cloud Enterprise plans](https://www.getdbt.com/pricing)).
 
-dbt Cloud supports AI integrations for dbt Labs OpenAI keys, OpenAI keys, or Azure OpenAI keys.
+dbt Cloud supports AI integrations for dbt Labs-managed OpenAI keys, Self-managed OpenAI keys, or Self-managed Azure OpenAI keys.
 
 Note, if you bring-your-own provider, you will incur API calls and associated charges for features used in dbt Cloud.
 
