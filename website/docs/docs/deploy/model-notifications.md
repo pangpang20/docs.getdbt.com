@@ -22,10 +22,11 @@ Create configuration YAML files in your project for dbt to send notifications ab
 - Your dbt Cloud administrator has [enabled the appropriate account setting](#enable-access-to-model-notifications) for you.
 - Your environment(s) must be on a [release track](/docs/dbt-versions/cloud-release-tracks) instead of a legacy dbt Core version.
 
-
 ## Configure groups
 
-Define your groups in any .yml file in your [models directory](/reference/project-configs/model-paths). For example: 
+Define your groups in any `.yml` file in your [models directory](/reference/project-configs/model-paths). Each group must have a single email address specified &mdash; multiple email fields or lists aren't supported.
+
+The following example shows how to define groups in a `groups.yml` file.
 
 <File name='models/groups.yml'>
 
@@ -108,6 +109,6 @@ Provide dbt Cloud account members the ability to configure and receive alerts ab
 To use model-level notifications, your dbt Cloud account must have access to the feature. Ask your dbt Cloud administrator to enable this feature for account members by following these steps:
 
 1. Navigate to **Notification settings** from your profile name in the sidebar (lower left-hand side). 
-1. From **Email notications**, enable the setting **Enable group/owner notifications on models** under the **Model notifications** section. Then, specify which statuses to receive notifications about (Success, Warning, and/or Fails). 
+1. From **Email notifications**, enable the setting **Enable group/owner notifications on models** under the **Model notifications** section. Then, specify which statuses to receive notifications about (Success, Warning, and/or Fails). 
 
   <Lightbox src="/img/docs/dbt-cloud/example-enable-model-notifications.png" title="Example of the setting Enable group/owner notifications on models" /> 
