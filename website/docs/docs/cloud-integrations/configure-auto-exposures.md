@@ -66,7 +66,7 @@ To set up [personal access tokens (PATs)](https://help.tableau.com/current/serve
       :::info
       dbt Cloud automatically imports and syncs any workbook within the selected collections. New additions to the collections will be added to the lineage in dbt Cloud during the next automatic sync (usually once per day).
    
-      A sync will also begin immediately when the list of selected collections is modified, to capture any newly-selected workbooks and remove those which are no longer relevant.
+      dbt Cloud immediately starts a sync when you update the selected collections list, capturing new workbooks and removing irrelevant ones.
       :::
 
 6. Click **Save**. 
