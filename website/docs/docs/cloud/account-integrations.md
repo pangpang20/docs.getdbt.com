@@ -8,7 +8,7 @@ The following sections describe the different **Account integrations** available
 
 <Lightbox src="/img/docs/dbt-cloud/account-integrations.jpg" title="Example of Account integrations from the sidebar" /> 
 
-## Git
+## Git integrations
 
 Connect your dbt Cloud account to your Git provider to enable dbt Cloud users to authenticate your personal accounts. dbt Cloud will perform Git actions on behalf of your authenticated self, against repositories to which you have access according to your Git provider permissions.
 
@@ -26,7 +26,7 @@ You can connect your dbt Cloud account to additional Git providers by importing 
 
 <Lightbox src="/img/docs/dbt-cloud/account-integration-git.jpg" width="85%" title="Example of the Git integration page" />
 
-## OAuth
+## OAuth integrations
 
 Connect your dbt Cloud account to an OAuth provider that are integrated with dbt Cloud. 
 
@@ -38,70 +38,65 @@ To configure an OAuth account integration:
 
 <Lightbox src="/img/docs/dbt-cloud/account-integration-oauth.jpg" width="85%" title="Example of the OAuth integration page" />
 
-## AI
+## AI integrations
 
 Once AI features have been [enabled](/docs/cloud/enable-dbt-copilot#enable-dbt-copilot), you can use dbt Labs' AI integration or bring-your-own provider to support AI-powered dbt Cloud features like [dbt Copilot](/docs/cloud/dbt-copilot) and [Ask dbt](/docs/cloud-integrations/snowflake-native-app). Note, if you bring-your-own provider, you will incur API calls and associated charges for features used in dbt Cloud.
-
-To configure the AI integration in your dbt Cloud account, a dbt Cloud admin can perform the following steps:
-1. Navigate to **Account settings** in the side menu.
-2. Under the **Settings** section, click on **Integrations**.
-3. Scroll to **AI**.
-4. Click on the **Pencil** icon to the right of **OpenAI** to configure the AI integration.
-
-<Lightbox src="/img/docs/dbt-cloud/account-integration-ai.jpg" width="85%" title="Example of the AI integration page" />
-
-### dbt Labs OpenAI
-
-1. Select the toggle for **dbt Labs** to use dbt Labs' managed OpenAI key.
-2. Click **Save**.
-
-### OpenAI key
-1. Select the toggle for **OpenAI** to use your own OpenAI key.
-2. Enter the API key.
-3. Click **Save**.
-
-### Azure OpenAI <Lifecycle status="beta" />
-
-**Deploying your own OpenAI model on Azure** https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-openai
-
-<Lightbox src="/img/docs/dbt-cloud/account-integration-ai.jpg" width="85%" title="Example of the AI integration page" />
 
 :::info
 dbt Cloud's AI is optimized for OpenAIs gpt-4o. Using other models can affect performance and accuracy, and functionality with other models isn't guaranteed.
 :::
 
-You can configure credentials for your Azure OpenAI deployment in the following two ways:
+To configure the AI integration in your dbt Cloud account, a dbt Cloud admin can perform the following steps:
+1. Navigate to **Account settings** in the side menu.
+2. Select **Integrations** and scroll to the **AI** section.
+3. Click on the **Pencil** icon to the right of **OpenAI** to configure the AI integration.
+   <Lightbox src="/img/docs/dbt-cloud/account-integration-ai.jpg" width="85%" title="Example of the AI integration page" />
+4. Configure the AI integration for either **dbt Labs OpenAI**, **OpenAI**, or **Azure OpenAI**.
 
+  <Tabs> 
+  <TabItem value="dbtlabs" label="dbt Labs OpenAI">
 
-- <Expandable alt_header="From a Target URI">
+  1. Select the toggle for **dbt Labs** to use dbt Labs' managed OpenAI key.
+  2. Click **Save**.
 
-    **Locate your Azure OpenAI deployment URI**
-    ref to Azure docs
+  <Lightbox src="/img/docs/dbt-cloud/account-integration-dbtlabs.jpg" width="85%" title="Example of the dbt Labs integration page" />
+  </TabItem>
 
-    <Lightbox src="/img/docs/dbt-cloud/account-integration-azure-target.jpg" width="85%" title="Example of Azure OpenAI integration section" />
+  <TabItem value="openai" label="OpenAI">
 
-    1. Select **Azure OpenAI**.
-    2. Select the tab **From Target URI**.
-    3. Paste the URI into the **Target URI** field.
-    4. Verify the **Endpoint**, **Model Name**, and **API Version** are correct.
-    5. Enter your Azure OpenAI API key.
-    6. Click **Save**.
-  </Expandable>
+  1. Select the toggle for **OpenAI** to use your own OpenAI key.
+  2. Enter the API key.
+  3. Click **Save**.
+    <Lightbox src="/img/docs/dbt-cloud/account-integration-openai.jpg" width="85%" title="Example of the OpenAI integration page" />
 
-- <Expandable alt_header="Manually providing the credentials">
+  </TabItem>
 
-    **Locate your Azure OpenAI configuration**
-    ref to Azure docs
+  <TabItem value="azure" label="Azure OpenAI (beta)">
 
-    <Lightbox src="/img/docs/dbt-cloud/account-integration-azure-manual.jpg" width="85%" title="Example of Azure OpenAI integration section" />
+  **Deploying your own OpenAI model on Azure** https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-openai
 
-    1. Select **Azure OpenAI**.
-    2. Select the tab **Manual Input**.
-    3. Enter the **Endpoint**.
-    4. Enter the **Model Name**.
-    5. Enter the **API Version**.
-    6. Enter your Azure OpenAI API key.
-    7. Click **Save**.
-  </Expandable>
+  You can configure credentials for your Azure OpenAI deployment in the following two ways:
+    - [From a Target URI](#from-a-target-uri)
+    - [Manually providing the credentials](#manually-providing-the-credentials)
 
+  #### From a Target URI
 
+  1. Locate your Azure OpenAI deployment URI - ref to Azure docs
+  2. In the dbt Cloud **Azure OpenAI** section, select the tab **From Target URI**.
+  3. Paste the URI into the **Target URI** field.
+  4. Enter your Azure OpenAI API key.
+  5. Verify the **Endpoint**, **API Version**, and **Deployment Name** are correct.
+  6. Click **Save**.
+  <Lightbox src="/img/docs/dbt-cloud/account-integration-azure-target.jpg" width="85%" title="Example of Azure OpenAI integration section" />
+
+  #### Manually providing the credentials
+
+  1. Locate your Azure OpenAI configuration - ref to Azure docs
+  2. In the dbt Cloud **Azure OpenAI** section, select the tab **Manual Input**.
+  2. Enter your Azure OpenAI API key.
+  3. Enter the **Endpoint**, **API Version**, and **Deployment Name**.
+  4. Click **Save**.
+  <Lightbox src="/img/docs/dbt-cloud/account-integration-azure-manual.jpg" width="85%" title="Example of Azure OpenAI integration section" />
+
+  </TabItem>
+  </Tabs>
