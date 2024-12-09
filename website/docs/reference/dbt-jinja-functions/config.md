@@ -36,7 +36,7 @@ The `config.get` function is used to get configurations for a model from the end
 
 There are 3 cases:
 1. The configuration variable exists, it is not `None`
-1. The configuration variable exists, it it is `None`
+1. The configuration variable exists, it is `None`
 1. The configuration variable does not exist
 
 Example usage:
