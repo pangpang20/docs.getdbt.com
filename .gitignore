@@ -22,3 +22,5 @@ website/i18n/*
 
 # Local Vercel folder
 .vercel
+
+gitpush.sh
