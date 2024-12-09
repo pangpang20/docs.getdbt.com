@@ -35,7 +35,7 @@ __Args__:
 The `config.get` function is used to get configurations for a model from the end-user. Configs defined in this way are optional, and a default value can be provided.
 
 There are 3 cases:
-1. The configuration variable exists, it isn't `None`
+1. The configuration variable exists, it is not `None`
 1. The configuration variable exists, it is `None`
 1. The configuration variable doesn't exist
 
