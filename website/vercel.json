@@ -3651,7 +3651,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.getdbt.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self' https://www.youtube.com https://www.loom.com; connect-src 'self' https://*.getdbt.com https://*.algolia.net https://*.algolianet.com https://www.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.getdbt.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self' https://www.youtube.com https://www.loom.com https://app.mutinyhq.com https://www.wistia.com; connect-src 'self' https://*.getdbt.com https://*.algolia.net https://*.algolianet.com https://www.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors https://app.mutinyhq.com *.getdbt.com *.vercel.app http://localhost:3000"
         },
         {
           "key": "Strict-Transport-Security",
