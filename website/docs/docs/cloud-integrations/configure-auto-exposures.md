@@ -69,7 +69,7 @@ To set up [personal access tokens (PATs)](https://help.tableau.com/current/serve
       dbt Cloud immediately starts a sync when you update the selected collections list, capturing new workbooks and removing irrelevant ones.
       :::
 
-6. Click **Save**. 
+5. Click **Save**. 
 
 dbt Cloud imports everything in the collection(s) and you can continue to view them in Explorer. For more information on how to view and use auto-exposures, refer to [View auto-exposures from dbt Explorer](/docs/collaborate/auto-exposures) page.
 
