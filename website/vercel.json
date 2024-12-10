@@ -3651,7 +3651,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "img-src 'self' data: https:;"
+          "value": "img-src 'self' data: https:; frame-ancestors 'self' https://*.youtube.com https://*.wistia.com https://app.mutinyhq.com *.getdbt.com *.vercel.app http://localhost:3000"
         },
         {
           "key": "Strict-Transport-Security",
