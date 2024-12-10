@@ -22,6 +22,7 @@ All dimensions require a `name`, `type`, and can optionally include an `expr` pa
 | `description` | A clear description of the dimension. | Optional | String |  
 | `expr` | Defines the underlying column or SQL query for a dimension. If no `expr` is specified, MetricFlow will use the column with the same name as the group. You can use the column name itself to input a SQL expression. | Optional | String |
 | `label` | Defines the display value in downstream tools. Accepts plain text, spaces, and quotes (such as `orders_total` or `"orders_total"`).  | Optional | String |
+| [`meta`](/reference/resource-configs/meta) |  Set metadata for a resource and organize resources. Accepts plain text, spaces, and quotes. | Optional | {<dictionary>} | 
 
 Refer to the following for the complete specification for dimensions:
 
