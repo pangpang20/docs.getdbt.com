@@ -9,7 +9,7 @@ datatype: column_name_or_expression
 
 <TabItem value="models" label="Models">
 
-Configure the `unique_key` in the `config` block of your [incremental model](/docs/build/incremental-models) SQL file, in your `models/properties.yml` file, or in your `dbt_project.yml` file.
+Configure the `unique_key` in the `config` block of your [incremental model's](/docs/build/incremental-models) SQL file, in your `models/properties.yml` file, or in your `dbt_project.yml` file.
 
 <File name='models/my_incremental_model.sql'>
 
