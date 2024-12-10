@@ -115,7 +115,7 @@ If your GitLab account is not connected, you’ll see "No connected account". Se
 
 Once you approve authorization, you will be redirected to dbt Cloud, and you should see your connected account. You're now ready to start developing in the dbt Cloud IDE or dbt Cloud CLI.
 
-## FAQs
+## Troubleshooting
 
 <FAQ path="Troubleshooting/gitlab-webhook"/>
 <FAQ path="Troubleshooting/error-importing-repo"/>
