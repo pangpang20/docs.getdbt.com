@@ -24,10 +24,7 @@ Essentially, exports are like any other table in your data platform &mdash; they
 
 ## Benefits of exports
 
-The following section explains the main benefits of using exports, including:
-- [DRY representation](#dry-representation)
-- [Easier changes](#easier-changes)
-- [Caching](#caching)
+The following section explains the main benefits of using exports:
 
 <Expandable alt_header="DRY representation">
 
