@@ -11,4 +11,4 @@ If you don't see your repository listed, double-check that:
 If you do see your repository listed, but are unable to import the repository successfully, double-check that:
 - You are a maintainer of that repository. Only users with maintainer permissions can set up repository connections.
 
-If you imported a repository using the dbt Cloud native integration with GitLab, you should be able to see the clone strategy is using a `deploy_token`. If it's relying on an SSH key, this means the repository was not set up using the native GitLab integration, but rather using the generic git clone option. The repository must be reconnected in order to get the benefits described above.
+If you imported a repository using the dbt Cloud native integration with GitLab, you should be able to see if the clone strategy is using a `deploy_token`. If it's relying on an SSH key, this means the repository was not set up using the native GitLab integration, but rather using the generic git clone option. The repository must be reconnected in order to get the benefits described above.
