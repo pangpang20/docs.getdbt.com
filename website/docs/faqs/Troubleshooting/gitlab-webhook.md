@@ -9,7 +9,7 @@ When you connect dbt Cloud to a GitLab repository, GitLab automatically register
 
 If you're unable to trigger a CI job, this usually indicates that the webhook registration is missing or incorrect.
 
-To resolve this issue, navigate to the repository settings in GitLab and view webhook registrations by navigating to GitLab --> **Settings** --> **Webhooks**.
+To resolve this issue, navigate to the repository settings in GitLab and view the webhook registrations by navigating to GitLab --> **Settings** --> **Webhooks**.
 
 Some things to check:
 
