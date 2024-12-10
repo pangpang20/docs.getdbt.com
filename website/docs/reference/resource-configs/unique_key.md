@@ -129,7 +129,7 @@ This is a **required parameter**. No default is provided.
 
 <TabItem value="models" label="Models">
 
-In this example, we use an `id` column as a unique key for an incremental model.
+In this example, the `id` column is the unique key for an incremental model.
 
 <File name='models/my_incremental_model.sql'>
 
