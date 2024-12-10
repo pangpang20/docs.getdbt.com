@@ -149,7 +149,7 @@ select * from ..
 
 <TabItem value="snapshots" label="Snapshots">
 
-In this example, we use an `id` column as a unique key for a snapshot.
+In this example, the `id` column is used as a unique key for a snapshot.
 
 <VersionBlock firstVersion="1.9">
 
