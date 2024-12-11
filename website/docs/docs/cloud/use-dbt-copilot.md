@@ -63,7 +63,7 @@ Access dbt Copilot's AI prompt window using the keyboard shortcut Cmd+B (Mac) or
 - **Accept**: If the generated SQL meets your requirements, click the **Accept** button to apply the changes directly to your `.sql` file directly in the IDE.
 - **Reject**: If the suggestion don’t align with your request/prompt, click **Reject** to discard the generated SQL without making changes and start again.
 
-#### 5. Regenerate
+#### 5. Regenerate code
 - To regenerate, press the **Escape** button on your keyboard (or click the Reject button in the popup). This will remove the generated code and puts your cursor back into the prompt text area. 
 - Update your prompt and press **Enter** to try another generation. Press **Escape** again to close the popover entirely.
 
