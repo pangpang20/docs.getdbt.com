@@ -86,7 +86,7 @@ Learn more about [dbt Cloud features](/docs/cloud/about-cloud/dbt-cloud-feature
 
 <Card
     title="dbt Core using GitHub Codespace"
-    body="Learn how to create a codespace and execute the `dbt build` command."
+    body="Learn how to create a codespace and execute the dbt build command."
     link="https://docs.getdbt.com/guides/codespace?step=1"
     icon="dbt-bit"/>
 </div>
