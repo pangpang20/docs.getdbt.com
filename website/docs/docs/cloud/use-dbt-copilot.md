@@ -71,5 +71,3 @@ Once you've accepted a suggestion, you can continue to use the prompt window to 
 
 <Lightbox src="/img/docs/dbt-cloud/cloud-ide/copilot-sql-generation.gif" width="100%" title="Edit existing SQL code using dbt Copilot's prompt window accessible by keyboard shortcut Cmd+B (Mac) or Ctrl+B (Windows)" />
 
-### Considerations
-Currently, dbt Copilot is focused on generating code to streamline development. We're exploring ways to expand its capabilities in the future to further enhance and support your workflow
