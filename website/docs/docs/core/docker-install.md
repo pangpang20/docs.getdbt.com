@@ -34,7 +34,7 @@ The `ENTRYPOINT` for dbt Docker images is the command `dbt`. You can bind-mount 
 docker run \
 --network=host \
 --mount type=bind,source=path/to/project,target=/usr/app \
---mount type=bind,source=path/to/profiles.yml,target=/root/.dbt/ \
+--mount type=bind,source=path/to/profiles.yml,target=/root/.dbt/profiles.yml \
 <dbt_image_name> \
 ls
 ```
