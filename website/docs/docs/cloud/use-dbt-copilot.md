@@ -59,7 +59,7 @@ Access dbt Copilot's AI prompt window using the keyboard shortcut Cmd+B (Mac) or
   - **Green**: Means new code that will be added if you accept the suggestion.
   - **Red**: Highlights existing code that will be removed or replaced by the suggested changes.
 
-#### 4. Accept or reject suggestions for full control
+#### 4. Accept or reject suggestions
 - **Accept**: If the generated SQL meets your requirements, click the **Accept** button to apply the changes directly to your `.sql` file directly in the IDE.
 - **Reject**: If the suggestion don’t align with your request/prompt, click **Reject** to discard the generated SQL without making changes and start again.
 
