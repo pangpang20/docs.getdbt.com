@@ -26,7 +26,7 @@ Note that we use the double colon (::) to indicate whether a parameter is nested
 | `name`       | String    | Required     | Name of the saved query object.          |
 | `description`     | String      | Required     | A description of the saved query.     |
 | `label`     | String      | Required     | The display name for your saved query. This value will be shown in downstream tools.    |
-| `config`     | String      |  Optional     |  Use the [`config`](/reference/resource-properties/config) property to specify configurations for your saved query. Supports `cache`, [`enabled`](/reference/resource-configs/enabled), `export_as`, [`group`](/reference/resource-configs/group), [`meta`](/reference/resource-configs/meta), and [`schema`](/reference/resource-configs/schema)  configurations.   |
+| `config`     | String      |  Optional     |  Use the [`config`](/reference/resource-properties/config) property to specify configurations for your saved query. Supports `cache`, [`enabled`](/reference/resource-configs/enabled), `export_as`, [`group`](/reference/resource-configs/group), [`meta`](/reference/resource-configs/meta), [`tags`](/reference/resource-configs/tags), and [`schema`](/reference/resource-configs/schema)  configurations.   |
 | `config::cache::enabled`     | Object      | Optional     |  An object with a sub-key used to specify if a saved query should populate the [cache](/docs/use-dbt-semantic-layer/sl-cache). Accepts sub-key `true` or `false`. Defaults to `false` |
 | `query_params`       | Structure   | Required     | Contains the query parameters. |
 | `query_params::metrics`   | List or String   | Optional    | A list of the metrics to be used in the query as specified in the command line interface. |
@@ -38,7 +38,6 @@ Note that we use the double colon (::) to indicate whether a parameter is nested
 | `exports::config::export_as` | String    | Required     | The type of export to run. Options include table or view currently and cache in the near future.   |
 | `exports::config::schema`   | String   | Optional    | The [schema](/reference/resource-configs/schema) for creating the table or view. This option cannot be used for caching.   |
 | `exports::config::alias`  | String     | Optional    | The table [alias](/reference/resource-configs/alias) used to write to the table or view.  This option cannot be used for caching.  | 
-| `exports::config::tags`  | String     | Optional    | Apply a [tag](/reference/resource-configs/tags) (or list of tags) to a resource. Tags help organize and filter resources in dbt. Nested within `exports` and `config`.  |
 
 </VersionBlock>
 
@@ -108,7 +107,8 @@ saved_queries:
     label: Test saved query
     config:
       cache:
-        enabled: true  # Or false if you want it disabled by default
+        [enabled](/reference/resource-configs/enabled): true | false
+        [tags](/reference/resource-configs/tags): 'my_tag'
     query_params:
       metrics:
         - simple_metric
@@ -123,7 +123,6 @@ saved_queries:
           export_as: table 
           alias: my_export_alias
           schema: my_export_schema_name
-          tags: 'my_tag'
 ```
 </VersionBlock>
 
@@ -243,6 +242,9 @@ The following is an example of a saved query with an export:
 saved_queries:
   - name: order_metrics
     description: Relevant order metrics
+    config:
+      tags:
+        - order_metrics
     query_params:
       metrics:
         - orders
@@ -262,9 +264,7 @@ saved_queries:
         config:
           export_as: table # Options available: table, view
           [alias](/reference/resource-configs/alias): my_export_alias # Optional - defaults to Export name
-          [schema](/reference/resource-configs/schema): my_export_schema_name # Optional - defaults to deployment schema
-          [tags](/reference/resource-configs/tags): 'my_tag'
-           
+          [schema](/reference/resource-configs/schema): my_export_schema_name # Optional - defaults to deployment schema           
 ```
 </VersionBlock>
 

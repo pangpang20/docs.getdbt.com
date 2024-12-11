@@ -20,14 +20,16 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
 
 ## December 2024
 
-- **New**: Exports now support [tags](/reference/resource-configs/tags) in dbt. Tags allow you to categorize your resources and filter them. You can add tags to your [exports](/docs/build/saved-queries#configure-exports) in the `semantic_model.yml` file or `dbt_project.yml` file. For example:
+- **New**: Saved queries now support [tags](/reference/resource-configs/tags), which allow you to categorize your resources and filter them. Add tags to your [saved queries](/docs/build/saved-queries) in the `semantic_model.yml` file or `dbt_project.yml` file. For example:
+  <File name='dbt_project.yml'>
 
   ```yml
-  exports:
-    - name: export_name
-      tags: ['export_tag']
-      ...
+  [saved-queries](/docs/build/saved-queries):
+    jaffle_shop:
+      customer_order_metrics:
+        +tags: order_metrics
   ```
+  </File>
 - **New**: [Model notifications](/docs/deploy/model-notifications) are now generally available in dbt Cloud. These notifications alert model owners through email about any issues encountered by models and tests as soon as they occur while running a job.
 - **New**: You can now use your [Azure OpenAI key](/docs/cloud/account-integrations?ai-integration=azure#ai-integrations) (available in beta) to use dbt Cloud features like [dbt Copilot](/docs/cloud/dbt-copilot) and [Ask dbt](/docs/cloud-integrations/snowflake-native-app) . Additionally, you can use your own [OpenAI API key](/docs/cloud/account-integrations?ai-integration=openai#ai-integrations) or use [dbt Labs-managed OpenAI](/docs/cloud/account-integrations?ai-integration=dbtlabs#ai-integrations) key. Refer to [AI integrations](/docs/cloud/account-integrations#ai-integrations) for more information.
 - **New**: The [`hard_deletes`](/reference/resource-configs/hard-deletes) config gives you more control on how to handle deleted rows from the source. Supported options are `ignore` (default), `invalidate` (replaces the legacy `invalidate_hard_deletes=true`), and `new_record`. Note that `new_record` will create a new metadata column in the snapshot table.

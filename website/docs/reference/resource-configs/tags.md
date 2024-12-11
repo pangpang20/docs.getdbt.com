@@ -20,15 +20,15 @@ datatype: string | [string]
 
 ```yml
 
-models:
+[models](/reference/model-configs):
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
-snapshots:
+[snapshots](/reference/snapshot-configs):
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
-seeds:
+[seeds](/reference/seed-configs):
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
@@ -39,19 +39,19 @@ seeds:
 
 ```yml
 
-models:
+[models](/reference/model-configs):
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
-snapshots:
+[snapshots](/reference/snapshot-configs):
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
-seeds:
+[seeds](/reference/seed-configs):
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
-exports:
+[saved-queries:](/docs/build/saved-queries)
   [<resource-path>](/reference/resource-configs/resource-path):
     +tags: <string> | [<string>]
 
@@ -64,38 +64,45 @@ exports:
 
 <TabItem value="other-yaml">
 
-<File name='models/resources.yml'>
+<VersionBlock firstVersion="1.9">
 
-```yml
-version: 2
+The following examples show how to add tags to dbt resources in YAML files. Replace `resource_type` with `models`, `snapshots`, `seeds`, or `saved_queries` as appropriate.
+</VersionBlock>
 
-models:
-  - name: model_name
+<VersionBlock lastVersion="1.8">
+
+The following examples show how to add tags to dbt resources in YAML files. Replace `resource_type` with `models`, `snapshots`, or `seeds` as appropriate.
+</VersionBlock>
+
+<File name='resource_type/properties.yml'>
+
+```yaml
+resource_type:
+  - name: resource_name
     config:
-      tags: <string> | [<string>]
-
+      tags: string
+    # Optional: Add specific properties for models
     columns:
       - name: column_name
-        tags: [<string>]
+        tags: string
         tests:
-          <test-name>:
+          test-name:
             config:
-              tags: <string> | [<string>]
+              tags: string
 ```
 
 </File>
 </TabItem>
 
-
 <TabItem value="config">
 
-```jinja
-
+<File name='models/model.sql'>
+```sql
 {{ config(
     tags="<string>" | ["<string>"]
 ) }}
-
 ```
+</File>
 
 </TabItem>
 
@@ -191,22 +198,22 @@ seeds:
 
 </File>
 
-### Apply tags to exports
+### Apply tags to saved queries
 
 <VersionBlock lastVersion="1.8">
 
-Applying tags to exports is only available in dbt Core versions 1.9 and later.
+Applying tags to saved queries is only available in dbt Core versions 1.9 and later.
 
 </VersionBlock>
 
 <VersionBlock firstVersion="1.9">
 
-This following example shows how to apply tags to an export in the `dbt_project.yml` file. The export is then tagged with `order_metrics`.
+This following example shows how to apply a tag to a saved query in the `dbt_project.yml` file. The saved query is then tagged with `order_metrics`.
 
 <File name='dbt_project.yml'>
 
 ```yml
-[exports](/docs/build/saved-queries#configure-exports):
+[saved-queries](/docs/build/saved-queries):
   jaffle_shop:
     customer_order_metrics:
       +tags: order_metrics
@@ -214,23 +221,19 @@ This following example shows how to apply tags to an export in the `dbt_project.
 
 </File>
 
-The second example shows how to apply tags to an export in the `semantic_model.yml` file. The export is then tagged with `order_metrics` and `hourly`.
+The second example shows how to apply multiple tags to a saved query in the `semantic_model.yml` file. The saved query is then tagged with `order_metrics` and `hourly`.
 
 <File name='semantic_model.yml'>
 
 ```yaml
 saved_queries:
-  - name: order_metrics
-    ...
-    exports:
-      - name: hourly_order_metrics
-        config:
-          alias: my_export_alias
-          export_as: table
-          schema: my_export_schema_name
-          tags: 
-            - order_metrics
-            - hourly
+  - name: test_saved_query
+    description: "{{ doc('saved_query_description') }}"
+    label: Test saved query
+    config:
+      tags: 
+        - order_metrics
+        - hourly
 ```
 
 </File>
