@@ -120,8 +120,8 @@ grant select on future views in database analytics to role reporter;
 Again, if you already have data in your analytics database, make sure you run:
 ```
 grant usage on all schemas in database analytics to role reporter;
-grant select on all tables in database analytics to role transformer;
-grant select on all views in database analytics to role transformer;
+grant select on all tables in database analytics to role reporter;
+grant select on all views in database analytics to role reporter;
 ```
 8. Maintain
 When new users are added, make sure you add them to the right role! Everything else should be inherited automatically thanks to those `future` grants.
