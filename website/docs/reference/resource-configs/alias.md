@@ -96,9 +96,6 @@ seeds:
       +alias: country_mappings
 
 ```
-
-</File>
-
 </File>
 </TabItem>
 
