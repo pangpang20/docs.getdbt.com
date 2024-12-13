@@ -14,18 +14,18 @@ By moving your environments and jobs to release tracks you can get all the funct
 
 ## Which release tracks are available?
 
-| Release track | Description | Plan Availability | 
-| ------------- | ------------ | ---------- | 
-| **Latest** `<Lifecycle status="GA"/>` |  (Formerly called "Versionless") Provides a continuous release of the latest functionality in dbt Cloud, and includes early access to new features of the dbt framework before they're available in open source releases of dbt Core | All plans |
-| **Compatible** `<Lifecycle status="preview"/>`  | Provides a monthly release aligned with the most recent open source versions of dbt Core and adapters, plus functionality exclusively available in dbt Cloud |  Team + Enterprise |
-| **Extended** `<Lifecycle status="preview"/>` | The previous month's "Compatible" release | Enterprise |
+| Release track | Description | Plan Availability | API Value |
+| ------------- | ----------- | ----------------- | --------- |
+| **Latest** `<Lifecycle status="GA"/>` |  (Formerly called "Versionless") Provides a continuous release of the latest functionality in dbt Cloud, and includes early access to new features of the dbt framework before they're available in open source releases of dbt Core | All plans | `latest` (or `versionless`) |
+| **Compatible** `<Lifecycle status="preview"/>`  | Provides a monthly release aligned with the most recent open source versions of dbt Core and adapters, plus functionality exclusively available in dbt Cloud |  Team + Enterprise | `compatible` |
+| **Extended** `<Lifecycle status="preview"/>` | The previous month's "Compatible" release | Enterprise | `extended` |
 
 The first "Compatible" release was on December 12, 2024, after the final release of dbt Core v1.9.0. For December 2024 only, the "Extended" release is the same as "Compatible." Starting in January 2025, "Extended" will be one month behind "Compatible."
 
 To configure an environment in the [dbt Cloud Admin API](/docs/dbt-cloud-apis/admin-cloud-api) or [Terraform](https://registry.terraform.io/providers/dbt-labs/dbtcloud/latest) to use a release track, set `dbt_version` to the release track name:
-- `latest` (formerly called `versionless`; the old name is still supported)
-- `compatible` (available to Team + Enterprise)
-- `extended` (available to Enterprise)
+- `latest` (or `versionless`, the old name is still supported)
+- `compatible`
+- `extended`
 
 ## Which release track should I choose?
 
