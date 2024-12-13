@@ -18,7 +18,7 @@ keywords:
 
 import dbtCopilotBeta from '/snippets/_dbt-copilot-avail.md';
 
-<dbtCopilotBeta routputsesource='tests' />
+<dbtCopilotBeta outputs='tests' />
 
 <VersionBlock firstVersion="1.8">
 
