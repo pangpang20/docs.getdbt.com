@@ -6,7 +6,7 @@ description: "The Compatible release track updates once per month, and it includ
 
 :::info Preview
 
-The "Compatible" and "Extended" release tracks are available in Preview. Access will be rolling out to eligible dbt Cloud accounts during the week of December 16-20, 2024.
+The "Compatible" and "Extended" [release tracks](/docs/dbt-versions/cloud-release-tracks) are available in Preview. Access will be rolling out to eligible dbt Cloud accounts during the week of December 16-20, 2024.
 
 :::
 
