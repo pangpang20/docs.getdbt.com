@@ -77,7 +77,7 @@ If you're running dbt version v1.6 or older, please know that your version of db
 
 dbt Labs has extended the "Critical Support" period of dbt Core v1.7 for dbt Cloud Enterprise customers while we work through the migration with those customers to Release Tracks. In the meantime, this means that v1.7 will continue to be accessible in dbt Cloud for Enteprise customers, jobs and environments on v1.7 for those customers will not be automatically migrated to "Latest," and dbt Labs will continue to fix critical bugs and security issues.
 
-Starting in October 2024, dbt Cloud accounts on the Developer and Team plans have been migrated off very old dbt Core versions and onto release tracks. If your account has been migrated to the "Latest" release track, and you are seeing net-new failures in your scheduled dbt jobs, please [contact dbt Cloud support](https://docs.getdbt.com/docs/dbt-support#dbt-cloud-support) to report the problem or request an extension.
+Starting in October 2024, dbt Cloud accounts on the Developer and Team plans have been migrated to release tracks from older dbt Core versions. If your account was migrated to the "Latest" release track and you notice new failures in scheduled jobs, please [contact dbt Cloud support](https://docs.getdbt.com/docs/dbt-support#dbt-cloud-support) to report the problem or request an extension.
 
 </Expandable>
 
