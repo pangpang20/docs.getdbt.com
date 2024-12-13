@@ -69,7 +69,7 @@ To learn more about how dbt Labs deploys stable dbt upgrades in a safe manner to
 
 If you're running dbt version 1.6 or older, please know that your version of dbt Core has reached [end-of-life (EOL)](/docs/dbt-versions/core#eol-version-support) and is no longer supported. We strongly recommend that you update to a newer version as soon as reasonably possible.
 
-dbt Labs has extended the critical support period of dbt Core v1.7 for dbt Cloud Enterprise customers to March 2025. At that point, we will be encouraging all customers to select a Release Track for receiving ongoing updates to dbt in dbt Cloud.
+dbt Labs has extended the critical support period of dbt Core v1.7 for dbt Cloud Enterprise customers to March 2025. At that point, we will be encouraging all customers to select a Release Track for ongoing updates in dbt Cloud.
 
 <Expandable alt_header="I'm using an older version of dbt in dbt Cloud. What should I do? What happens if I do nothing?" >
 
