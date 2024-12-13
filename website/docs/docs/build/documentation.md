@@ -2,10 +2,17 @@
 title: "Documentation"
 description: "Learn how good documentation for your dbt models helps stakeholders discover and understand your datasets."
 id: "documentation"
+meta:
+  outputs: 'documentation'
 ---
 
 Good documentation for your dbt models will help downstream consumers discover and understand the datasets you curate for them.
 dbt provides a way to generate documentation for your dbt project and render it as a website.
+ 
+import dbtCopilotHelps from '/snippets/_dbt_copilot_avail.md';
+
+<dbtCopilotHelps meta={frontMatter.meta} />
+
 
 ## Related documentation
 

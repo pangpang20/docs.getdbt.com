@@ -8,12 +8,19 @@ search_weight: "heavy"
 id: "data-tests"
 keywords:
   - test, tests, testing, dag
+meta:
+  outputs: 'tests'
 ---
+
 ## Related reference docs
 * [Test command](/reference/commands/test)
 * [Data test properties](/reference/resource-properties/data-tests)
 * [Data test configurations](/reference/data-test-configs)
 * [Test selection examples](/reference/node-selection/test-selection-examples)
+
+import dbtCopilotHelps from '/snippets/_dbt_copilot_avail.md';
+
+<dbtCopilotHelps meta={frontMatter.meta} />
 
 <VersionBlock firstVersion="1.8">
 
