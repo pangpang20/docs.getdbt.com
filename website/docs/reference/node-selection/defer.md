@@ -47,7 +47,7 @@ Deferral requires both `--defer` and `--state` to be set, either by passing flag
 
 #### Favor state
 
-You can optionally skip the second criterion by passing the `--favor-state` flag. If passed, dbt will favor using the node defined in your `--state` namespace, even if the node exists in the current target. Selected nodes will still resolve via the `target` namespace, regardless of the `--favor-state` flag.
+If `--favor-state` is passed, dbt will favor the node definition from the `--state` directory, _unless_ that node is also included among the selected nodes.
 
 ### Example
 
