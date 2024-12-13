@@ -10,9 +10,9 @@ keywords:
   - test, tests, testing, dag
 ---
 
-import DbtCopilotBeta from '/snippets/_dbt-copilot-avail.md';
+import CopilotBeta from '/snippets/_dbt-copilot-avail.md';
 
-<DbtCopilotBeta resource='data tests' />
+<CopilotBeta resource='data tests' />
 
 ## Related reference docs
 * [Test command](/reference/commands/test)

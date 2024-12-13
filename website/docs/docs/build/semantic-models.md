@@ -9,9 +9,9 @@ tags: [Metrics, Semantic Layer]
 pagination_next: "docs/build/dimensions"
 ---
 
-import DbtCopilotBeta from '/snippets/_dbt-copilot-avail.md';
+import CopilotBeta from '/snippets/_dbt-copilot-avail.md';
 
-<DbtCopilotBeta resource='semantic models' />
+<CopilotBeta resource='semantic models' />
 
 Semantic models are the foundation for data definition in MetricFlow, which powers the dbt Semantic Layer:
 
