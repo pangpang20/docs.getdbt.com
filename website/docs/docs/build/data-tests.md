@@ -18,7 +18,7 @@ meta:
 * [Data test configurations](/reference/data-test-configs)
 * [Test selection examples](/reference/node-selection/test-selection-examples)
 
-import dbtCopilotHelps from '/snippets/_dbt_copilot_avail.md';
+import dbtCopilotHelps from '/snippets/_dbt-copilot-avail.md';
 
 <dbtCopilotHelps meta={frontMatter.meta} />
 

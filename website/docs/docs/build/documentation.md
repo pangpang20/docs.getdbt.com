@@ -9,7 +9,7 @@ meta:
 Good documentation for your dbt models will help downstream consumers discover and understand the datasets you curate for them.
 dbt provides a way to generate documentation for your dbt project and render it as a website.
  
-import dbtCopilotHelps from '/snippets/_dbt_copilot_avail.md';
+import dbtCopilotHelps from '/snippets/_dbt-copilot-avail.md';
 
 <dbtCopilotHelps meta={frontMatter.meta} />
 
