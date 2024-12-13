@@ -62,8 +62,9 @@ semantic_models:
       type_params:
         time_granularity: day
       label: "Date of transaction" # Recommend adding a label to provide more context to users consuming the data
-      meta:
-        data_owner: "Finance team"
+      config: 
+        meta:
+          data_owner: "Finance team"
       expr: ts
     - name: is_bulk
       type: categorical
@@ -147,8 +148,9 @@ dimensions:
   - name: is_bulk_transaction
     type: categorical
     expr: case when quantity > 10 then true else false end
-    meta:
-      usage: "Filter to identify bulk transactions, like where quantity > 10."
+    config:
+      meta:
+        usage: "Filter to identify bulk transactions, like where quantity > 10."
 ```
 </VersionBlock>
 
@@ -192,8 +194,9 @@ dimensions:
     type: time
     label: "Date of creation"
     expr: ts_created # ts_created is the underlying column name from the table 
-    meta:
-      notes: "Only valid for orders from 2022 onward"
+    config:
+      meta:
+        notes: "Only valid for orders from 2022 onward"
     is_partition: True
     type_params:
       time_granularity: day

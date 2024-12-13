@@ -436,21 +436,24 @@ semantic_models:
     dimensions:
       - name: order_date
         type: time
-        meta:
-          data_owner: "Finance team"
-          used_in_reporting: true
+        config:
+          meta:
+            data_owner: "Finance team"
+            used_in_reporting: true
     entities:
       - name: customer_id
         type: primary
-        meta:
-          description: "Unique identifier for customers"
-          data_owner: "Sales team"
-          used_in_reporting: false
+        config:
+          meta:
+            description: "Unique identifier for customers"
+            data_owner: "Sales team"
+            used_in_reporting: false
     measures:
       - name: count_of_users
         expr: user_id
-        meta:
-          used_in_reporting: true
+        config:
+          meta:
+            used_in_reporting: true
 ```
 
 </File>
@@ -468,10 +471,12 @@ semantic-models:
     ...
     [dimensions](/docs/build/dimensions):
       - name: order_date
-        +meta:
-          data_owner: "Finance team"
-          used_in_reporting: true
+        config:
+          meta:
+            data_owner: "Finance team"
+            used_in_reporting: true
 ```
+
 
 </File>
 </TabItem>
