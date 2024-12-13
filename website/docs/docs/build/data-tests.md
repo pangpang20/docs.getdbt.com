@@ -10,15 +10,15 @@ keywords:
   - test, tests, testing, dag
 ---
 
+import DbtCopilotBeta from '/snippets/_dbt-copilot-avail.md';
+
+<DbtCopilotBeta resource='data tests' />
+
 ## Related reference docs
 * [Test command](/reference/commands/test)
 * [Data test properties](/reference/resource-properties/data-tests)
 * [Data test configurations](/reference/data-test-configs)
 * [Test selection examples](/reference/node-selection/test-selection-examples)
-
-import DbtCopilotBeta from '/snippets/_dbt-copilot-avail.md';
-
-<DbtCopilotBeta resource='data tests' />
 
 <VersionBlock firstVersion="1.8">
 
