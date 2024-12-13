@@ -16,9 +16,9 @@ keywords:
 * [Data test configurations](/reference/data-test-configs)
 * [Test selection examples](/reference/node-selection/test-selection-examples)
 
-import dbtCopilotBeta from '/snippets/_dbt-copilot-avail.md';
+import DbtCopilotBeta from '/snippets/_dbt-copilot-avail.md';
 
-<dbtCopilotBeta outputs='tests' />
+<DbtCopilotBeta resource='data tests' />
 
 <VersionBlock firstVersion="1.8">
 
