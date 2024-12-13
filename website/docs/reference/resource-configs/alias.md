@@ -24,7 +24,7 @@ models:
 ```
 </File>
 
-In the `models/properties.yml` file, the following specifies an `alias` as part of the model's metadata, useful for centralized configuration:
+The following specifies an `alias` as part of the `models/properties.yml` file metadata, useful for centralized configuration:
 
 <File name='models/properties.yml'>
 
