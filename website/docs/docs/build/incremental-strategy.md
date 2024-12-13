@@ -30,10 +30,10 @@ Click the name of the adapter in the below table for more information about supp
 | [dbt-redshift](/reference/resource-configs/redshift-configs#incremental-materialization-strategies) |     ✅    |    ✅   |        ✅        |                    |      ✅        |
 | [dbt-bigquery](/reference/resource-configs/bigquery-configs#merge-behavior-incremental-models)      |           |    ✅   |                 |          ✅         |      ✅            |
 | [dbt-spark](/reference/resource-configs/spark-configs#incremental-models)                           |     ✅    |    ✅   |                 |          ✅         |      ✅            |
-| [dbt-databricks](/reference/resource-configs/databricks-configs#incremental-models)                 |     ✅    |    ✅   |                 |          ✅         |                    |
+| [dbt-databricks](/reference/resource-configs/databricks-configs#incremental-models)                 |     ✅    |    ✅   |                 |          ✅         |          ✅         |
 | [dbt-snowflake](/reference/resource-configs/snowflake-configs#merge-behavior-incremental-models)    |     ✅    |    ✅   |        ✅        |                    |      ✅            |
 | [dbt-trino](/reference/resource-configs/trino-configs#incremental)                                  |     ✅    |    ✅   |        ✅        |                    |                    |
-| [dbt-fabric](/reference/resource-configs/fabric-configs#incremental)                                |     ✅    |    ✅   |        ✅          |                    |                    |
+| [dbt-fabric](/reference/resource-configs/fabric-configs#incremental)                                |     ✅    |         |        ✅          |                    |                    |
 | [dbt-athena](/reference/resource-configs/athena-configs#incremental-models)                         |     ✅    |    ✅   |                 |          ✅         |                    |
 
 ### Configuring incremental strategy
@@ -294,6 +294,8 @@ For example, a user-defined strategy named `insert_only` can be defined and used
 ```
 
 </File>
+
+If you use a custom microbatch macro, set a [`require_batched_execution_for_custom_microbatch_strategy` behavior flag](/reference/global-configs/behavior-changes#custom-microbatch-strategy) in your `dbt_project.yml` to enable batched execution of your custom strategy. 
 
 ### Custom strategies from a package
 
