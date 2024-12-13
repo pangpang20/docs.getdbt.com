@@ -47,7 +47,7 @@ Deferral requires both `--defer` and `--state` to be set, either by passing flag
 
 #### Favor state
 
-If `--favor-state` is passed, dbt will favor the node definition from the `--state` directory, _unless_ that node is also included among the selected nodes.
+When `--favor-state` is passed, dbt prioritizes node definitions from the `--state directory`. However, this doesn’t apply if the node is also part of the selected nodes.
 
 ### Example
 
