@@ -38,7 +38,7 @@ models:
 ```
 </File>
 
-In `models/sales_total.sql` file, the following assigns the `alias` directly in the model file:
+The following assigns the `alias` directly in the In `models/sales_total.sql` file:
 
 <File name='models/sales_total.sql'>
 
