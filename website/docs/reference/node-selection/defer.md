@@ -31,7 +31,7 @@ dbt test --models [...] --defer --state path/to/artifacts
 
 By default, dbt uses the [`target`](/reference/dbt-jinja-functions/target) namespace to resolve `ref` calls.
 
-But with `--defer`, dbt will use the state manifest instead if the following criteria are met:
+When `--defer` is enabled, dbt resolves ref calls using the state manifest instead, but only if:
 
 1. The node isn’t in the selected nodes **and**
 2. It doesn’t exist in the database (or `--favor-state` is used).
