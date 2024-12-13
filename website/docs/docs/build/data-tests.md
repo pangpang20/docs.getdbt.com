@@ -8,8 +8,6 @@ search_weight: "heavy"
 id: "data-tests"
 keywords:
   - test, tests, testing, dag
-meta:
-  outputs: 'tests'
 ---
 
 ## Related reference docs
@@ -18,9 +16,9 @@ meta:
 * [Data test configurations](/reference/data-test-configs)
 * [Test selection examples](/reference/node-selection/test-selection-examples)
 
-import dbtCopilotHelps from '/snippets/_dbt-copilot-avail.md';
+import dbtCopilotBeta from '/snippets/_dbt-copilot-avail.md';
 
-<dbtCopilotHelps meta={frontMatter.meta} />
+<dbtCopilotBeta routputsesource='tests' />
 
 <VersionBlock firstVersion="1.8">
 
