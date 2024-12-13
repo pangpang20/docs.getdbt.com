@@ -33,7 +33,7 @@ By default, dbt uses the [`target`](/reference/dbt-jinja-functions/target) names
 
 When `--defer` is enabled, dbt resolves ref calls using the state manifest instead, but only if:
 
-1. The node isn’t in the selected nodes **and**
+1. The node isn’t among the selected nodes, _and_
 2. It doesn’t exist in the database (or `--favor-state` is used).
 
 Ephemeral models are never deferred, since they serve as "passthroughs" for other `ref` calls.
