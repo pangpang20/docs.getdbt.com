@@ -146,7 +146,7 @@ For semantic nodes and models that aren't downstream of modified models, dbt Clo
 
 <Expandable alt_header="Semantic nodes that are modified or affected by downstream modified nodes.">
 
-To only validate modified semantic nodes, use the following command (with [state selection](/reference/node-selection/syntax#stateful-selection)):
+To only validate modified semantic nodes, use the following command (with [state selection](/reference/node-selection/syntax#state-selection)):
 
 ```bash
 dbt sl validate --select state:modified+
@@ -188,6 +188,8 @@ To validate _all_ semantic nodes in your project, add the following command to d
 
 ## Troubleshooting
 
+<FAQ path="Troubleshooting/gitlab-webhook"/>
+
 <DetailsToggle alt_header="Temporary schemas aren't dropping">
 If your temporary schemas aren't dropping after a PR merges or closes, this typically indicates one of these issues:
 - You have overridden the <code>generate_schema_name</code> macro and it isn't using <code>dbt_cloud_pr_</code> as the prefix.
@@ -200,6 +202,7 @@ To resolve this, change your macro so that the temporary PR schema name contains
 A macro is creating a schema but there are no dbt models writing to that schema. dbt Cloud doesn't drop temporary schemas that weren't written to as a result of running a dbt model.
 
 </DetailsToggle>
+
 
 <DetailsToggle alt_header="Error messages that refer to schemas from previous PRs">
 
