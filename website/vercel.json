@@ -103,8 +103,8 @@
       "permanent": true
     },
     {
-      "source": "docs/dbt-versions/versionless-cloud",
-      "destination": "docs/dbt-versions/cloud-release-tracks",
+      "source": "/docs/dbt-versions/versionless-cloud",
+      "destination": "/docs/dbt-versions/cloud-release-tracks",
       "permanent": true
     },
     {
@@ -3651,7 +3651,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "img-src 'self' data: https:;"
+          "value": "img-src 'self' data: https:; frame-ancestors 'self' https://*.mutinyhq.com https://*.getdbt.com"
         },
         {
           "key": "Strict-Transport-Security",

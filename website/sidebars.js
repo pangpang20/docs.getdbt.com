@@ -49,6 +49,7 @@ const sidebarSettings = {
           items: [
             "docs/cloud/about-cloud-setup",
             "docs/cloud/account-settings",
+            "docs/cloud/account-integrations",
             "docs/dbt-cloud-environments",
             "docs/cloud/migration",
             {
@@ -221,6 +222,7 @@ const sidebarSettings = {
                 "docs/core/connect-data-platform/athena-setup",
                 "docs/core/connect-data-platform/glue-setup",
                 "docs/core/connect-data-platform/clickhouse-setup",
+                "docs/core/connect-data-platform/cratedb-setup",
                 "docs/core/connect-data-platform/databend-setup",
                 "docs/core/connect-data-platform/decodable-setup",
                 "docs/core/connect-data-platform/doris-setup",
@@ -925,6 +927,8 @@ const sidebarSettings = {
           items: [
             "reference/resource-configs/access",
             "reference/resource-configs/alias",
+            "reference/resource-configs/batch-size",
+            "reference/resource-configs/begin",
             "reference/resource-configs/database",
             "reference/resource-configs/enabled",
             "reference/resource-configs/event-time",
@@ -933,10 +937,12 @@ const sidebarSettings = {
             "reference/resource-configs/grants",
             "reference/resource-configs/group",
             "reference/resource-configs/docs",
+            "reference/resource-configs/lookback",
             "reference/resource-configs/persist_docs",
             "reference/resource-configs/pre-hook-post-hook",
             "reference/resource-configs/schema",
             "reference/resource-configs/tags",
+            "reference/resource-configs/unique_key",
             "reference/resource-configs/meta",
             "reference/advanced-config-usage",
             "reference/resource-configs/plus-prefix",
@@ -952,6 +958,7 @@ const sidebarSettings = {
             "reference/resource-configs/materialized",
             "reference/resource-configs/on_configuration_change",
             "reference/resource-configs/sql_header",
+            "reference/resource-properties/concurrent_batches",
           ],
         },
         {
@@ -980,7 +987,6 @@ const sidebarSettings = {
             "reference/resource-configs/strategy",
             "reference/resource-configs/target_database",
             "reference/resource-configs/target_schema",
-            "reference/resource-configs/unique_key",
             "reference/resource-configs/updated_at",
           ],
         },
