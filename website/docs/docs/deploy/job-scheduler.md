@@ -11,7 +11,8 @@ The job scheduler is the backbone of running jobs in dbt Cloud, bringing power a
 The scheduler enables both cron-based and event-driven execution of dbt commands in the user’s data platform. Specifically, it handles:
 
 - Cron-based execution of dbt Cloud jobs that run on a predetermined cadence
-- Event-driven execution of dbt Cloud CI jobs triggered by pull requests to the dbt repo
+- Event-driven execution of dbt Cloud jobs that run based on the completion of another job
+- Event-driven execution of dbt Cloud CI jobs triggered by pull requests to the dbt repo (e.g. "merge jobs")
 - Event-driven execution of dbt Cloud jobs triggered by API
 - Event-driven execution of dbt Cloud jobs manually triggered by a user to "Run Now"
 
