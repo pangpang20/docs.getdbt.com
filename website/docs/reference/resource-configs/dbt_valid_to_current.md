@@ -6,8 +6,6 @@ default_value: {NULL}
 id: "dbt_valid_to_current"
 ---
 
-import VersionCallout from '/snippets/_version-callout.md';
-
 <VersionCallout version="1.9" />
 
 <File name='snapshots/schema.yml'>
