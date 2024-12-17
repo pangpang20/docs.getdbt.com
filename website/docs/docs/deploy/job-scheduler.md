@@ -14,7 +14,7 @@ The scheduler enables both cron-based and event-driven execution of dbt commands
 - Event-driven execution of dbt Cloud jobs that run based on the completion of another job ([trigger on job completion](/docs/deploy/deploy-jobs#trigger-on-job-completion))
 - Event-driven execution of dbt Cloud CI jobs triggered by pull requests to the dbt repo ([merge jobs](/docs/deploy/merge-jobs))
 - Event-driven execution of dbt Cloud jobs triggered by API
-- Event-driven execution of dbt Cloud jobs manually triggered by a user to "Run Now"
+- Event-driven execution of dbt Cloud jobs manually triggered by a user to **Run now**
 
 The scheduler handles various tasks including queuing jobs, creating temporary environments to run the dbt commands required for those jobs, providing logs for debugging and remediation, and storing dbt artifacts for direct consumption/ingestion by the Discovery API. 
 
