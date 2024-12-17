@@ -12,7 +12,7 @@ The scheduler enables both cron-based and event-driven execution of dbt commands
 
 - Cron-based execution of dbt Cloud jobs that run on a predetermined cadence
 - Event-driven execution of dbt Cloud jobs that [run based on the completion of another job ([trigger on job completion](/docs/deploy/deploy-jobs#trigger-on-job-completion))
-- Event-driven execution of dbt Cloud CI jobs triggered by pull requests to the dbt repo (e.g. "merge jobs")
+- Event-driven execution of dbt Cloud CI jobs triggered by pull requests to the dbt repo ([merge jobs](/docs/deploy/merge-jobs))
 - Event-driven execution of dbt Cloud jobs triggered by API
 - Event-driven execution of dbt Cloud jobs manually triggered by a user to "Run Now"
 
