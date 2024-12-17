@@ -20,6 +20,7 @@ Release notes are grouped by month for both multi-tenant and virtual private clo
 
 ## December 2024
 
+- **New**: The dbt Semantic Layer now supports Azure Single-tenant deployments. Refer to [Set up the dbt Semantic Layer](/docs/use-dbt-semantic-layer/setup-sl) for more information on how to get started.
 - **Fix**: Resolved intermittent issues in Single-tenant environments affecting Semantic Layer and query history.
 - **Fix**: [The dbt Semantic Layer](/docs/use-dbt-semantic-layer/dbt-sl) now respects the BigQuery [`execution_project` attribute](/docs/core/connect-data-platform/bigquery-setup#execution-project), including for exports.
 - **New**: [Model notifications](/docs/deploy/model-notifications) are now generally available in dbt Cloud. These notifications alert model owners through email about any issues encountered by models and tests as soon as they occur while running a job.
