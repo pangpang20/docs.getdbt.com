@@ -190,6 +190,15 @@ To validate _all_ semantic nodes in your project, add the following command to d
 
 <FAQ path="Troubleshooting/gitlab-webhook"/>
 
+<DetailsToggle alt_header="CI jobs aren't triggering occasionally when opening a PR using the Azure DevOps integration">
+
+Scenarios where dbt Cloud will not run a CI job using the ADO native integration:
+
+- If you have abandoned a previous PR (e.g. PR 1) that had triggered a CI job (e.g. merging `feature-123` into `main`) and then opened up a new PR (PR 2) that also merges `feature-123` into `main` - PR 2 will not trigger a new CI job.
+- A previous PR (e.g. PR 1) that was on commit `#4818ceb` triggered a CI job. You now create a new PR (e.g. PR 2) that is also on the same commit `#4818ceb` - PR 2 will not trigger a new CI job.
+
+</DetailsToggle>
+
 <DetailsToggle alt_header="Temporary schemas aren't dropping">
 If your temporary schemas aren't dropping after a PR merges or closes, this typically indicates one of these issues:
 - You have overridden the <code>generate_schema_name</code> macro and it isn't using <code>dbt_cloud_pr_</code> as the prefix.
