@@ -1,6 +1,9 @@
 ---
-title: "Managed repository"
+title: "Connect with managed repository"
 id: "managed-repository"
+description: "Learn how to set up a project with a managed repository."
+pagination_next: "docs/cloud/git/import-a-project-by-git-url"
+pagination_prev: "docs/cloud/git/git-configuration-in-dbt-cloud"
 ---
 
 If you do not already have a git repository for your dbt project, you can let dbt Cloud manage a repository for you. Managed repositories are a great way to trial dbt without needing to create a new repository.
