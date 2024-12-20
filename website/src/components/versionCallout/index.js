@@ -1,7 +1,13 @@
 import React from 'react';
 import Admonition from '@theme/Admonition'; 
 
-const VersionCallout = ({ version }) => (
+const VersionCallout = ({ version }) => {
+  if (!version) {
+    // If no version is passed, render nothing or a default fallback message
+    return null;
+  }
+
+  return (
   <div>
     <Admonition type="tip" icon="💡" title="Did you know...">
       <span>
@@ -13,5 +19,6 @@ const VersionCallout = ({ version }) => (
     </Admonition>
   </div>
 );
+};
 
 export default VersionCallout;
