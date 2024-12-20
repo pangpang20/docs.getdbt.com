@@ -3,7 +3,6 @@ import Admonition from '@theme/Admonition';
 
 const VersionCallout = ({ version }) => {
   if (!version) {
-    // If no version is passed, render nothing or a default fallback message
     return null;
   }
 
