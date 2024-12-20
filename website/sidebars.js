@@ -222,6 +222,7 @@ const sidebarSettings = {
                 "docs/core/connect-data-platform/athena-setup",
                 "docs/core/connect-data-platform/glue-setup",
                 "docs/core/connect-data-platform/clickhouse-setup",
+                "docs/core/connect-data-platform/cratedb-setup",
                 "docs/core/connect-data-platform/databend-setup",
                 "docs/core/connect-data-platform/decodable-setup",
                 "docs/core/connect-data-platform/doris-setup",
@@ -522,6 +523,7 @@ const sidebarSettings = {
           link: { type: "doc", id: "docs/collaborate/explore-projects" },
           items: [
             "docs/collaborate/explore-projects",
+            "docs/collaborate/data-health-signals",
             "docs/collaborate/access-from-dbt-cloud",
             "docs/collaborate/column-level-lineage",
             "docs/collaborate/model-performance",
