@@ -197,7 +197,7 @@ dbt Cloud won't trigger a CI job run if the latest commit in a pull or merge req
 Scenarios where dbt Cloud does not trigger a CI job with Azure DevOps:
 
 1. Reusing a branch in a new PR
-   - If you abandon a previous PR (PR 1) that triggered a CI job for the same branch (`feature-123`) merging into `main`, and then open a new PR (PR 2) with the same branch merging into main &mdash; dbt Cloud won't trigger a new CI job for PR 2.
+   - If you abandon a previous PR (PR 1) that triggered a CI job for the same branch (`feature-123`) merging into `main`, and then open a new PR (PR 2) with the same branch merging into`main` &mdash; dbt Cloud won't trigger a new CI job for PR 2.
 
 2. Reusing the same commit
    - If you create a new PR (PR 2) on the same commit (`#4818ceb`) as a previous PR (PR 1) that triggered a CI job &mdash; dbt Cloud won't trigger a new CI job for PR 2.
