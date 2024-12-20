@@ -58,7 +58,7 @@ groups:
 </File>
 
 :::tip
-The `owner` value is flexible and accepts arbitrary inputs in addition to the required `email` field. For example, you could include a custom field like `favorite_food` to add context about the team.
+The `owner` key is flexible and accepts arbitrary inputs in addition to the required `email` field. For example, you could include a custom field like `favorite_food` to add context about the team.
 :::
 
 ## Attach groups to models
