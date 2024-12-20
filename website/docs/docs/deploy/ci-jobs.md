@@ -190,12 +190,17 @@ To validate _all_ semantic nodes in your project, add the following command to d
 
 <FAQ path="Troubleshooting/gitlab-webhook"/>
 
-<DetailsToggle alt_header="CI jobs aren't triggering occasionally when opening a PR using the Azure DevOps integration">
+<DetailsToggle alt_header="CI jobs aren't triggering occasionally when opening a PR using the Azure DevOps (ADO) integration">
 
-Scenarios where dbt Cloud will not run a CI job using the ADO native integration:
+dbt Cloud won't trigger a CI job run if the latest commit in a pull or merge request has already triggered a run for that job. However, some providers (like GitHub) will enforce the result of the existing run on multiple pull/merge requests.
 
-- If you have abandoned a previous PR (e.g. PR 1) that had triggered a CI job (e.g. merging `feature-123` into `main`) and then opened up a new PR (PR 2) that also merges `feature-123` into `main` - PR 2 will not trigger a new CI job.
-- A previous PR (e.g. PR 1) that was on commit `#4818ceb` triggered a CI job. You now create a new PR (e.g. PR 2) that is also on the same commit `#4818ceb` - PR 2 will not trigger a new CI job.
+Scenarios where dbt Cloud does not trigger a CI job with Azure DevOps:
+
+1. Reusing a branch in a new PR
+   - If you abandon a previous PR (PR 1) that triggered a CI job for the same branch (`feature-123`) merging into `main`, and then open a new PR (PR 2) with the same branch merging into main &mdash; dbt Cloud won't trigger a new CI job for PR 2.
+
+2. Reusing the same commit
+   - If you create a new PR (PR 2) on the same commit (`#4818ceb`) as a previous PR (PR 1) that triggered a CI job &mdash; dbt Cloud won't trigger a new CI job for PR 2.
 
 </DetailsToggle>
 
