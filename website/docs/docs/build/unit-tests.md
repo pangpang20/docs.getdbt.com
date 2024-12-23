@@ -10,7 +10,6 @@ keywords:
 
 <VersionCallout version="1.8" />
 
-:::note 
 
 Unit testing functionality is available in [dbt Cloud Release Tracks](/docs/dbt-versions/cloud-release-tracks) or dbt Core v1.8+
 
