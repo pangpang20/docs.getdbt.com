@@ -6,7 +6,7 @@ default_value: {"dbt_valid_from": "dbt_valid_from", "dbt_valid_to": "dbt_valid_t
 id: "snapshot_meta_column_names"
 ---
 
-<VersionCallout version="1.8" />
+<VersionCallout version="1.9" />
 
 <File name='snapshots/schema.yml'>
 
