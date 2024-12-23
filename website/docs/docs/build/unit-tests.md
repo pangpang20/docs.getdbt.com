@@ -8,6 +8,8 @@ keywords:
   - unit test, unit tests, unit testing, dag
 ---
 
+<VersionCallout version="1.9" />
+
 :::note 
 
 Unit testing functionality is available in [dbt Cloud Release Tracks](/docs/dbt-versions/cloud-release-tracks) or dbt Core v1.8+
