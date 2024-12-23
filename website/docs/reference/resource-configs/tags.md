@@ -22,7 +22,7 @@ datatype: string | [string]
 
 [models](/reference/model-configs):
   [<resource-path>](/reference/resource-configs/resource-path):
-    +tags: <string> | [<string>]
+    +tags: <string> | [<string>] # Supports single strings or list of strings
 
 [snapshots](/reference/snapshot-configs):
   [<resource-path>](/reference/resource-configs/resource-path):
@@ -41,7 +41,7 @@ datatype: string | [string]
 
 [models](/reference/model-configs):
   [<resource-path>](/reference/resource-configs/resource-path):
-    +tags: <string> | [<string>]
+    +tags: <string> | [<string>] # Supports single strings or list of strings
 
 [snapshots](/reference/snapshot-configs):
   [<resource-path>](/reference/resource-configs/resource-path):
@@ -80,15 +80,16 @@ The following examples show how to add tags to dbt resources in YAML files. Repl
 resource_type:
   - name: resource_name
     config:
-      tags: string
-    # Optional: Add specific properties for models
+      tags: <string> | [<string>] # Supports single strings or list of strings
+    # Optional: Add the following specific properties for models
     columns:
       - name: column_name
-        tags: string
+        tags: <string> | [<string>]
         tests:
           test-name:
             config:
-              tags: string
+              tags: "single-string" # Supports single string 
+              tags: ["string-1", "string-2"] # Supports list of strings
 ```
 
 </File>
