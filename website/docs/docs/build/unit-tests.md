@@ -12,7 +12,6 @@ keywords:
 
 
 
-:::
 
 Historically, dbt's test coverage was confined to [“data” tests](/docs/build/data-tests), assessing the quality of input data or resulting datasets' structure. However, these tests could only be executed _after_ building a model. 
 
