@@ -114,6 +114,7 @@ Apply a tag (or list of tags) to a resource.
 
 These tags can be used as part of the [resource selection syntax](/reference/node-selection/syntax), when running the following commands:
 - `dbt run --select tag:my_tag`
+- `dbt build --select tag:my_tag`
 - `dbt seed --select tag:my_tag`
 - `dbt snapshot --select tag:my_tag`
 - `dbt test --select tag:my_tag` (indirectly runs all tests associated with the models that are tagged)
@@ -222,6 +223,13 @@ This following example shows how to apply a tag to a saved query in the `dbt_pro
 
 </File>
 
+Then, run part of your project like so:
+
+```
+# Run all resources tagged "order_metrics"
+dbt run --select tag:order_metrics
+```
+
 The second example shows how to apply multiple tags to a saved query in the `semantic_model.yml` file. The saved query is then tagged with `order_metrics` and `hourly`.
 
 <File name='semantic_model.yml'>
@@ -236,8 +244,15 @@ saved_queries:
         - order_metrics
         - hourly
 ```
-
 </File>
+
+
+Then, run part of your project like so:
+
+```
+# Run all resources tagged "order_metrics" and "hourly"
+dbt build --select tag:order_metrics tag:hourly
+```
 </VersionBlock>
 
 ## Usage notes
