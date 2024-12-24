@@ -5,7 +5,7 @@ hide_table_of_contents: true
 pagination_next: "docs/cloud/git/managed-repository"
 ---
 
-[Version control](/docs/collaborate/git/version-control-basics) &mdash; a system allows you and your teammates to work collaboratively, safely, and simultaneously on a single project &mdash; is an essential part of the dbt workflow, enabling teams to collaborate effectively and maintain a history of changes to their dbt projects. 
+[Version control](/docs/collaborate/git/version-control-basics) &mdash; a system allows you and your teammates to work safely and simultaneously on a single project &mdash; is an essential part of the dbt workflow. It enables teams to collaborate effectively and maintain a history of changes to their dbt projects. 
 
 In dbt Cloud, you can configure Git integrations to manage your dbt project code with ease. dbt Cloud offers multiple ways to integrate with you Git provider, catering to diverse team needs and preferences. 
 
