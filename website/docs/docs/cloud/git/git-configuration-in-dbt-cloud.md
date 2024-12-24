@@ -38,7 +38,7 @@ Whether you use a Git integration that natively connects with dbt Cloud or prefe
     icon="dbt-bit"/>
 
 <Card
-    title="Connect to Azure DevOps "
+    title="Connect to Azure DevOps"
     body="Learn how to connect to Azure DevOps using dbt Cloud's native integration. <br /><br />Available on dbt Cloud Enterprise plans."
     link="/docs/cloud/git/connect-azure-devops"
     icon="dbt-bit"/>
