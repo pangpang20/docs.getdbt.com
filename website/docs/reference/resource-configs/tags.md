@@ -164,14 +164,14 @@ select ...
 
 </File>
 
-Then, run part of your project like so:
+Run resources with specific tags (or exclude resources with specific tags) with the following commands:
 
-```
+```shell
 # Run all models tagged "daily"
-$ dbt run --select tag:daily
+  dbt run --select tag:daily
 
 # Run all models tagged "daily", except those that are tagged hourly
-$ dbt run --select tag:daily --exclude tag:hourly
+  dbt run --select tag:daily --exclude tag:hourly
 ```
 
 ### Apply tags to seeds
@@ -204,7 +204,10 @@ seeds:
 
 <VersionBlock lastVersion="1.8">
 
+:::tip Upgrade to dbt Core 1.9
+
 Applying tags to saved queries is only available in dbt Core versions 1.9 and later.
+:::
 
 </VersionBlock>
 
@@ -223,11 +226,11 @@ This following example shows how to apply a tag to a saved query in the `dbt_pro
 
 </File>
 
-Then, run part of your project like so:
+Then run resources with a specific tag with the following commands:
 
-```
+```shell
 # Run all resources tagged "order_metrics"
-dbt run --select tag:order_metrics
+  dbt run --select tag:order_metrics
 ```
 
 The second example shows how to apply multiple tags to a saved query in the `semantic_model.yml` file. The saved query is then tagged with `order_metrics` and `hourly`.
@@ -247,11 +250,11 @@ saved_queries:
 </File>
 
 
-Then, run part of your project like so:
+Run resources with multiple tags with the following commands:
 
-```
+```shell
 # Run all resources tagged "order_metrics" and "hourly"
-dbt build --select tag:order_metrics tag:hourly
+  dbt build --select tag:order_metrics tag:hourly
 ```
 </VersionBlock>
 
@@ -304,8 +307,8 @@ sources:
 
 In the example above, the `unique` test would be selected by any of these four tags:
 ```bash
-$ dbt test --select tag:top_level
-$ dbt test --select tag:table_level
-$ dbt test --select tag:column_level
-$ dbt test --select tag:test_level
+dbt test --select tag:top_level
+dbt test --select tag:table_level
+dbt test --select tag:column_level
+dbt test --select tag:test_level
 ```
