@@ -164,7 +164,7 @@ select ...
 
 </File>
 
-Run resources with specific tags (or exclude resources with specific tags) with the following commands:
+Run resources with specific tags (or exclude resources with specific tags) using the following commands:
 
 ```shell
 # Run all models tagged "daily"
@@ -226,7 +226,7 @@ This following example shows how to apply a tag to a saved query in the `dbt_pro
 
 </File>
 
-Then run resources with a specific tag with the following commands:
+Then run resources with a specific tag using the following commands:
 
 ```shell
 # Run all resources tagged "order_metrics"
@@ -250,7 +250,7 @@ saved_queries:
 </File>
 
 
-Run resources with multiple tags with the following commands:
+Run resources with multiple tags using the following commands:
 
 ```shell
 # Run all resources tagged "order_metrics" and "hourly"
