@@ -6,7 +6,10 @@ pagination_next: "docs/cloud/git/import-a-project-by-git-url"
 pagination_prev: "docs/cloud/git/git-configuration-in-dbt-cloud"
 ---
 
-If you don't already have a Git repository for your dbt project, you can let dbt Cloud manage a repository for you. Managed repositories are a great way to trial dbt without needing to create a new repository.
+Managed repositories are a great way to trial dbt without needing to create a new repository. If you don't already have a Git repository for your dbt project, you can let dbt Cloud host and manage a repository for you. 
+
+If in the future you choose to host this repository elsewhere, you can export the information from dbt Cloud at any time. Refer to [Move from a managed repository to a self-hosted repository](/faqs/Git/managed-repo) for more information on how to do that.
+
 
 :::info
 dbt Labs recommends against using a managed repository in a production environment. You can't use Git features like pull requests, which are part of our recommended version control best practices.
@@ -22,6 +25,3 @@ To set up a project with a managed repository:
 6. Click **Create**.
    <Lightbox src="/img/docs/dbt-cloud/cloud-configuring-dbt-cloud/managed-repo.png" title="Adding a managed repository"/>
 
-- dbt Cloud hosts and manages this repository for you.
-- If in the future you choose to host this repository elsewhere, you can export the information from dbt Cloud at any time.
-   - Refer to [Move from a managed repository to a self-hosted repository](/faqs/Git/managed-repo) for more information.
