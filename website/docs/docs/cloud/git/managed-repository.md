@@ -9,7 +9,7 @@ pagination_prev: "docs/cloud/git/git-configuration-in-dbt-cloud"
 If you don't already have a Git repository for your dbt project, you can let dbt Cloud manage a repository for you. Managed repositories are a great way to trial dbt without needing to create a new repository.
 
 :::info
-We do not recommend using a managed repository in a production environment. You will not be able to use git features like pull requests which are part of our recommended version control best practices.
+dbt Labs recommends against using a managed repository in a production environment. You can't use Git features like pull requests, which are part of our recommended version control best practices.
 :::
 
 To set up a project with a managed repository:
