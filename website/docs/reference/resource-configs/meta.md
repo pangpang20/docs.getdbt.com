@@ -179,7 +179,7 @@ exposures:
 
 <TabItem value="semantic models">
 
-Configure `meta` in the your semantic models YAML file or under the `semantic-models` config block in the `dbt_project.yml` file. 
+Configure `meta` in the your [semantic models](/docs/build/semantic-models) YAML file or under the `semantic-models` config block in the `dbt_project.yml` file. 
 
 <VersionBlock lastVersion="1.9">
 
@@ -381,7 +381,7 @@ models:
 ### Assign meta to semantic model
 
 
-The following example shows how to assign a `meta` value to a semantic model in the `semantic_model.yml` file and  `dbt_project.yml` file:
+The following example shows how to assign a `meta` value to a [semantic model](/docs/build/semantic-models) in the `semantic_model.yml` file and  `dbt_project.yml` file:
 
 <Tabs>
 <TabItem value="semantic_model" label="Semantic model">
