@@ -55,7 +55,7 @@ For more info on `gitignore` syntax, refer to the [Git docs](https://git-scm.com
 
 </Expandable>
 
-<Expandable alt_header="Fix in the git provider">
+<Expandable alt_header="Fix in the Git provider">
 
 Sometimes it's necessary to use the git providers web interface to fix a broken `.gitignore` file. Although the specific steps may vary across providers, the general process remains the same.
 
