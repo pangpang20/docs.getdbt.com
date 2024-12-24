@@ -22,17 +22,16 @@ dbt Cloud Enterprise supports [external OAuth authentication](https://docs.snow
 
 The process of setting up external OAuth will require a little bit of back-and-forth between your dbt Cloud, IdP, and Snowflake accounts, and having them open in multiple browser tabs will help speed up the configuration process:
 
-- **dbt Cloud:** You’ll primarily be working in the **Account Settings** —> **Integrations** page. You will need [proper permission](/docs/cloud/manage-access/enterprise-permissions) to set up the integration and create the connections.
+- **dbt Cloud:** You’ll primarily be working in the **Account settings** —> **Integrations** page. You will need [proper permission](/docs/cloud/manage-access/enterprise-permissions) to set up the integration and create the connections.
 - **Snowflake:** Open a worksheet in an account that has permissions to [create a security integration](https://docs.snowflake.com/en/sql-reference/sql/create-security-integration).
 - **Okta:** You’ll be working in multiple areas of the Okta account, but you can start in the **Applications** section. You will need permissions to [create an application](https://help.okta.com/en-us/content/topics/security/custom-admin-role/about-role-permissions.htm#Application_permissions) and an [authorization server](https://help.okta.com/en-us/content/topics/security/custom-admin-role/about-role-permissions.htm#Authorization_server_permissions).
 - **Entra ID** An admin with access to create [Entra ID apps](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/custom-available-permissions) who is also a user in Snowflake is required. 
 
 If the admins that handle these products are all different people, it’s better to have them coordinating simultaneously to reduce friction.
 
-:::info Username and credential matching required
-Ensure that the username entered by the IdP admin matches the username in the Snowflake credentials. If the email address used in the dbt Cloud setup is different from the Snowflake username, the connection will fail or you may run into issues.
+:::info Snowflake and IdP username matching required
+Ensure that the username/email address entered by the IdP admin matches the Snowflake credentials username. If the email address used in the dbt Cloud setup is different from the Snowflake email address, the connection will fail or you may run into issues.
 :::
-
 
 ### Snowflake commands
 
