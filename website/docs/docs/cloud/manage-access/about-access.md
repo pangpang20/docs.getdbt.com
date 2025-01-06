@@ -33,10 +33,10 @@ You can edit an existing user's license by navigating to the **Users** section o
 
 ## Groups
 
-Groups in dbt Cloud serve much of the same purpose as they do in traditional directory tools &mdash; to gather individual users together to make bulk assignment of permissions easier. Admins use groups in dbt Cloud to assign [licenses](#licenses) and [permissions](#permissions). 
+Groups in dbt Cloud serve much of the same purpose as they do in traditional directory tools &mdash; to gather individual users together to make bulk assignment of permissions easier. The permissions available depends on whether you're on an [Enterprise](/docs/cloud/manage-access/enterprise-permissions) or [self-service Team](/docs/cloud/manage-access/self-service-permissions) plan.
 
+- Admins use groups in dbt Cloud to assign [licenses](#licenses) and [permissions](#permissions). 
 - The permissions are more granular than licenses, and you only assign them at the group level; _you can’t assign permissions at the user level._
-- The permissions available depends on whether you're on an [Enterprise](/docs/cloud/manage-access/enterprise-permissions) or [self-service Team](/docs/cloud/manage-access/self-service-permissions) plan.
 - Every user in dbt Cloud must be assigned to at least one group.
 
 There are three default groups available as soon as you create your dbt Cloud account (the person who created the account is added to all three automatically):
