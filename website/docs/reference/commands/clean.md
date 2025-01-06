@@ -12,16 +12,20 @@ dbt clean
 ```
 
 ## Supported flags
-To view the supported flags for the `dbt clean` command in the terminal, use the `--help` flag like this:
+
+This section will briefly explain the following flags:
+
+- `--clean-project-files-only` (default)
+- `--no-clean-project-files-only`
+
+To view the list of all supported flags for the `dbt clean` command in the terminal, use the `--help` flag, which will display detailed information about the available flags you can use, including its description and usage:
 
 ```shell
 dbt clean --help
 ```
 
-This command displays detailed information about the available flags you can use, including its description and usage.
-
 ### --clean-project-files-only (default)
-Deletes all the paths within the project directory specified in `clean-targets`.
+By default, dbt deletes all the paths within the project directory specified in `clean-targets`.
 
 :::note
 Avoid using paths outside the dbt project; otherwise, you will see an error.
@@ -29,15 +33,15 @@ Avoid using paths outside the dbt project; otherwise, you will see an error.
   
 
 #### Example usage
-```
-$ dbt clean --clean-project-files-only
+```shell
+dbt clean --clean-project-files-only
 ```
 
 ### --no-clean-project-files-only
 Deletes all the paths specified in the `clean-targets` list of `dbt_project.yml`, including those outside the current dbt project.
 
-```
-$ dbt clean --no-clean-project-files-only
+```shell
+dbt clean --no-clean-project-files-only
 ```
 
 ## dbt clean with remote file system
