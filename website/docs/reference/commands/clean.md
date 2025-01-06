@@ -12,6 +12,10 @@ dbt clean
 ```
 
 ## Supported flags
+To view the supported flags for the `dbt clean` command in the terminal, use the `--help` flag like this:
+
+```shell
+dbt clean --help
 ### --clean-project-files-only (default)
 Deletes all the paths within the project directory specified in `clean-targets`.
 
