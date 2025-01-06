@@ -24,7 +24,7 @@ To view the list of all supported flags for the `dbt clean` command in the termi
 dbt clean --help
 ```
 
-### --clean-project-files-only (default)
+### --clean-project-files-only
 By default, dbt deletes all the paths within the project directory specified in `clean-targets`.
 
 :::note
