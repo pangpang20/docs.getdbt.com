@@ -15,8 +15,8 @@ dbt clean
 
 This section will briefly explain the following flags:
 
-- `--clean-project-files-only` (default)
-- `--no-clean-project-files-only`
+- [`--clean-project-files-only`](#--clean-project-files-only) (default)
+- [`--no-clean-project-files-only`](#--no-clean-project-files-only)
 
 To view the list of all supported flags for the `dbt clean` command in the terminal, use the `--help` flag, which will display detailed information about the available flags you can use, including its description and usage:
 
