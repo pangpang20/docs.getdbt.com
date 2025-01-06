@@ -9,7 +9,9 @@ pagination_prev: null
 :::info "User access" is not "Model access"
 
 This page covers user groups and access, including:
-- User licenses, permissions, group memberships, role-based access controls for projects and environments, single sign-on, and secure authentication
+- User licenses, permissions, and group memberships
+- Role-based access controls for projects and environments
+- Single sign-on, and secure authentication
 
 For model-specific access and their availability across projects, refer to [Model access](/docs/collaborate/govern/model-access).
 
