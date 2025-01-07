@@ -32,7 +32,7 @@ import SLCourses from '/snippets/_sl-course.md';
 
 This quickstart guide is designed for dbt Cloud users using Snowflake as their data platform. It focuses on building and defining metrics, setting up the dbt Semantic Layer in a dbt Cloud project, and querying metrics in Google Sheets. 
 
-If you're on different data platforms, you can also follow this guide and will need to modify the setup for the specific platform. See the [Users on different platforms](#for-users-on-different-data-platforms) section for more information.
+If you're on different data platforms, you can also follow this guide and will need to modify the setup for the specific platform. See the [users on different platforms](#for-users-on-different-data-platforms) section for more information.
 
 ### Prerequisites
 
