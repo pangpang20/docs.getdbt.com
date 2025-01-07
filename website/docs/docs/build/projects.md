@@ -77,6 +77,12 @@ To use the Project subdirectory option in dbt Cloud, follow these steps:
 
 After configuring the Project subdirectory option, dbt Cloud will use it as the root directory for your dbt project. This means that dbt commands, such as `dbt run` or `dbt test`, will operate on files within the specified subdirectory. If there is no `dbt_project.yml` file in the Project subdirectory, you will be prompted to initialize the dbt project.
 
+:::info Multiple projects in dbt Cloud
+
+Some [plans](https://www.getdbt.com/pricing) only allow for one project, but you can have multiple projects (and cross-project references with [dbt Mesh](https://docs.getdbt.com/best-practices/how-we-mesh/mesh-1-intro)) in Enterprise.
+
+:::
+
 ## New projects
 
 You can create new projects and [share them](/docs/collaborate/git-version-control) with other people by making them available on a hosted git repository like GitHub, GitLab, and BitBucket.
