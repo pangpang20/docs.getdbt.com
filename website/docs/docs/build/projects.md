@@ -79,7 +79,7 @@ After configuring the Project subdirectory option, dbt Cloud will use it as the 
 
 :::info Multiple projects in dbt Cloud
 
-Some [plans](https://www.getdbt.com/pricing) only allow for one project, but you can have multiple projects (and cross-project references with [dbt Mesh](https://docs.getdbt.com/best-practices/how-we-mesh/mesh-1-intro)) in Enterprise.
+Some [plans](https://www.getdbt.com/pricing) support only one dbt project, while [Enterprise plans](https://www.getdbt.com/contact) allow multiple projects and [cross-project references](/best-practices/how-we-mesh/mesh-1-intro) with dbt Mesh.
 
 :::
 
