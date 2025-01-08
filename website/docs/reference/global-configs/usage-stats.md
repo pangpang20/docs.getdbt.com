@@ -20,10 +20,13 @@ For full transparency, you can see all the event definitions in [`tracking.py`](
 
 - dbt Core users have telemetry enabled by default to help us understand usage patterns and improve the product. You can opt out of event tracking at any time by adding the following to your `dbt_project.yml` file:
 
+  <File name="dbt_project.yml">
+
   ```yaml
   flags:
     send_anonymous_usage_stats: false
   ```
+  </File>
 
   dbt Core users can also use the `DO_NOT_TRACK` environment variable to enable or disable sending anonymous data. For more information, see [Environment variables](/docs/build/environment-variables).
 
